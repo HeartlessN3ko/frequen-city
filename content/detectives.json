@@ -1,0 +1,79 @@
+{
+  "_note": "Selectable detective bodies (existing Bitty robots) and narration voices. Add models here; outfit {shoulder, hem, hatY, hatScale} fine-tunes the coat and hat per robot. Voice samples are audio paths (null until recorded).",
+  "models": [
+    {
+      "id": "bitty",
+      "name": "Bitty",
+      "model": "assets/characters/bitty/bitty.glb"
+    },
+    {
+      "id": "dusk",
+      "name": "Dusk",
+      "model": "assets/characters/bitty/dusk.glb"
+    },
+    {
+      "id": "lavi",
+      "name": "Lavi",
+      "model": "assets/characters/bitty/lavi.glb"
+    },
+    {
+      "id": "lemo",
+      "name": "Lemo",
+      "model": "assets/characters/bitty/lemo.glb"
+    },
+    {
+      "id": "mintie",
+      "name": "Mintie",
+      "model": "assets/characters/bitty/mintie.glb"
+    },
+    {
+      "id": "moss",
+      "name": "Moss",
+      "model": "assets/characters/bitty/moss.glb"
+    },
+    {
+      "id": "nox",
+      "name": "Nox",
+      "model": "assets/characters/bitty/nox.glb"
+    },
+    {
+      "id": "patchwork",
+      "name": "Patchwork",
+      "model": "assets/characters/bitty/patchwork.glb"
+    },
+    {
+      "id": "peachy",
+      "name": "Peachy",
+      "model": "assets/characters/bitty/peachy.glb"
+    },
+    {
+      "id": "pip",
+      "name": "Pip",
+      "model": "assets/characters/bitty/pip.glb"
+    },
+    {
+      "id": "skyline",
+      "name": "Skyline",
+      "model": "assets/characters/bitty/skyline.glb"
+    },
+    {
+      "id": "sunny",
+      "name": "Sunny",
+      "model": "assets/characters/bitty/sunny.glb"
+    }
+  ],
+  "voices": [
+    {
+      "id": "masc",
+      "label": "Masculine",
+      "sample": null,
+      "sampleText": "The city never sleeps. Mostly because nobody told it to."
+    },
+    {
+      "id": "fem",
+      "label": "Feminine",
+      "sample": null,
+      "sampleText": "The city never sleeps. Mostly because nobody told it to."
+    }
+  ]
+}

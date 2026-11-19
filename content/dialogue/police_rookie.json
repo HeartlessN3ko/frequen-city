@@ -1,0 +1,62 @@
+{
+  "entries": [
+    {
+      "when": {
+        "all": [
+          {
+            "flag": "briefed"
+          },
+          {
+            "not": {
+              "flag": "unlocked:apartment"
+            }
+          }
+        ]
+      },
+      "node": "address"
+    }
+  ],
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "rookie",
+      "text": "A detective! I’ve read about those. How am I doing so far?",
+      "next": "menu"
+    },
+    "address": {
+      "speaker": "rookie",
+      "text": "Her address? It’s somewhere in this station. I found the coffee machine first, if that helps.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "pr_what",
+          "text": "What have you found so far?",
+          "next": "found",
+          "when": {
+            "not": {
+              "seen": "pr_what"
+            }
+          }
+        },
+        {
+          "text": "Keep up the good work.",
+          "next": "end"
+        }
+      ]
+    },
+    "found": {
+      "speaker": "rookie",
+      "text": "I found the coffee machine. It took most of the morning.",
+      "end": true
+    },
+    "end": {
+      "speaker": "rookie",
+      "text": "Good luck out there!",
+      "end": true
+    }
+  }
+}

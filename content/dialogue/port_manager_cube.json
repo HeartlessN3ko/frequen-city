@@ -1,0 +1,35 @@
+{
+  "_note": "Draft inspection of the cube at the arrivals counter.",
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "port_officer",
+      "text": "Your cube says “human detective.” Twice. I’d call that a match.",
+      "next": "c"
+    },
+    "c": {
+      "speaker": "port_officer",
+      "text": "The missing-user report is clipped to your entry papers. Read it when you have a minute.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "pm:checked"
+        }
+      ],
+      "end": true
+    },
+    "cleared": {
+      "speaker": "port_officer",
+      "text": "That’s your transfer stamp. You’re cleared, detective.",
+      "end": true
+    }
+  },
+  "entries": [
+    {
+      "when": {
+        "flag": "met_officer"
+      },
+      "node": "cleared"
+    }
+  ]
+}

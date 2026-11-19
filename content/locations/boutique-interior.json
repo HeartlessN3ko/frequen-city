@@ -1,0 +1,537 @@
+{
+  "name": "Stealth & Glitter",
+  "ambience": "assets/audio/amb/shop.mp3",
+  "exterior": "boutique",
+  "hideOnMap": true,
+  "screens": [
+    {
+      "id": "sales-till",
+      "at": [
+        -4.8,
+        1.47,
+        -2.651
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "shop",
+        "service": "STEALTH & GLITTER  /  SALES",
+        "status": "SALES DESK",
+        "keyboard": [
+          -4.8,
+          1.08,
+          -2.5
+        ]
+      },
+      "title": "Fitting room",
+      "rows": [
+        [
+          "Garments",
+          "Try on"
+        ],
+        [
+          "Accessories",
+          "At the counter"
+        ]
+      ]
+    },
+    {
+      "id": "customer-display",
+      "at": [
+        -4.8,
+        1.55,
+        -2.745
+      ],
+      "size": [
+        0.42,
+        0.154
+      ],
+      "yaw": 180,
+      "title": "Design station",
+      "rows": [
+        [
+          "Designer",
+          "Miori Ananse"
+        ],
+        [
+          "Catalog",
+          "Prints in progress"
+        ]
+      ],
+      "station": {
+        "palette": "shop",
+        "service": "STEALTH & GLITTER",
+        "status": "CUSTOMER DISPLAY",
+        "rearMount": true
+      },
+      "highlightFor": "design"
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/interiors/boutique.glb",
+      "lightScale": 0.002,
+      "floorFinish": {
+        "image": "assets/interiors/boutique-floor.jpg",
+        "bounds": [
+          -8.2,
+          -16.2,
+          16.4
+        ]
+      }
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#0d0b10",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.52,
+    "key": 0.35,
+    "ambient": 0.07,
+    "exposure": 1.05,
+    "reflections": 0.26,
+    "fog": false
+  },
+  "startPosition": "entrance",
+  "_measure": "Positions come from the gameplay cameras in Stealth and Glitter Boutique.blend (LOC_StealthAndGlitterBoutique), converted to game axes (x, z, -y). Front door at x 0, z 0; the room runs toward -z.",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Boutique Clerk",
+      "camera": {
+        "position": [
+          -1.126,
+          1.25,
+          -1.416
+        ],
+        "target": [
+          -5.077,
+          1.287,
+          -2.042
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -5.077,
+            1.287,
+            -2.042
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "tote-muse",
+          "label": "Muse Mode On",
+          "dir": "right"
+        },
+        {
+          "to": "door",
+          "label": "Catalog campaign",
+          "dir": "right"
+        },
+        {
+          "to": "collection-view",
+          "label": "Featured collection",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "tote-muse",
+      "label": "Muse Mode On",
+      "camera": {
+        "position": [
+          -2.9,
+          1.25,
+          -5.65
+        ],
+        "target": [
+          -0.223,
+          1.07,
+          -8.623
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -0.223,
+            1.07,
+            -8.623
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Boutique Clerk",
+          "dir": "right"
+        },
+        {
+          "to": "door",
+          "label": "Catalog campaign",
+          "dir": "right"
+        },
+        {
+          "to": "collection-view",
+          "label": "Featured collection",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "label": "Catalog campaign",
+      "camera": {
+        "position": [
+          0,
+          1.17,
+          -2.4
+        ],
+        "target": [
+          3.995,
+          1.399,
+          -2.191
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            3.995,
+            1.399,
+            -2.191
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Boutique Clerk",
+          "dir": "back"
+        },
+        {
+          "to": "tote-muse",
+          "label": "Muse Mode On",
+          "dir": "left"
+        },
+        {
+          "to": "collection-view",
+          "label": "Featured collection",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "collection-view",
+      "label": "Featured collection",
+      "camera": {
+        "position": [
+          -1.68,
+          1.25,
+          -3.79
+        ],
+        "target": [
+          -4.916,
+          1.41,
+          -6.141
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -4.916,
+            1.41,
+            -6.141
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Boutique Clerk",
+          "dir": "back"
+        },
+        {
+          "to": "tote-muse",
+          "label": "Muse Mode On",
+          "dir": "forward"
+        },
+        {
+          "to": "door",
+          "label": "Catalog campaign",
+          "dir": "back"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        -0.15
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "boutique"
+      }
+    },
+    {
+      "id": "collection",
+      "kind": "inspect",
+      "label": "Featured collection",
+      "at": [
+        -4.7,
+        1.4,
+        -6
+      ],
+      "positions": [
+        "collection-view"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "boutique_collection"
+        },
+        {
+          "do": "inspect",
+          "title": "KOMG",
+          "text": "Anime-inspired streetwear for Black people, built around the idea of a Black Girls Magical Academy.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "boutique_collection"
+      }
+    },
+    {
+      "id": "racks",
+      "kind": "inspect",
+      "label": "Racks",
+      "at": [
+        4.8,
+        0.8,
+        -5.5
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "boutique_racks"
+        },
+        {
+          "do": "inspect",
+          "title": "Racks",
+          "text": "The pieces carry names rather than product codes: the Pastel Prism Star crop hoodie, the Kura Gakuen sigil boyfriend hoodie in Pastel Aurora, Neon Cat Cloud and neon flame-head tees, the Cosmic Aura dress, Android Tear leggings, and the Rendered Emotion and Muse Mode On totes. The line covers hoodies, tees, a dress, leggings and bags, a small but complete wardrobe, and its names pull anime, space and machines into one vocabulary.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "boutique_racks"
+      },
+      "reach": 8
+    },
+    {
+      "id": "ads",
+      "kind": "inspect",
+      "label": "Catalog campaign",
+      "at": [
+        4.9,
+        2.14,
+        -0.245
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "boutique_ads"
+        },
+        {
+          "do": "inspect",
+          "title": "Catalog campaign",
+          "text": "The framed print is Stealth & Glitter’s catalog campaign. The same collection was advertised in a varsity ad, a full-drop ad and a behind-the-design film. Skye makes the campaign images with an AI pipeline: images generated with gpt-image, a quality-control pass, then Kling for video, feeding the brand’s social posting.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "boutique_ads"
+      }
+    },
+    {
+      "id": "design",
+      "kind": "inspect",
+      "label": "Design station",
+      "at": [
+        -4.8,
+        1.55,
+        -2.745
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "boutique_design"
+        },
+        {
+          "do": "inspect",
+          "title": "Design Station",
+          "text": "Stealth & Glitter is an online clothing company Skye started in 2024, where she sells her custom clothing designs, including anime-inspired graphics and streetwear.",
+          "kicker": "Discovery",
+          "print": {
+            "style": "tag",
+            "lines": [
+              "Stealth & Glitter",
+              "Miori Ananse",
+              "Designs"
+            ]
+          }
+        }
+      ],
+      "doneWhen": {
+        "discovered": "boutique_design"
+      }
+    },
+    {
+      "id": "tote-rendered",
+      "kind": "inspect",
+      "label": "Rendered Emotion",
+      "at": [
+        -0.75,
+        1.05,
+        -9.018
+      ],
+      "positions": [
+        "tote-muse"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Rendered Emotion",
+        "text": "A Stealth & Glitter canvas tote from the Miori Ananse Designs collection, hung on the racks beside its pair, Muse Mode On."
+      }
+    },
+    {
+      "id": "tote-muse",
+      "kind": "inspect",
+      "label": "Muse Mode On",
+      "at": [
+        0,
+        1.05,
+        -9.018
+      ],
+      "positions": [
+        "tote-muse"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Muse Mode On",
+        "text": "A Stealth & Glitter canvas tote from the Miori Ananse Designs collection, the pair of Rendered Emotion on the racks."
+      }
+    },
+    {
+      "id": "tote-kura",
+      "kind": "inspect",
+      "label": "Kura Garden Crest",
+      "at": [
+        0.75,
+        1.05,
+        -9.018
+      ],
+      "positions": [
+        "tote-muse"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Kura Garden Crest",
+        "text": "A Stealth & Glitter canvas tote carrying the Kura Garden Crest, from the academy world of the Kura Onna Maho Gakuen line that also gives the boutique its sigil hoodie and varsity bomber."
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "clerk",
+      "character": "clerk",
+      "at": [
+        -5.42,
+        0,
+        -1.64
+      ],
+      "facing": 87.0,
+      "dialogue": "npc_clerk",
+      "positions": [
+        "entrance"
+      ]
+    },
+    {
+      "id": "clerk_b",
+      "character": "staff_stealthglitter_b",
+      "at": [
+        0.93,
+        0,
+        -6.91
+      ],
+      "facing": -71.8,
+      "positions": [
+        "tote-muse"
+      ]
+    },
+    {
+      "id": "clerk_c",
+      "character": "staff_stealthglitter_c",
+      "at": [
+        -3.34,
+        0,
+        -7.47
+      ],
+      "facing": 24.3,
+      "positions": [
+        "collection-view"
+      ]
+    }
+  ],
+  "lights": "assets/interiors/boutique.lights.json",
+  "lampScale": 0.36,
+  "outlines": "assets/outlines/boutique-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "windowView": {
+    "street": "boutique",
+    "rotation": -172.41,
+    "origin": [
+      260,
+      1.98,
+      -324.05
+    ],
+    "day": "assets/city/views/boutique-doorway-day.jpg",
+    "late": "assets/city/views/boutique-doorway-late.jpg"
+  },
+  "onFirstEnter": [
+    {
+      "do": "dialogue",
+      "tree": "npc_clerk",
+      "npc": "clerk",
+      "greeting": true
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "start": "meet",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "leevee_library#meet"
+      },
+      "node": "a"
+    }
+  ],
+  "nodes": {
+    "meet": {
+      "speaker": "leevee",
+      "text": "Oh. Detective. I’m returning Skye’s journals before they’re overdue. She hates late fees more than she hates the cold.",
+      "next": "menu"
+    },
+    "a": {
+      "speaker": "leevee",
+      "text": "Still here? The journals are nearly shelved.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "lv_books",
+          "text": "Why are you returning her books?",
+          "next": "books",
+          "when": {
+            "not": {
+              "seen": "leevee_library#books"
+            }
+          }
+        },
+        {
+          "id": "lv_counter",
+          "text": "What were you cleaning at her place?",
+          "next": "counter",
+          "when": {
+            "all": [
+              {
+                "evidence": "apt_spill"
+              },
+              {
+                "not": {
+                  "seen": "leevee_library#counter"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "lv_bar",
+          "text": "The bartender says you came in after her.",
+          "next": "bar",
+          "when": {
+            "all": [
+              {
+                "evidence": "e3_sighting"
+              },
+              {
+                "not": {
+                  "seen": "leevee_library#bar"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "lv_bye",
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "books": {
+      "speaker": "leevee",
+      "text": "She checks out more than she reads. I bring them back so the library keeps letting her.",
+      "end": true
+    },
+    "counter": {
+      "speaker": "leevee",
+      "text": "I had a dishcloth. There was a red mark on the counter. That’s all I saw.",
+      "choices": [
+        {
+          "id": "lv_red",
+          "text": "Red like what?",
+          "next": "counter2"
+        },
+        {
+          "text": "Understood.",
+          "next": "menu"
+        }
+      ]
+    },
+    "counter2": {
+      "speaker": "leevee",
+      "text": "Like salsa. Or jam. I didn’t taste it, detective. I’m a cleaning routine, not a food critic.",
+      "end": true
+    },
+    "bar": {
+      "speaker": "leevee",
+      "text": "I went in after her. The bartender had already handed over her order.",
+      "choices": [
+        {
+          "id": "lv_bar2",
+          "text": "Where did she go after that?",
+          "next": "bar2"
+        },
+        {
+          "text": "Understood.",
+          "next": "menu"
+        }
+      ]
+    },
+    "bar2": {
+      "speaker": "leevee",
+      "text": "Toward the tower, both arms full. I came here instead. Somebody has to return the journals.",
+      "end": true
+    },
+    "end": {
+      "speaker": "leevee",
+      "text": "Good luck, detective. I’ll finish shelving these in the back.",
+      "effects": [
+        {
+          "do": "npcLeave",
+          "npc": "leevee",
+          "path": [
+            [
+              -3.4,
+              -11
+            ],
+            [
+              -7.4,
+              -12.6
+            ],
+            [
+              -10.2,
+              -13.2
+            ]
+          ],
+          "flag": "lib:leevee_talked"
+        }
+      ],
+      "end": true
+    }
+  }
+}

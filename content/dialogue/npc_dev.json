@@ -1,0 +1,89 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "dev",
+      "text": "Careful, half these cabinets are prototypes. The other half are older prototypes.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_dev_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "flag": "briefed"
+              },
+              {
+                "not": {
+                  "seen": "npc_dev#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_dev_build",
+          "text": "What’s she building here?",
+          "next": "build",
+          "when": {
+            "not": {
+              "seen": "npc_dev#build"
+            }
+          }
+        },
+        {
+          "id": "n_dev_play",
+          "text": "What do you play around here?",
+          "next": "play",
+          "when": {
+            "not": {
+              "seen": "npc_dev#play"
+            }
+          }
+        },
+        {
+          "id": "n_dev_bye",
+          "text": "Just looking.",
+          "next": "end"
+        }
+      ]
+    },
+    "skye": {
+      "speaker": "dev",
+      "text": "A rival publisher took her. Classic industry move.",
+      "next": "proof"
+    },
+    "proof": {
+      "speaker": "dev",
+      "text": "Proof? Look at their logo. That’s a guilty logo.",
+      "effects": [
+        {
+          "do": "giveEvidence",
+          "id": "vw_rival"
+        }
+      ],
+      "end": true
+    },
+    "build": {
+      "speaker": "dev",
+      "text": "Toy Plane: Alien Assault. Toy planes dogfight through a full-size city, and the gaps between buildings become the race course.",
+      "end": true
+    },
+    "play": {
+      "speaker": "dev",
+      "text": "Who’s the Smartest?, if you like trivia. Or Squad Dungeon, if you have an hour and opinions about ten classes.",
+      "end": true
+    },
+    "end": {
+      "speaker": "dev",
+      "text": "Don’t press the big red button on cabinet three. It doesn’t do anything. That’s the problem.",
+      "end": true
+    }
+  }
+}

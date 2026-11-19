@@ -1,0 +1,221 @@
+{
+  "name": "Police Department",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Frequen City PD",
+  "mapName": "Police",
+  "mapPin": {
+    "x": 60,
+    "y": 50
+  },
+  "interior": "police-interior",
+  "models": [
+    {
+      "url": "assets/city/ext-police.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        14,
+        -366,
+        136,
+        -244
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        14,
+        -366,
+        136,
+        -244
+      ]
+    },
+    {
+      "url": "assets/city/police-curb-shops.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/police-lettering.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/police.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/police.glb"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "fill": 0.9
+  },
+  "ambient": {
+    "pedestrians": 5,
+    "paths": [
+      [
+        [
+          76,
+          0.36,
+          -319
+        ],
+        [
+          76,
+          0.36,
+          -291
+        ]
+      ],
+      [
+        [
+          80.2,
+          0.36,
+          -291
+        ],
+        [
+          80.2,
+          0.36,
+          -319
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "curb",
+      "street"
+    ],
+    "greetings": [
+      "Looking for the station? Blue doors.",
+      "The station keeps better hours than the coffee machine.",
+      "I reported a missing sock once. They gave it a case number and a red string.",
+      "If you're here about Skye, the agents have been pacing out here all week.",
+      "We weren't programmed with very many dialogue options. That was one of them."
+    ]
+  },
+  "startPosition": "curb",
+  "positions": [
+    {
+      "id": "curb",
+      "label": "Station-side curb",
+      "camera": {
+        "position": [
+          78.2,
+          1.76,
+          -307.3
+        ],
+        "target": [
+          72,
+          2.35,
+          -305
+        ],
+        "fov": 67,
+        "turnCenter": 90,
+        "yawRange": 85,
+        "trackFrontage": true
+      },
+      "links": [
+        {
+          "to": "street",
+          "label": "Across the street",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "street",
+      "label": "Across the street",
+      "camera": {
+        "position": [
+          91.3,
+          2.05,
+          -320.2
+        ],
+        "target": [
+          72.5,
+          2.7,
+          -303.25
+        ],
+        "fov": 62,
+        "yawRange": 82,
+        "portrait": {
+          "target": [
+            72.6,
+            2.95,
+            -305.4
+          ],
+          "fov": 70
+        },
+        "trackFrontage": true
+      },
+      "links": [
+        {
+          "to": "curb",
+          "label": "Station-side curb",
+          "dir": "forward"
+        }
+      ],
+      "scenery": {
+        "day": "assets/city/views/police-day.jpg",
+        "late": "assets/city/views/police-late.jpg",
+        "lateHour": 15,
+        "radius": 39,
+        "origin": [
+          91.3,
+          2.05,
+          -320.2
+        ],
+        "heading": 0,
+        "surfaceDepth": "assets/city/street-depth/police-street.png"
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Police Department",
+      "at": [
+        71.7,
+        1.66,
+        -305
+      ],
+      "positions": [
+        "curb",
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "police-interior"
+      }
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "police_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "Blue doors. You can’t miss the station."
+    }
+  ],
+  "unlockWhen": {
+    "flag": "unlocked:police"
+  },
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter the station"
+  },
+  "horizon": {
+    "day": "assets/city/views/police-curb-day.jpg",
+    "late": "assets/city/views/police-curb-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      78.2,
+      1.76,
+      -307.3
+    ],
+    "shadowFill": 0.075,
+    "surfaceDepth": "assets/city/street-depth/police-curb.png"
+  }
+}

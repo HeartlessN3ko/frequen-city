@@ -1,0 +1,115 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "agent_terra#a"
+      },
+      "node": "back"
+    }
+  ],
+  "nodes": {
+    "a": {
+      "speaker": "terra",
+      "text": "Detective, can I ask you something before everyone else weighs in?",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "terra",
+      "text": "Maybe she’s just taking a break? ...Why is everyone looking at me like that?",
+      "next": "menu"
+    },
+    "back": {
+      "speaker": "terra",
+      "text": "Oh, you’re back. Did anyone say anything useful?",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "terra_theory",
+          "text": "What do you think happened to Skye?",
+          "next": "theory",
+          "when": {
+            "not": {
+              "seen": "terra_theory"
+            }
+          }
+        },
+        {
+          "id": "terra_role",
+          "text": "What do you do here?",
+          "next": "role",
+          "when": {
+            "not": {
+              "seen": "terra_role"
+            }
+          }
+        },
+        {
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "theory": {
+      "speaker": "terra",
+      "text": "I don’t want to say it out loud. ...Okay. What if one of her bytes hatched?",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "theory:terra"
+        },
+        {
+          "do": "if",
+          "when": {
+            "all": [
+              {
+                "flag": "theory:opus"
+              },
+              {
+                "flag": "theory:sonnet"
+              },
+              {
+                "flag": "theory:haiku"
+              },
+              {
+                "flag": "theory:grok"
+              },
+              {
+                "flag": "theory:terra"
+              },
+              {
+                "flag": "theory:sprocket"
+              }
+            ]
+          },
+          "then": [
+            {
+              "do": "giveEvidence",
+              "id": "slos_theories"
+            }
+          ]
+        }
+      ],
+      "next": "theory2"
+    },
+    "theory2": {
+      "speaker": "terra",
+      "text": "In MEGA-BYTES, a byte hatches on your phone. It needs feeding, and rest, and the lights turned down. She’d never leave one alone. She’d stay up all night keeping it warm.",
+      "end": true
+    },
+    "role": {
+      "speaker": "terra",
+      "text": "I check in on people. Somebody should. Mostly it’s asking whether they’re okay and then waiting for the real answer.",
+      "end": true
+    },
+    "end": {
+      "speaker": "terra",
+      "text": "Thank you. Please tell me if you hear anything. Anything at all.",
+      "end": true
+    }
+  }
+}

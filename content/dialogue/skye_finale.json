@@ -1,0 +1,140 @@
+{
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "narrator",
+      "text": "Skye was sitting on the rooftop couch, her head tipped toward the music. She looked up at me.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "skye",
+      "text": "Hey. Come sit with me. This is my favorite part.",
+      "choices": [
+        {
+          "id": "asked_cues",
+          "text": "I saw your Petpet Park cue sheet at the studio.",
+          "when": {
+            "discovered": "studio_console"
+          },
+          "next": "cues"
+        },
+        {
+          "id": "sk_found",
+          "text": "We thought you were missing.",
+          "next": "c"
+        },
+        {
+          "id": "sk_ketchup",
+          "text": "Is that... ketchup?",
+          "next": "ketchup"
+        }
+      ]
+    },
+    "ketchup": {
+      "speaker": "skye",
+      "text": "Yeah. Those packets fight back. Did I leave a mess?",
+      "next": "check"
+    },
+    "c": {
+      "speaker": "skye",
+      "text": "I’ve only been gone a few hours! I wanted to hear the new music up here.",
+      "next": "idea"
+    },
+    "end": {
+      "speaker": "detective",
+      "text": "Case closed. Missing for: a few hours.",
+      "thought": true,
+      "effects": [
+        {
+          "do": "finale"
+        }
+      ],
+      "end": true
+    },
+    "cues": {
+      "speaker": "skye",
+      "text": "Pukapuka Island and Mystimar Glenn! You went looking for my music, too.",
+      "next": "checkin"
+    },
+    "radio": {
+      "speaker": "detective",
+      "text": "Dispatch, I found Skye. She’s up on the roof listening to music. She’s safe.",
+      "next": "stay"
+    },
+    "check": {
+      "speaker": "detective",
+      "text": "Just a stain. The agents sent me to find you. Are you okay?",
+      "next": "c",
+      "when": {
+        "any": [
+          {
+            "evidence": "apt_spill"
+          },
+          {
+            "evidence": "roof_stain"
+          }
+        ]
+      },
+      "elseNext": "check_unseen"
+    },
+    "checkin": {
+      "speaker": "detective",
+      "text": "I’ll tell them you’re up here listening. They’ve been worried.",
+      "next": "c"
+    },
+    "check_unseen": {
+      "speaker": "detective",
+      "text": "I came looking for you. Are you okay?",
+      "next": "c"
+    },
+    "idea": {
+      "speaker": "detective",
+      "text": "Your last message said you had the best idea for a new game. Then nothing.",
+      "next": "idea2"
+    },
+    "idea2": {
+      "speaker": "skye",
+      "text": "Oh! I never finished the thought, did I. Okay: a detective shows up in the city looking for me. And by the time they find me, they know me.",
+      "next": "idea3"
+    },
+    "idea3": {
+      "speaker": "detective",
+      "text": "I looked at my coat. Then at her.",
+      "thought": true,
+      "next": "know"
+    },
+    "know": {
+      "speaker": "skye",
+      "text": "And you really looked. That’s most of my life down there.",
+      "when": {
+        "discoveredCount": 25
+      },
+      "elseNext": "know_some",
+      "next": "bag"
+    },
+    "know_some": {
+      "speaker": "skye",
+      "text": "You saw some of me on the way up. The rest is still down there whenever you want it.",
+      "next": "bag"
+    },
+    "bag": {
+      "speaker": "detective",
+      "text": "There’s a bag at the Port with your arrival time on it.",
+      "when": {
+        "discovered": "port_arrivals"
+      },
+      "elseNext": "radio",
+      "next": "bag2"
+    },
+    "bag2": {
+      "speaker": "skye",
+      "text": "My bag! I knew I forgot something.",
+      "next": "radio"
+    },
+    "stay": {
+      "speaker": "skye",
+      "text": "Stay for the next song. Then come meet everybody. There’s a place we all hang out.",
+      "next": "end"
+    }
+  }
+}

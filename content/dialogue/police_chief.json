@@ -1,0 +1,148 @@
+{
+  "entries": [
+    {
+      "when": {
+        "flag": "case:complete"
+      },
+      "node": "closed"
+    },
+    {
+      "when": {
+        "flag": "unlocked:apartment"
+      },
+      "node": "sent"
+    },
+    {
+      "when": {
+        "flag": "briefed"
+      },
+      "node": "again"
+    }
+  ],
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "chief",
+      "text": "You’re the human? Great. Perfect. Sit — no, stand. Whatever detectives do.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "chief",
+      "text": "Skye is missing. The agents filed several reports. One just said “HELP” in a really big font.",
+      "next": "menu"
+    },
+    "again": {
+      "speaker": "chief",
+      "text": "Back already? Her address is still on file here.",
+      "next": "menu"
+    },
+    "sent": {
+      "speaker": "chief",
+      "text": "Robot Arms Apartments is on your map now. Good luck, Detective.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "pc_how_long",
+          "text": "How long has she been gone?",
+          "next": "long",
+          "when": {
+            "not": {
+              "seen": "pc_how_long"
+            }
+          }
+        },
+        {
+          "id": "pc_suspects",
+          "text": "Any suspects?",
+          "next": "suspects",
+          "when": {
+            "not": {
+              "seen": "pc_suspects"
+            }
+          }
+        },
+        {
+          "id": "pc_why_you",
+          "text": "Why aren’t you investigating?",
+          "next": "why",
+          "when": {
+            "not": {
+              "seen": "pc_why_you"
+            }
+          }
+        },
+        {
+          "id": "pc_proceed",
+          "text": "Where do I start?",
+          "next": "leads",
+          "when": {
+            "not": {
+              "flag": "briefed"
+            }
+          }
+        },
+        {
+          "text": "That’s all, Chief.",
+          "next": "end"
+        }
+      ]
+    },
+    "long": {
+      "speaker": "chief",
+      "text": "A long time. The agents were very clear. “A really long time.”",
+      "end": true
+    },
+    "suspects": {
+      "speaker": "chief",
+      "text": "Suspects? We’d need to investigate to have suspects. That’s where you come in.",
+      "end": true
+    },
+    "why": {
+      "speaker": "chief",
+      "text": "Nobody prompted us to. We’re very good at waiting for instructions.",
+      "end": true
+    },
+    "leads": {
+      "speaker": "chief",
+      "text": "Her address is on file in this station. Her agents work out of SLOS HQ; they filed the reports.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "briefed"
+        }
+      ],
+      "next": "board"
+    },
+    "board": {
+      "speaker": "chief",
+      "text": "Pin what you find on your board. We bought a lot of red string.",
+      "end": true
+    },
+    "end": {
+      "speaker": "detective",
+      "text": "Three coffee rings, a drawer of red string and a chief who said “whatever detectives do.” A missing user, a department that runs on vibes. My first day was going great.",
+      "thought": true,
+      "when": {
+        "not": {
+          "seen": "police_chief#end"
+        }
+      },
+      "elseNext": "bye",
+      "end": true
+    },
+    "bye": {
+      "end": true,
+      "final": true
+    },
+    "closed": {
+      "speaker": "chief",
+      "text": "Dispatch got your call. I filed the good news. Just once this time.",
+      "end": true,
+      "final": true
+    }
+  }
+}

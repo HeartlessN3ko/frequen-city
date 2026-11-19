@@ -1,0 +1,69 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "engineer",
+      "text": "Mind the cables. This floor is my problem. The rest of the tower can wait.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_engineer_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "flag": "briefed"
+              },
+              {
+                "not": {
+                  "seen": "npc_engineer#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_engineer_music",
+          "text": "Tell me about her music.",
+          "next": "music",
+          "when": {
+            "not": {
+              "seen": "npc_engineer#music"
+            }
+          }
+        },
+        {
+          "id": "n_engineer_bye",
+          "text": "Just listening.",
+          "next": "end"
+        }
+      ]
+    },
+    "skye": {
+      "speaker": "engineer",
+      "text": "She was in this week, finishing the latest renders for the new Taku project. Then she stopped coming. Nobody tells me why. I just keep the cables alive.",
+      "end": true
+    },
+    "music": {
+      "speaker": "engineer",
+      "text": "Three albums on that wall: Adventures in Weirdness, Audio Chaos and B-Sides. She built about 189 of her own instruments in Reason, too. Nobody needs that many. She did.",
+      "effects": [
+        {
+          "do": "discover",
+          "id": "studio_instruments"
+        }
+      ],
+      "end": true
+    },
+    "end": {
+      "speaker": "engineer",
+      "text": "The volume’s already too loud. That’s how she likes it.",
+      "end": true
+    }
+  }
+}

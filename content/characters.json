@@ -1,0 +1,260 @@
+{
+  "_note": "Speakers and NPC bodies. Frequen City has no humans: every body is an agent robot. model = GLB under public/; node picks one figure out of a multi-character file. A character without a model can still speak (no body is shown).",
+  "opus": {
+    "name": "Opus",
+    "color": "#e7a6c4",
+    "model": "assets/characters/cast/opus.glb",
+    "height": 1.45
+  },
+  "sonnet": {
+    "name": "Sonnet",
+    "color": "#f2b38a",
+    "model": "assets/characters/cast/sonnet.glb",
+    "height": 1.45
+  },
+  "haiku": {
+    "name": "Haiku",
+    "color": "#7fe3d0",
+    "model": "assets/characters/cast/haiku.glb",
+    "height": 1.45
+  },
+  "sprocket": {
+    "name": "Sprocket",
+    "color": "#79a8ff",
+    "model": "assets/characters/cast/sprocket.glb",
+    "interactionSurface": "assets/outlines/sprocket.glb",
+    "height": 1
+  },
+  "grok": {
+    "name": "Grok",
+    "color": "#ff6b6b",
+    "model": "assets/characters/cast/grok.glb",
+    "height": 1.45
+  },
+  "terra": {
+    "name": "Terra",
+    "color": "#8fe08a",
+    "model": "assets/characters/cast/terra.glb",
+    "height": 1.45
+  },
+  "fable": {
+    "name": "Fable",
+    "color": "#d9b8ff",
+    "model": "assets/characters/cast/fable.glb",
+    "height": 1.45
+  },
+  "gemini": {
+    "name": "Gemini",
+    "color": "#8ab4ff",
+    "model": "assets/characters/cast/gemini.glb",
+    "height": 1.45
+  },
+  "deepseek": {
+    "name": "DeepSeek",
+    "color": "#6f8cff",
+    "model": "assets/characters/cast/deepseek.glb",
+    "height": 1.45
+  },
+  "k2": {
+    "name": "K2",
+    "color": "#c9c9c9",
+    "model": "assets/characters/cast/k2.glb",
+    "height": 1.45
+  },
+  "k3": {
+    "name": "K3",
+    "color": "#bdbdbd",
+    "model": "assets/characters/cast/k3.glb",
+    "height": 1.45
+  },
+  "astra": {
+    "name": "Astra",
+    "color": "#ffd27a",
+    "model": "assets/characters/cast/astra.glb",
+    "height": 1.45
+  },
+  "luna": {
+    "name": "Luna",
+    "color": "#b7c4ff",
+    "model": "assets/characters/cast/luna.glb",
+    "height": 1.45
+  },
+  "sol": {
+    "name": "Sol",
+    "color": "#ffb36b",
+    "model": "assets/characters/cast/sol.glb",
+    "height": 1.45
+  },
+  "smarter_child": {
+    "name": "SmarterChild",
+    "color": "#ffe066",
+    "model": "assets/characters/cast/smarter_child.glb",
+    "height": 1.45
+  },
+  "narrator": {
+    "name": "",
+    "color": "#f4e7c8"
+  },
+  "port_manager": {
+    "name": "Port Manager",
+    "color": "#ffd27a",
+    "model": "assets/characters/bitty/peachy.glb",
+    "height": 1.3
+  },
+  "port_officer": {
+    "name": "Port Officer",
+    "color": "#9fd0ff",
+    "model": "assets/characters/cast/port-officer.glb",
+    "height": 1.48
+  },
+  "chief": {
+    "name": "Police Chief",
+    "color": "#c9d6ff",
+    "model": "assets/characters/staff/staff-policeofficer-a.glb",
+    "height": 1.35
+  },
+  "rookie": {
+    "name": "Officer Rookie",
+    "color": "#b0c4ff",
+    "model": "assets/characters/staff/staff-policeofficer-b.glb",
+    "height": 1.25
+  },
+  "dev": {
+    "name": "Voidworks Developer",
+    "color": "#9effc0",
+    "model": "assets/characters/staff/staff-gamedev-a.glb",
+    "height": 1.3
+  },
+  "engineer": {
+    "name": "Studio Engineer",
+    "color": "#ffcf8a",
+    "model": "assets/characters/staff/staff-audioengineer-a.glb",
+    "height": 1.3
+  },
+  "clerk": {
+    "name": "Boutique Clerk",
+    "color": "#ff9fd6",
+    "model": "assets/characters/staff/staff-stealthglitter-a.glb",
+    "height": 1.3
+  },
+  "bartender": {
+    "name": "Bartender",
+    "color": "#f4c27a",
+    "model": "assets/characters/bitty/moss.glb",
+    "height": 1.3
+  },
+  "curator": {
+    "name": "Curator",
+    "color": "#e8e2d0",
+    "model": "assets/characters/bitty/patchwork.glb",
+    "height": 1.3
+  },
+  "librarian": {
+    "name": "Librarian",
+    "color": "#c7b28a",
+    "model": "assets/characters/staff/staff-librarian-a.glb",
+    "height": 1.3
+  },
+  "dj": {
+    "name": "DJ",
+    "color": "#c08aff",
+    "model": "assets/characters/bitty/skyline.glb",
+    "height": 1.3
+  },
+  "leevee": {
+    "name": "Leevee",
+    "color": "#ffb0c8",
+    "model": "assets/characters/cast/leevee.glb",
+    "interactionSurface": "assets/outlines/leevee.glb",
+    "height": 1.32
+  },
+  "skye": {
+    "name": "Skye",
+    "color": "#ffd6e8",
+    "model": "assets/characters/skye-seated.glb",
+    "interactionSurface": "assets/outlines/skye.glb",
+    "height": 1.563
+  },
+  "bar_regular": {
+    "name": "Regular",
+    "color": "#ffb3a1",
+    "model": "assets/characters/bitty/lemo.glb",
+    "height": 1.22
+  },
+  "club_patron_a": {
+    "name": "Dance-floor regular",
+    "color": "#9fe3ff",
+    "model": "assets/characters/bitty/peachy.glb",
+    "height": 1.24
+  },
+  "club_patron_b": {
+    "name": "Booth regular",
+    "color": "#b7f2c0",
+    "model": "assets/characters/bitty/pip.glb",
+    "height": 1.2
+  },
+  "street_resident": {
+    "name": "Local resident",
+    "color": "#a7e2d5"
+  },
+  "staff_gamedev_b": {
+    "name": "Voidworks Developer",
+    "color": "#9effc0",
+    "model": "assets/characters/staff/staff-gamedev-b.glb",
+    "height": 1.3
+  },
+  "staff_gamedev_c": {
+    "name": "Voidworks Developer",
+    "color": "#9effc0",
+    "model": "assets/characters/staff/staff-gamedev-c.glb",
+    "height": 1.3
+  },
+  "staff_audioengineer_b": {
+    "name": "Studio Engineer",
+    "color": "#ffcf8a",
+    "model": "assets/characters/staff/staff-audioengineer-b.glb",
+    "height": 1.3
+  },
+  "staff_audioengineer_c": {
+    "name": "Studio Engineer",
+    "color": "#ffcf8a",
+    "model": "assets/characters/staff/staff-audioengineer-c.glb",
+    "height": 1.3
+  },
+  "staff_stealthglitter_b": {
+    "name": "Boutique Clerk",
+    "color": "#ff9fd6",
+    "model": "assets/characters/staff/staff-stealthglitter-b.glb",
+    "height": 1.3
+  },
+  "staff_stealthglitter_c": {
+    "name": "Boutique Clerk",
+    "color": "#ff9fd6",
+    "model": "assets/characters/staff/staff-stealthglitter-c.glb",
+    "height": 1.3
+  },
+  "staff_policeofficer_c": {
+    "name": "Police Officer",
+    "color": "#b0c4ff",
+    "model": "assets/characters/staff/staff-policeofficer-c.glb",
+    "height": 1.3
+  },
+  "staff_portsecurity_a": {
+    "name": "Port Security",
+    "color": "#9fd0ff",
+    "model": "assets/characters/staff/staff-portsecurity-a.glb",
+    "height": 1.3
+  },
+  "staff_portsecurity_b": {
+    "name": "Port Security",
+    "color": "#9fd0ff",
+    "model": "assets/characters/staff/staff-portsecurity-b.glb",
+    "height": 1.3
+  },
+  "staff_portsecurity_c": {
+    "name": "Port Security",
+    "color": "#9fd0ff",
+    "model": "assets/characters/staff/staff-portsecurity-c.glb",
+    "height": 1.3
+  }
+}

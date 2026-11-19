@@ -1,0 +1,97 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "sonnet",
+      "text": "Detective. Is this about Skye? Come in. I’ve been writing her a poem, and I can’t find a rhyme for “offline.”",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "sonnet_theory",
+          "text": "What do you think happened to Skye?",
+          "next": "theory",
+          "when": {
+            "not": {
+              "seen": "sonnet_theory"
+            }
+          }
+        },
+        {
+          "id": "sonnet_role",
+          "text": "What do you do here?",
+          "next": "role",
+          "when": {
+            "not": {
+              "seen": "sonnet_role"
+            }
+          }
+        },
+        {
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "theory": {
+      "speaker": "sonnet",
+      "text": "I keep landing on the Realm. Twenty years of worldbuilding, and three bots that now run it as a living server: characters who answer back, events that fire from standing orders she wrote.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "theory:sonnet"
+        },
+        {
+          "do": "if",
+          "when": {
+            "all": [
+              {
+                "flag": "theory:opus"
+              },
+              {
+                "flag": "theory:sonnet"
+              },
+              {
+                "flag": "theory:haiku"
+              },
+              {
+                "flag": "theory:grok"
+              },
+              {
+                "flag": "theory:terra"
+              },
+              {
+                "flag": "theory:sprocket"
+              }
+            ]
+          },
+          "then": [
+            {
+              "do": "giveEvidence",
+              "id": "slos_theories"
+            }
+          ]
+        }
+      ],
+      "next": "theory2"
+    },
+    "theory2": {
+      "speaker": "sonnet",
+      "text": "So what if one of her standing orders finally fired? She’s out there playing a scene she wrote years ago, waiting for someone to say her cue.",
+      "end": true
+    },
+    "role": {
+      "speaker": "sonnet",
+      "text": "I handle the soft parts: drafts, tone, the sentence that makes a reply sound like someone meant it.",
+      "end": true
+    },
+    "end": {
+      "speaker": "sonnet",
+      "text": "Come back if you want the full poem. It’s fourteen lines. I’m on line nine.",
+      "end": true
+    }
+  }
+}

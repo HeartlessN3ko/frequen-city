@@ -1,0 +1,975 @@
+{
+  "name": "USB Port Authority",
+  "ambience": "assets/audio/amb/port.mp3",
+  "subtitle": "Arrivals · Frequen City",
+  "mapName": "USB Port",
+  "mapPin": {
+    "x": 80,
+    "y": 66
+  },
+  "unlocked": true,
+  "models": [
+    {
+      "url": "assets/city/port-passenger.glb"
+    },
+    {
+      "url": "assets/props/port-pickup-doors.glb",
+      "slidingDoor": {
+        "left": "PickupLeft",
+        "right": "PickupRight",
+        "center": [
+          222,
+          2.9,
+          128.25
+        ],
+        "travel": 1.29
+      }
+    },
+    {
+      "url": "assets/city/port-station-fittings.glb"
+    },
+    {
+      "url": "assets/city/port-hall-kerb.glb",
+      "_note": "2026-11-18: stone kerb and column footings along the hall's street edge (tools/build-port-hall-kerb.py). The floor slab's edge is black in the floor light bake and showed as a strip under the door sill once the threshold stop went live."
+    },
+    {
+      "url": "assets/city/port-skyline.glb",
+      "_note": "Port sightlines include the source tower facades, window bands and opposite quay.",
+      "haze": {
+        "match": "range|mountain|landscape|hill|coping_far",
+        "_match": "2026-11-18: the packed skyline tiles carry the name of their first joined mesh (FC_Waterfront_North_coping_far_x,y), so the ranges inside them never matched and one stood pure black behind the terminal.",
+        "amount": 0.75,
+        "near": 150,
+        "far": 1400
+      }
+    },
+    {
+      "url": "assets/props/holo-cube.glb",
+      "position": [
+        207.65,
+        2.843,
+        177.95
+      ],
+      "scale": 1,
+      "highlightFor": "cube"
+    },
+    {
+      "url": "assets/props/port-entry-document.glb",
+      "position": [
+        209.72,
+        2.844,
+        177.82
+      ],
+      "rotationY": 9,
+      "when": {
+        "not": {
+          "any": [
+            {
+              "flag": "met_officer"
+            },
+            {
+              "flag": "port:paper"
+            }
+          ]
+        }
+      },
+      "highlightFor": "lostfound"
+    },
+    {
+      "url": "assets/city/port-waterfront.glb"
+    },
+    {
+      "url": "assets/city/port-lettering.glb"
+    },
+    {
+      "url": "assets/interiors/port-docket-rack.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/usb-port.glb",
+      "showInPhotograph": true
+    }
+  ],
+  "env": {
+    "fogNear": 560,
+    "fogFar": 3400,
+    "fill": 0.08,
+    "reflections": 0.28
+  },
+  "lamps": "assets/city/port.lamps.json",
+  "ambient": {
+    "pedestrians": 3,
+    "paths": [
+      [
+        [
+          182,
+          1.67,
+          123.5
+        ],
+        [
+          200,
+          1.67,
+          121
+        ],
+        [
+          207,
+          1.67,
+          121.5
+        ]
+      ],
+      [
+        [
+          186,
+          2.03,
+          160
+        ],
+        [
+          204,
+          2.03,
+          156
+        ]
+      ],
+      [
+        [
+          190,
+          1.67,
+          117
+        ],
+        [
+          205,
+          1.67,
+          116.5
+        ]
+      ]
+    ],
+    "_paths": "Street paths stop ~7 m short of the threshold camera (214,3,118) so walkers never park in front of the doors.",
+    "lanes": [
+      [
+        -1.2,
+        0
+      ],
+      [
+        -1.2,
+        0.4
+      ],
+      [
+        0.4
+      ]
+    ],
+    "_lanes": "Side offsets per path, raycast-checked every 0.5 m against port.glb. At least 1.2 m apart so two robots never overlap; lanes left of the line walk one way, the rest the other.",
+    "talkPositions": [
+      "curb",
+      "threshold"
+    ],
+    "greetings": [
+      "Keep your claim tag handy. I once followed the wrong case around the belt.",
+      "I’m early for the ferry. The waterfront makes the wait easier.",
+      "Lost & Found is through there. They found my patience in a box once."
+    ]
+  },
+  "startPosition": "officer",
+  "positions": [
+    {
+      "id": "officer",
+      "label": "Arrivals · passport control",
+      "camera": {
+        "position": [
+          208.04,
+          3.03,
+          175.03
+        ],
+        "target": [
+          208.62,
+          2.98,
+          176.95
+        ],
+        "fov": 49,
+        "trackFrontage": true,
+        "portrait": {
+          "fov": 59
+        }
+      },
+      "links": [
+        {
+          "to": "desk",
+          "label": "Lost & Found"
+        },
+        {
+          "to": "claim",
+          "label": "Baggage · optional"
+        },
+        {
+          "to": "curb",
+          "label": "Outside · waterfront"
+        }
+      ]
+    },
+    {
+      "id": "desk",
+      "label": "Lost & Found",
+      "camera": {
+        "position": [
+          209.95,
+          3.12,
+          175.48
+        ],
+        "target": [
+          209.71,
+          2.91,
+          177.82
+        ],
+        "fov": 45,
+        "portrait": {
+          "target": [
+            209.71,
+            2.91,
+            177.82
+          ],
+          "fov": 52
+        },
+        "trackFrontage": true
+      },
+      "links": [
+        {
+          "to": "officer",
+          "label": "Arrivals"
+        },
+        {
+          "to": "claim",
+          "label": "Baggage · optional"
+        }
+      ]
+    },
+    {
+      "id": "claim",
+      "label": "Baggage claim",
+      "camera": {
+        "position": [
+          222,
+          3.56,
+          145
+        ],
+        "target": [
+          230.662,
+          2.867,
+          140.051
+        ],
+        "fov": 43,
+        "portrait": {
+          "target": [
+            226.7,
+            3.24,
+            141
+          ],
+          "fov": 61
+        }
+      },
+      "links": [
+        {
+          "to": "officer",
+          "label": "Arrivals"
+        },
+        {
+          "to": "desk",
+          "label": "Lost & Found"
+        }
+      ]
+    },
+    {
+      "id": "curb",
+      "label": "Waterfront overlook",
+      "camera": {
+        "position": [
+          173,
+          1.78,
+          73.5
+        ],
+        "target": [
+          142,
+          5.3,
+          44
+        ],
+        "fov": 55,
+        "yawRange": 84
+      },
+      "links": [
+        {
+          "to": "officer",
+          "label": "Arrivals"
+        }
+      ],
+      "scenery": {
+        "day": "assets/city/port-river-day.jpg",
+        "late": "assets/city/port-river-late.jpg",
+        "lateHour": 15,
+        "surfaceDepth": "assets/city/street-depth/usb-port-curb.png"
+      }
+    },
+    {
+      "id": "threshold",
+      "label": "Entrance threshold",
+      "camera": {
+        "position": [
+          214,
+          2.82,
+          118
+        ],
+        "target": [
+          219.882,
+          2.746,
+          126.087
+        ],
+        "fov": 33.9,
+        "yawRange": 10
+      },
+      "links": [
+        {
+          "to": "officer",
+          "label": "Arrivals"
+        }
+      ],
+      "_scenery_note": "2026-11-18: this stop (and the title backdrop) shows the live terminal. The 4096 px photograph was magnified about three times at this 33.9 degree lens and the PICKUP COURT sign was unreadable. Look range is 10 degrees so the dark far range to the left stays out of frame. Rename _scenery back to scenery to restore the photograph.",
+      "_scenery": {
+        "day": "assets/city/port-threshold-day.jpg",
+        "late": "assets/city/port-threshold-late.jpg",
+        "lateHour": 15,
+        "surfaceDepth": "assets/city/street-depth/usb-port-threshold.png"
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "cube",
+      "kind": "inspect",
+      "label": "Arrival cube",
+      "at": [
+        207.65,
+        3.09,
+        177.95
+      ],
+      "positions": [
+        "officer"
+      ],
+      "when": {
+        "flag": "pm:intro"
+      },
+      "action": {
+        "do": "dialogue",
+        "tree": "port_manager_cube"
+      }
+    },
+    {
+      "id": "board",
+      "kind": "inspect",
+      "label": "Claim 01 · arrivals record",
+      "at": [
+        228,
+        4.04,
+        140.4
+      ],
+      "positions": [
+        "claim"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "port_arrivals"
+        },
+        {
+          "do": "inspect",
+          "title": "Unclaimed Luggage",
+          "text": "An arrival was logged four hours before the detective's transfer. This one brought luggage. It's still waiting at baggage claim.",
+          "kicker": "Optional discovery",
+          "print": {
+            "style": "claim",
+            "lines": [
+              "PORT EXCHANGE — CLAIM 01",
+              "Four hours before your arrival",
+              "Luggage uncollected",
+              "Name withheld"
+            ]
+          }
+        }
+      ],
+      "doneWhen": {
+        "discovered": "port_arrivals"
+      },
+      "reach": 8
+    },
+    {
+      "id": "lostfound",
+      "kind": "inspect",
+      "label": "Your entry document",
+      "at": [
+        209.72,
+        2.88,
+        177.82
+      ],
+      "positions": [
+        "desk"
+      ],
+      "action": [
+        {
+          "do": "inspect",
+          "kicker": "Passport control",
+          "title": "Your entry document",
+          "text": "Your copy of the missing-user report is clipped to the stamped entry form. Skye’s last message mentioned a new game.",
+          "confirm": "Collect document",
+          "evidence": "missing_report"
+        },
+        {
+          "do": "setFlag",
+          "flag": "port:paper"
+        }
+      ],
+      "when": {
+        "not": {
+          "any": [
+            {
+              "flag": "met_officer"
+            },
+            {
+              "flag": "port:paper"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "transfer",
+      "kind": "inspect",
+      "label": "Transfer record · desk terminal",
+      "at": [
+        207.5,
+        3.65,
+        178.35
+      ],
+      "positions": [
+        "desk"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "port_transfer"
+        },
+        {
+          "do": "inspect",
+          "title": "Transfer Terminal",
+          "text": "Visitor packets download here. Most arrivals are data. Humans are considerably less common.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "port_transfer"
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "manager",
+      "character": "port_manager",
+      "at": [
+        169.5,
+        0.4,
+        70.9
+      ],
+      "facing": 54,
+      "dialogue": "port_outside",
+      "positions": [
+        "curb"
+      ],
+      "floorContact": true
+    },
+    {
+      "id": "officer",
+      "character": "port_officer",
+      "at": [
+        208.62,
+        1.91,
+        176.92
+      ],
+      "facing": 165,
+      "dialogue": "port_officer",
+      "positions": [
+        "officer",
+        "desk"
+      ],
+      "floorContact": true,
+      "talkMarkerHeight": 0.6
+    },
+    {
+      "id": "security_a",
+      "character": "staff_portsecurity_a",
+      "at": [
+        225.91,
+        1.91,
+        142.77
+      ],
+      "facing": -60.6,
+      "positions": [
+        "claim"
+      ],
+      "floorContact": true
+    },
+    {
+      "id": "security_b",
+      "character": "staff_portsecurity_b",
+      "at": [
+        228.2,
+        1.91,
+        143.76
+      ],
+      "facing": -79,
+      "positions": [
+        "claim"
+      ],
+      "floorContact": true
+    },
+    {
+      "id": "security_c",
+      "character": "staff_portsecurity_c",
+      "at": [
+        166.9,
+        0.4,
+        69.76
+      ],
+      "facing": 58.5,
+      "positions": [
+        "curb"
+      ],
+      "floorContact": true
+    }
+  ],
+  "onEnter": [
+    {
+      "do": "dialogue",
+      "tree": "port_manager",
+      "npc": "officer",
+      "when": {
+        "not": {
+          "flag": "pm:intro"
+        }
+      }
+    }
+  ],
+  "tutorial": [
+    {
+      "id": "look",
+      "text": "Turn toward the glowing cube on the officer’s counter. Drag or use the arrow keys.",
+      "textTouch": "Drag to look along the counter for the glowing cube.",
+      "done": "tutorial:looked",
+      "when": {
+        "flag": "pm:intro"
+      },
+      "route": [],
+      "focusMarker": "cube"
+    },
+    {
+      "id": "zoom",
+      "text": "Zoom in on the arrival cube at the counter. Pinch or use the scroll wheel.",
+      "done": "tutorial:zoomed",
+      "when": {
+        "flag": "pm:intro"
+      },
+      "route": [],
+      "textTouch": "Pinch to zoom in on the arrival cube.",
+      "allow": [
+        "tutorial:looked"
+      ],
+      "focusMarker": "cube"
+    },
+    {
+      "id": "inspect",
+      "text": "Tap the cube when you’re ready to read your assignment.",
+      "done": "interact",
+      "when": {
+        "flag": "pm:intro"
+      },
+      "route": [],
+      "marker": "cube",
+      "allow": [
+        "tutorial:looked",
+        "tutorial:zoomed"
+      ],
+      "focusMarker": "cube"
+    },
+    {
+      "id": "move",
+      "text": "The buttons at the bottom move you around this location. Choose Lost & Found to collect your papers.",
+      "done": "position:changed",
+      "when": {
+        "flag": "pm:checked"
+      },
+      "route": [
+        "desk"
+      ],
+      "doneTo": "desk"
+    },
+    {
+      "id": "talk",
+      "text": "An outline and a magnifying glass mark things you can inspect. Select the entry document on the counter to see what it tells you.",
+      "done": "interact",
+      "when": {
+        "all": [
+          {
+            "flag": "pm:checked"
+          },
+          {
+            "not": {
+              "flag": "met_officer"
+            }
+          }
+        ]
+      },
+      "route": [],
+      "marker": "lostfound"
+    },
+    {
+      "id": "report-back",
+      "text": "The speech bubble marks someone you can talk to. Turn to the officer beside the counter and select him to show your papers.",
+      "done": "interact",
+      "marker": "npc:officer",
+      "when": {
+        "flag": "port:paper"
+      },
+      "allow": [
+        "tutorial:looked"
+      ],
+      "focusSpeaker": "officer"
+    },
+    {
+      "id": "file",
+      "text": "Open the highlighted Case file. It keeps your report and your next lead together.",
+      "done": "casefile:opened",
+      "when": {
+        "flag": "unlocked:police"
+      }
+    },
+    {
+      "id": "case-board",
+      "text": "Open the highlighted Board to see your first evidence card. Later you’ll join related clues with red string.",
+      "done": "board:opened",
+      "when": {
+        "flag": "unlocked:police"
+      }
+    },
+    {
+      "id": "map",
+      "text": "Open Map to see your next lead: Police. You can go now, or close the map and explore. At Baggage, inspect the record for an optional discovery.",
+      "done": "map:opened",
+      "when": {
+        "flag": "unlocked:police"
+      }
+    }
+  ],
+  "_measure": "Ground heights measured by raycast in the browser: street/curb y 1.67, arrivals hall floor y 2.03.",
+  "lights": "assets/city/port.lights.json",
+  "_lights": "The port's own Blender lights (export_city_region.py). Terminal lighting and hall pendants stay on; lanterns come on at dusk.",
+  "_eye": "Cameras sit at Bitty eye height: ground + 1.15 m (robots are ~1.3 m tall). Ground by raycast: street y 1.67, hall floor y 1.88-1.95.",
+  "_tutorial": "The officer checks the download before look, zoom, cube inspection, the counter and the map. Optional waterfront and baggage visits open afterward.",
+  "screens": [
+    {
+      "id": "arrivals",
+      "_note": "Live body transfer log on the passport-control terminal. The carousel keeps the passenger arrival record.",
+      "style": "board",
+      "at": [
+        207.035,
+        3.68,
+        178.38
+      ],
+      "yaw": 180,
+      "size": [
+        3.8,
+        0.6
+      ],
+      "title": "TRANSFER LOG",
+      "subtitle": "Arrivals desk",
+      "columns": [
+        1,
+        2.65,
+        1.8
+      ],
+      "rowsVisible": 2,
+      "pageSeconds": 6,
+      "rows": [
+        [
+          "10:02",
+          "Human arrival",
+          "VERIFIED"
+        ],
+        [
+          "CASE",
+          "Missing user",
+          "ASSIGNED"
+        ]
+      ],
+      "highlightFor": "transfer",
+      "station": {
+        "palette": "port",
+        "service": "USB PORT AUTHORITY  /  ARRIVALS",
+        "status": "BODY TRANSFER LOG",
+        "wide": true
+      }
+    },
+    {
+      "id": "checkin-1",
+      "at": [
+        193,
+        3.68,
+        178.439
+      ],
+      "size": [
+        3.8,
+        0.6
+      ],
+      "yaw": 180,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT AUTHORITY",
+        "status": "PASSENGER SERVICES",
+        "wide": true
+      },
+      "title": "Passenger check-in",
+      "rows": [
+        [
+          "Documents",
+          "Identity packet"
+        ],
+        [
+          "Next stop",
+          "Passport control"
+        ]
+      ]
+    },
+    {
+      "id": "checkin-2",
+      "at": [
+        200,
+        3.68,
+        178.439
+      ],
+      "size": [
+        3.8,
+        0.6
+      ],
+      "yaw": 180,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT AUTHORITY",
+        "status": "PASSENGER SERVICES",
+        "wide": true
+      },
+      "title": "Transfer desk",
+      "rows": [
+        [
+          "Arrivals",
+          "Body transfers"
+        ],
+        [
+          "Baggage",
+          "Claim carousel"
+        ]
+      ]
+    },
+    {
+      "id": "dispatch-1",
+      "at": [
+        287.15,
+        3.62,
+        101.321
+      ],
+      "size": [
+        1.38,
+        0.65
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT AUTHORITY",
+        "status": "PORT OPERATIONS"
+      },
+      "title": "Dispatch log",
+      "rows": [
+        [
+          "Origin",
+          "Passenger terminal"
+        ],
+        [
+          "Desk",
+          "Transfer control"
+        ]
+      ]
+    },
+    {
+      "id": "dispatch-2",
+      "at": [
+        288.8,
+        3.62,
+        101.321
+      ],
+      "size": [
+        1.38,
+        0.65
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT AUTHORITY",
+        "status": "PORT OPERATIONS"
+      },
+      "title": "Baggage routing",
+      "rows": [
+        [
+          "Incoming",
+          "Claim carousel"
+        ],
+        [
+          "Exceptions",
+          "Lost property"
+        ]
+      ]
+    },
+    {
+      "id": "ticket-desk-1",
+      "at": [
+        117.75,
+        1.861,
+        170.1
+      ],
+      "size": [
+        0.447,
+        0.3
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT  /  TICKETS",
+        "status": "PASSENGER SERVICES"
+      },
+      "title": "Ticket desk",
+      "rows": [
+        [
+          "Travel",
+          "Passenger ticket"
+        ],
+        [
+          "Changes",
+          "Ask at counter"
+        ]
+      ]
+    },
+    {
+      "id": "ticket-desk-2",
+      "at": [
+        120.25,
+        1.861,
+        170.1
+      ],
+      "size": [
+        0.447,
+        0.3
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT  /  TICKETS",
+        "status": "PASSENGER SERVICES"
+      },
+      "title": "Ticket desk",
+      "rows": [
+        [
+          "Travel",
+          "Passenger ticket"
+        ],
+        [
+          "Changes",
+          "Ask at counter"
+        ]
+      ]
+    },
+    {
+      "id": "ticket-desk-3",
+      "at": [
+        117.75,
+        1.861,
+        151.8
+      ],
+      "size": [
+        0.447,
+        0.3
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT  /  TICKETS",
+        "status": "PASSENGER SERVICES"
+      },
+      "title": "Ticket desk",
+      "rows": [
+        [
+          "Travel",
+          "Passenger ticket"
+        ],
+        [
+          "Changes",
+          "Ask at counter"
+        ]
+      ]
+    },
+    {
+      "id": "ticket-desk-4",
+      "at": [
+        120.25,
+        1.861,
+        151.8
+      ],
+      "size": [
+        0.447,
+        0.3
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT  /  TICKETS",
+        "status": "PASSENGER SERVICES"
+      },
+      "title": "Ticket desk",
+      "rows": [
+        [
+          "Travel",
+          "Passenger ticket"
+        ],
+        [
+          "Changes",
+          "Ask at counter"
+        ]
+      ]
+    },
+    {
+      "id": "payment",
+      "at": [
+        243.5,
+        3.06,
+        177.114
+      ],
+      "size": [
+        0.296,
+        0.175
+      ],
+      "yaw": 180,
+      "station": {
+        "palette": "port",
+        "service": "USB PORT",
+        "status": "COUNTER READER"
+      },
+      "title": "Payment",
+      "rows": [
+        [
+          "Tap card",
+          "When ready"
+        ]
+      ]
+    }
+  ],
+  "_screens": "Passenger-facing station signage comes from the source fonts. Only the arrivals desk has a live timetable.",
+  "outlines": "assets/outlines/usb-port.glb"
+}

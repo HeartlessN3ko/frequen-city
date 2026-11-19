@@ -1,0 +1,91 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "npc_curator#a"
+      },
+      "node": "back"
+    }
+  ],
+  "nodes": {
+    "a": {
+      "speaker": "curator",
+      "text": "Welcome to the Museum of Questionable Achievements! Everything in here is something Skye built, started, or swore she’d finish. Several are all three.",
+      "next": "menu"
+    },
+    "back": {
+      "speaker": "curator",
+      "text": "Back for another lap? The exhibits haven’t moved. Mostly.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_curator_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "flag": "briefed"
+              },
+              {
+                "not": {
+                  "seen": "npc_curator#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_curator_tour",
+          "text": "What’s on display?",
+          "next": "tour",
+          "when": {
+            "not": {
+              "seen": "npc_curator#tour"
+            }
+          }
+        },
+        {
+          "id": "n_curator_about",
+          "text": "What’s Skye like?",
+          "next": "about",
+          "when": {
+            "not": {
+              "seen": "npc_curator#about"
+            }
+          }
+        },
+        {
+          "id": "n_curator_bye",
+          "text": "Just looking.",
+          "next": "end"
+        }
+      ]
+    },
+    "skye": {
+      "speaker": "curator",
+      "text": "Not today. But this whole building is a piece of her. Walk it and you’ll know her better than most visitors do.",
+      "end": true
+    },
+    "tour": {
+      "speaker": "curator",
+      "text": "The Codex of Humanity is on the central plinth. The Commons is on the right wall, and the television is playing Agents of Chaos. Take your time with them.",
+      "end": true
+    },
+    "about": {
+      "speaker": "curator",
+      "text": "She keeps everything. Second Brain holds about 38,620 files of her life. Some people keep a diary. Skye built an archive with a search bar.",
+      "end": true
+    },
+    "end": {
+      "speaker": "curator",
+      "text": "Please don’t lick the exhibits. Again.",
+      "end": true
+    }
+  }
+}

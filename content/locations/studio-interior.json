@@ -1,0 +1,857 @@
+{
+  "name": "Savage Cat Productions",
+  "ambience": "assets/audio/amb/shop.mp3",
+  "exterior": "studio",
+  "hideOnMap": true,
+  "continuousInterior": true,
+  "maxWalkLength": 10.5,
+  "models": [
+    {
+      "url": "assets/interiors/studio.glb",
+      "lightScale": 0.002,
+      "floorFinish": {
+        "image": "assets/interiors/studio-floor-repair.jpg",
+        "bounds": [
+          -8.2,
+          -15.2,
+          16.4
+        ]
+      }
+    },
+    {
+      "url": "assets/interiors/studio-furniture.glb"
+    },
+    {
+      "url": "assets/interiors/studio-inspection.glb"
+    },
+    {
+      "url": "assets/interiors/studio-construction.glb"
+    },
+    {
+      "url": "assets/interiors/studio-hardware.glb"
+    },
+    {
+      "url": "assets/interiors/studio-makeover.glb"
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#100c0b",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.38,
+    "key": 0.35,
+    "ambient": 0.07,
+    "exposure": 1.05,
+    "reflections": 0.26,
+    "fog": false
+  },
+  "startPosition": "entrance",
+  "_measure": "Positions come from the gameplay cameras in ChaosDesigned Recording Studio.blend (LOC_ChaosDesignedRecordingStudio), converted to game axes (x, z, -y). Front door at x 0, z 0; the room runs toward -z.",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Entrance",
+      "maxLinks": 4,
+      "camera": {
+        "position": [
+          -4.35,
+          1.25,
+          -1.246
+        ],
+        "target": [
+          1.2,
+          0.8,
+          -4.55
+        ],
+        "fov": 58,
+        "yawRange": 85,
+        "portrait": {
+          "fov": 67,
+          "target": [
+            -0.7,
+            0.7,
+            -3.75
+          ]
+        }
+      },
+      "links": [
+        {
+          "to": "console",
+          "label": "Mixing console",
+          "dir": "forward"
+        },
+        {
+          "to": "logbook",
+          "label": "Access log",
+          "dir": "left"
+        },
+        {
+          "to": "look-albums",
+          "label": "Album wall",
+          "dir": "right"
+        },
+        {
+          "to": "patches",
+          "label": "Instrument room",
+          "dir": "left",
+          "transition": "cut"
+        }
+      ],
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/entrance.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "console",
+      "label": "Mixing console",
+      "camera": {
+        "position": [
+          0.35,
+          1.25,
+          -1.55
+        ],
+        "target": [
+          0.35,
+          1.05,
+          -4.55
+        ],
+        "fov": 61,
+        "yawRange": 66,
+        "portrait": {
+          "position": [
+            0.35,
+            1.25,
+            -0.9
+          ],
+          "target": [
+            0.43,
+            0.85,
+            -4.56
+          ],
+          "fov": 90
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "forward"
+        },
+        {
+          "to": "archive",
+          "label": "Listening desk",
+          "dir": "right"
+        },
+        {
+          "to": "headphones",
+          "label": "Playback equipment"
+        }
+      ],
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/console.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "archive",
+      "label": "Listening desk",
+      "camera": {
+        "position": [
+          5.8,
+          1.25,
+          -6.22
+        ],
+        "target": [
+          7.22,
+          1.05,
+          -5.9
+        ],
+        "fov": 60,
+        "yawRange": 62,
+        "portrait": {
+          "position": [
+            5.49,
+            1.25,
+            -6.22
+          ],
+          "target": [
+            7.2,
+            0.89,
+            -6.0
+          ],
+          "fov": 90
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back",
+          "transition": "cut"
+        },
+        {
+          "to": "console",
+          "label": "Mixing console",
+          "dir": "back"
+        },
+        {
+          "to": "look-albums",
+          "label": "Album wall",
+          "dir": "forward"
+        }
+      ],
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/archive.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "door",
+      "label": "Front door",
+      "camera": {
+        "position": [
+          0,
+          1.17,
+          -1.8
+        ],
+        "target": [
+          0,
+          0.87,
+          2.6
+        ],
+        "fov": 58,
+        "yawRange": 85
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "look-albums",
+      "label": "Album wall",
+      "camera": {
+        "position": [
+          5.8,
+          1.25,
+          -1.27
+        ],
+        "target": [
+          7.73,
+          1.787,
+          -1.43
+        ],
+        "fov": 70,
+        "yawRange": 60,
+        "portrait": {
+          "position": [
+            5.18,
+            1.25,
+            -1.27
+          ],
+          "fov": 83,
+          "target": [
+            7.73,
+            1.737,
+            -1.27
+          ]
+        }
+      },
+      "links": [
+        {
+          "to": "archive",
+          "label": "Listening desk",
+          "dir": "back"
+        },
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back"
+        },
+        {
+          "to": "taku-poster",
+          "label": "Logo wall",
+          "transition": "cut"
+        }
+      ],
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/look-albums.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "logbook",
+      "label": "Access log",
+      "camera": {
+        "position": [
+          -4.78,
+          1.15,
+          -0.81
+        ],
+        "target": [
+          -6.08,
+          0.515,
+          -1.5
+        ],
+        "fov": 50,
+        "yawRange": 85
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back"
+        },
+        {
+          "to": "lounge",
+          "label": "Studio lounge",
+          "dir": "right"
+        }
+      ],
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/logbook.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "taku-poster",
+      "label": "Logo wall",
+      "links": [
+        {
+          "to": "look-albums",
+          "label": "Album wall",
+          "dir": "back",
+          "transition": "cut"
+        },
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back",
+          "transition": "cut"
+        }
+      ],
+      "camera": {
+        "position": [
+          4.25,
+          1.65,
+          -1.8
+        ],
+        "target": [
+          4.25,
+          1.95,
+          -0.16
+        ],
+        "fov": 62,
+        "yawRange": 45
+      },
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/taku-poster.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "headphones",
+      "label": "Playback equipment",
+      "camera": {
+        "position": [
+          3.94,
+          1.25,
+          -2.98
+        ],
+        "target": [
+          3.3,
+          0.87,
+          -4.5
+        ],
+        "fov": 57,
+        "yawRange": 53
+      },
+      "links": [
+        {
+          "to": "console",
+          "label": "Mixing console"
+        },
+        {
+          "to": "archive",
+          "label": "Listening desk"
+        },
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "transition": "cut"
+        }
+      ],
+      "scenery": {
+        "day": "assets/interiors/studio-workshop/headphones.webp",
+        "heading": 0
+      }
+    },
+    {
+      "id": "patches",
+      "label": "Instrument room",
+      "camera": {
+        "position": [
+          -4.55,
+          1.25,
+          -9.45
+        ],
+        "target": [
+          -4.6,
+          0.58,
+          -11.3
+        ],
+        "fov": 64,
+        "portrait": {
+          "position": [
+            -4.55,
+            1.25,
+            -8.96
+          ],
+          "target": [
+            -4.6,
+            0.32,
+            -11.3
+          ]
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back",
+          "transition": "cut"
+        }
+      ]
+    },
+    {
+      "id": "lounge",
+      "label": "Studio lounge",
+      "camera": {
+        "position": [
+          -3.7,
+          1.25,
+          -5.55
+        ],
+        "target": [
+          -7.1,
+          1.0,
+          -5.55
+        ],
+        "fov": 72,
+        "yawRange": 55,
+        "portrait": {
+          "target": [
+            -7.1,
+            1.0,
+            -5.2
+          ],
+          "fov": 78
+        }
+      },
+      "links": [
+        {
+          "to": "logbook",
+          "label": "Access log",
+          "dir": "back"
+        },
+        {
+          "to": "entrance",
+          "label": "Entrance",
+          "dir": "back"
+        },
+        {
+          "to": "patches",
+          "label": "Instrument room",
+          "dir": "forward",
+          "transition": "cut"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        -0.15
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "studio"
+      }
+    },
+    {
+      "id": "listen",
+      "kind": "inspect",
+      "label": "Listening station",
+      "at": [
+        7.04,
+        0.72,
+        -5.68
+      ],
+      "positions": [
+        "archive"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_listening"
+        },
+        {
+          "do": "listeningStation",
+          "title": "Listening desk",
+          "tracks": [
+            "youth",
+            "machine",
+            "mushroom"
+          ],
+          "autoplay": false
+        }
+      ]
+    },
+    {
+      "id": "instruments",
+      "kind": "inspect",
+      "label": "Studio instrument patches",
+      "at": [
+        -4.6,
+        0.7,
+        -11.1
+      ],
+      "positions": [
+        "patches"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_instruments"
+        },
+        {
+          "do": "inspect",
+          "title": "Custom instruments",
+          "text": "Skye produced for years in Reason, and this is its patch archive: about 189 instruments, among them The Rave Master, Atari Arp, Angel Rhodes and 808 Destruction. A separate Instrument Building folder holds eleven more she was still developing, including Horn Section, Strings All, Drum Processor and Toy Machine, which is also the title of a 2013 drum and bass single in her discography.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "studio_instruments"
+      }
+    },
+    {
+      "id": "console",
+      "kind": "inspect",
+      "label": "Petpet Park cue sheet",
+      "at": [
+        1.7,
+        1.04,
+        -3.753
+      ],
+      "positions": [
+        "console"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_console"
+        },
+        {
+          "do": "inspect",
+          "title": "Petpet Park",
+          "text": "Skye composed two songs and several sound effects for Nickelodeon's Petpet Park. The songs include “Mystimar Glenn” and “Pukapuka Island.”",
+          "kicker": "Discovery",
+          "print": {
+            "style": "cue",
+            "lines": [
+              "PETPET PARK — NICKELODEON",
+              "Music and sound effects by Skye",
+              "Mystimar Glenn / Pukapuka Island"
+            ]
+          }
+        }
+      ],
+      "doneWhen": {
+        "discovered": "studio_console"
+      }
+    },
+    {
+      "id": "access",
+      "kind": "inspect",
+      "label": "Tower access log",
+      "at": [
+        -6.1,
+        0.55,
+        -1.5
+      ],
+      "positions": [
+        "logbook"
+      ],
+      "when": {
+        "flag": "briefed"
+      },
+      "action": [
+        {
+          "do": "inspect",
+          "evidence": "e4_access"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "e4_access"
+      }
+    },
+    {
+      "id": "taku-session",
+      "kind": "inspect",
+      "label": "Play Taku session",
+      "at": [
+        -0.23,
+        1.61,
+        -5.03
+      ],
+      "positions": [
+        "console"
+      ],
+      "action": {
+        "do": "listeningStation",
+        "title": "Taku / Session 01",
+        "tracks": [
+          "youth"
+        ],
+        "autoplay": false
+      }
+    },
+    {
+      "id": "headphones",
+      "kind": "inspect",
+      "label": "Studio headphones",
+      "at": [
+        3.3,
+        1.17,
+        -4.5
+      ],
+      "positions": [
+        "headphones"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_listening"
+        },
+        {
+          "do": "listeningStation",
+          "title": "Listening desk",
+          "tracks": [
+            "youth",
+            "machine",
+            "mushroom"
+          ],
+          "autoplay": false
+        }
+      ]
+    },
+    {
+      "id": "albums",
+      "kind": "inspect",
+      "label": "Adventures in Weirdness",
+      "at": [
+        7.727,
+        2.067,
+        -0.45
+      ],
+      "positions": [
+        "look-albums"
+      ],
+      "doneWhen": {
+        "discovered": "studio_albums"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_albums"
+        },
+        {
+          "do": "inspect",
+          "title": "Adventures in Weirdness",
+          "kicker": "ChaosDesigned discography",
+          "image": "assets/discoveries/approved/adventures-in-weirdness.png",
+          "text": "ChaosDesigned’s 2016 chiptune drum and bass album includes “Mushroom Land.”",
+          "listening": {
+            "do": "listeningStation",
+            "title": "Listen to Mushroom Land",
+            "kicker": "Adventures in Weirdness",
+            "tracks": [
+              "mushroom"
+            ],
+            "autoplay": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "album-2",
+      "kind": "inspect",
+      "label": "Audio Chaos",
+      "at": [
+        7.727,
+        2.067,
+        -1.07
+      ],
+      "positions": [
+        "look-albums"
+      ],
+      "doneWhen": {
+        "discovered": "studio_audiochaos"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_audiochaos"
+        },
+        {
+          "do": "inspect",
+          "title": "Audio Chaos",
+          "kicker": "ChaosDesigned discography",
+          "image": "assets/discoveries/approved/audio-chaos.png",
+          "text": "Skye’s Audio Chaos archive spans three volumes from 2009 to 2011. The first includes “Designing Chaos.”"
+        }
+      ]
+    },
+    {
+      "id": "album-3",
+      "kind": "inspect",
+      "label": "B-Sides",
+      "at": [
+        7.727,
+        2.067,
+        -1.69
+      ],
+      "positions": [
+        "look-albums"
+      ],
+      "doneWhen": {
+        "discovered": "studio_bsides"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "studio_bsides"
+        },
+        {
+          "do": "inspect",
+          "title": "B-Sides",
+          "kicker": "ChaosDesigned discography",
+          "image": "assets/discoveries/approved/b-sides.png",
+          "text": "A collection of unfinished ChaosDesigned tracks."
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "engineer",
+      "character": "engineer",
+      "talkMarkerHeight": 0.99,
+      "talkMarkerOffset": [
+        -0.32,
+        0,
+        -0.2
+      ],
+      "at": [
+        -2.65,
+        0,
+        -3.25
+      ],
+      "facing": -57.2,
+      "dialogue": "npc_engineer",
+      "positions": [
+        "entrance"
+      ]
+    },
+    {
+      "id": "engineer_b",
+      "character": "staff_audioengineer_b",
+      "at": [
+        2.35,
+        0,
+        -6.05
+      ],
+      "facing": -24,
+      "positions": [
+        "console"
+      ]
+    },
+    {
+      "id": "engineer_c",
+      "character": "staff_audioengineer_c",
+      "at": [
+        -6.2,
+        0,
+        -7.05
+      ],
+      "facing": 59,
+      "positions": [
+        "lounge"
+      ]
+    }
+  ],
+  "lights": "assets/interiors/studio.lights.json",
+  "lampScale": 0.36,
+  "outlines": "assets/outlines/studio-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "windowView": {
+    "street": "studio",
+    "rotation": -23.89,
+    "origin": [
+      68.4,
+      1.98,
+      3.25
+    ],
+    "day": "assets/city/views/studio-doorway-day.jpg",
+    "late": "assets/city/views/studio-doorway-late.jpg"
+  },
+  "onFirstEnter": {
+    "do": "dialogue",
+    "tree": "npc_engineer",
+    "npc": "engineer",
+    "greeting": true
+  },
+  "photoOccluders": [
+    {
+      "center": [
+        0,
+        0.725,
+        -4.4
+      ],
+      "size": [
+        4.6,
+        0.07,
+        1.45
+      ]
+    },
+    {
+      "center": [
+        0,
+        0.8,
+        -4.4
+      ],
+      "size": [
+        4.25,
+        0.08,
+        1.12
+      ]
+    }
+  ]
+}

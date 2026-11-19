@@ -1,0 +1,911 @@
+{
+  "name": "Museum of Questionable Achievements",
+  "ambience": "assets/audio/amb/museum.mp3",
+  "exterior": "museum",
+  "hideOnMap": true,
+  "screens": [
+    {
+      "id": "gallery-desk",
+      "at": [
+        -5.8,
+        1.25,
+        -2.651
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "museum",
+        "service": "VISITOR SERVICES",
+        "status": "MUSEUM OF QUESTIONABLE ACHIEVEMENTS",
+        "keyboard": [
+          -5.8,
+          0.86,
+          -2.5
+        ]
+      },
+      "title": "Gallery guide",
+      "rows": [
+        [
+          "The Codex of Humanity",
+          "Central exhibit"
+        ],
+        [
+          "The Commons",
+          "Right gallery"
+        ],
+        [
+          "Agents of Chaos",
+          "Screening wall"
+        ]
+      ]
+    },
+    {
+      "id": "customer-display",
+      "at": [
+        -5.8,
+        1.33,
+        -2.745
+      ],
+      "size": [
+        0.42,
+        0.154
+      ],
+      "yaw": 180,
+      "title": "Gallery desk",
+      "rows": [
+        [
+          "Exhibits",
+          "Ask for a guide"
+        ]
+      ],
+      "station": {
+        "palette": "museum",
+        "service": "VISITOR SERVICES",
+        "status": "VISITOR DISPLAY",
+        "rearMount": true
+      }
+    },
+    {
+      "id": "opening-tv",
+      "at": [
+        0,
+        2.15,
+        -15.684
+      ],
+      "size": [
+        2.4,
+        1.35
+      ],
+      "video": "assets/video/agents-of-chaos-opening.mp4",
+      "poster": "assets/video/agents-of-chaos-opening.jpg"
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/interiors/museum-renewed.glb",
+      "lightScale": 0.002,
+      "floorFinish": {
+        "image": "assets/interiors/museum-floor.jpg",
+        "bounds": [
+          -9.2,
+          -17.2,
+          18.4
+        ]
+      }
+    },
+    {
+      "url": "assets/interiors/museum-furniture.glb"
+    },
+    {
+      "url": "assets/interiors/museum-notes.glb"
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#1a1814",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.38,
+    "key": 0.35,
+    "ambient": 0.07,
+    "exposure": 0.9,
+    "reflections": 0.26,
+    "fog": false
+  },
+  "startPosition": "entrance",
+  "_measure": "Positions come from the gameplay cameras in Museum of Questionable Achievements.blend (LOC_MuseumQuestionableAchievements), converted to game axes (x, z, -y). Front door at x 0, z 0; the room runs toward -z.",
+  "_note": "Approved exhibits: Codex central volume, Commons interface, Agents of Chaos opening television. Hull Breach and unapproved replacement prints removed. Existing camera repairs retained.",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Curator",
+      "camera": {
+        "position": [
+          -4,
+          1.25,
+          -1.85
+        ],
+        "target": [
+          -7.07,
+          1.05,
+          -1.85
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            -7.07,
+            1.05,
+            -1.85
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "inventions-view",
+          "label": "The AI Pages",
+          "dir": "forward"
+        },
+        {
+          "to": "codex",
+          "label": "The Codex of Humanity",
+          "dir": "forward"
+        },
+        {
+          "to": "museum-tv",
+          "label": "Agents of Chaos TV",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "inventions-view",
+      "label": "The AI Pages",
+      "camera": {
+        "position": [
+          -2.8,
+          1.25,
+          -2.8
+        ],
+        "target": [
+          -2.8,
+          0.8,
+          -4.15
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            -2.8,
+            0.8,
+            -4.15
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Curator",
+          "dir": "back"
+        },
+        {
+          "to": "melaninated",
+          "label": "Melaninated",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "melaninated",
+      "label": "Melaninated",
+      "camera": {
+        "position": [
+          -5.3,
+          1.25,
+          -5.35
+        ],
+        "target": [
+          -5.3,
+          1.17,
+          -7.4
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            -5.3,
+            1.17,
+            -7.4
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "inventions-view",
+          "label": "The AI Pages",
+          "dir": "back"
+        },
+        {
+          "to": "codex",
+          "label": "The Codex of Humanity",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "codex",
+      "label": "The Codex of Humanity",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          -6.5
+        ],
+        "target": [
+          0,
+          1.1,
+          -9
+        ],
+        "fov": 42,
+        "yawRange": 15,
+        "portrait": {
+          "position": [
+            0,
+            1.85,
+            -5.1
+          ],
+          "target": [
+            0,
+            1.15,
+            -9
+          ],
+          "fov": 65
+        }
+      },
+      "links": [
+        {
+          "to": "melaninated",
+          "label": "Melaninated",
+          "dir": "back"
+        },
+        {
+          "to": "ex1",
+          "label": "Second Brain",
+          "dir": "forward"
+        },
+        {
+          "to": "entrance",
+          "label": "Curator / exit",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "label": "Second Brain",
+      "camera": {
+        "position": [
+          5.3,
+          1.25,
+          -5.35
+        ],
+        "target": [
+          5.3,
+          1.17,
+          -7.4
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            5.3,
+            1.17,
+            -7.4
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "codex",
+          "label": "The Codex of Humanity",
+          "dir": "back"
+        },
+        {
+          "to": "commons",
+          "label": "The Commons",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "commons",
+      "label": "The Commons",
+      "camera": {
+        "position": [
+          6.5,
+          1.25,
+          -9
+        ],
+        "target": [
+          8.8,
+          1.9,
+          -9
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            8.8,
+            1.9,
+            -9
+          ],
+          "fov": 65
+        }
+      },
+      "links": [
+        {
+          "to": "ex1",
+          "label": "Second Brain",
+          "dir": "back"
+        },
+        {
+          "to": "ex3",
+          "label": "Oracle",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "ex3",
+      "label": "Oracle",
+      "camera": {
+        "position": [
+          5.3,
+          1.25,
+          -10
+        ],
+        "target": [
+          5.3,
+          1.25,
+          -12
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            5.3,
+            1.25,
+            -12
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "commons",
+          "label": "The Commons",
+          "dir": "back"
+        },
+        {
+          "to": "realm",
+          "label": "The Realm · Terra",
+          "dir": "forward"
+        },
+        {
+          "to": "entrance",
+          "label": "Curator / exit",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "realm",
+      "label": "The Realm · Terra",
+      "camera": {
+        "position": [
+          6.3,
+          1.25,
+          -13.4
+        ],
+        "target": [
+          6.3,
+          1.85,
+          -15.79
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            6.3,
+            1.85,
+            -15.79
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "ex3",
+          "label": "Oracle",
+          "dir": "back"
+        },
+        {
+          "to": "museum-tv",
+          "label": "Agents of Chaos TV",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "museum-tv",
+      "label": "Agents of Chaos TV",
+      "camera": {
+        "position": [
+          0,
+          1.25,
+          -12.6
+        ],
+        "target": [
+          0,
+          2.15,
+          -15.68
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "position": [
+            0,
+            1.25,
+            -11.7
+          ],
+          "target": [
+            0,
+            2.15,
+            -15.68
+          ],
+          "fov": 66
+        }
+      },
+      "links": [
+        {
+          "to": "realm",
+          "label": "The Realm · Terra",
+          "dir": "back"
+        },
+        {
+          "to": "expanded",
+          "label": "Great Generals · People studies",
+          "dir": "forward"
+        },
+        {
+          "to": "entrance",
+          "label": "Curator / exit",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "expanded",
+      "label": "Great Generals · People studies",
+      "camera": {
+        "position": [
+          -6.3,
+          1.25,
+          -13.4
+        ],
+        "target": [
+          -6.3,
+          1.85,
+          -15.79
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            -6.3,
+            1.85,
+            -15.79
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "museum-tv",
+          "label": "Agents of Chaos TV",
+          "dir": "back"
+        },
+        {
+          "to": "slos",
+          "label": "SLOS",
+          "dir": "forward"
+        },
+        {
+          "to": "entrance",
+          "label": "Curator / exit",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "slos",
+      "label": "SLOS",
+      "camera": {
+        "position": [
+          -5.3,
+          1.25,
+          -10
+        ],
+        "target": [
+          -5.3,
+          1.25,
+          -12
+        ],
+        "fov": 52,
+        "yawRange": 25,
+        "portrait": {
+          "target": [
+            -5.3,
+            1.25,
+            -12
+          ],
+          "fov": 60
+        }
+      },
+      "links": [
+        {
+          "to": "expanded",
+          "label": "Great Generals · People studies",
+          "dir": "back"
+        },
+        {
+          "to": "entrance",
+          "label": "Curator",
+          "dir": "forward"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        -0.15
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "museum"
+      }
+    },
+    {
+      "id": "ex0",
+      "kind": "inspect",
+      "label": "Melaninated",
+      "at": [
+        -5.3,
+        1.15,
+        -7.35
+      ],
+      "positions": [
+        "melaninated"
+      ],
+      "doneWhen": {
+        "discovered": "museum_melinin"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_melinin"
+        },
+        {
+          "do": "inspect",
+          "title": "Melaninated",
+          "text": "Melaninated is a photo-editor project designed for melanin-rich skin. Its color-processing approach aims to smooth skin without lightening the original tone, and add glow without a washed-out result.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "ex1",
+      "kind": "inspect",
+      "label": "Second Brain",
+      "at": [
+        5.3,
+        1.15,
+        -7.35
+      ],
+      "positions": [
+        "ex1"
+      ],
+      "doneWhen": {
+        "discovered": "museum_secondbrain"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_secondbrain"
+        },
+        {
+          "do": "inspect",
+          "title": "Second Brain",
+          "text": "Second Brain is the reference system Skye built in April 2026, and it is not a to-do list. It records what she is working on, where every project’s files live across her drives, why she made each decision (a decision log) and how fast she ships, with a section called My Lore for her creative philosophy. She writes to it as she works, in a journal of what shipped each day, so that future-Skye and any new AI session can start from what is on file. It was the foundation for a visualizer meant to show who she actually is.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "ex2",
+      "kind": "inspect",
+      "label": "SLOS HUD",
+      "at": [
+        -5.3,
+        1.15,
+        -11.95
+      ],
+      "positions": [
+        "slos"
+      ],
+      "doneWhen": {
+        "discovered": "museum_hud"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_hud"
+        },
+        {
+          "do": "inspect",
+          "title": "SLOS",
+          "text": "Skye's AI workspace: the place where she stores AI data and manages her projects, driven by a locally running language model.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "ex3",
+      "kind": "inspect",
+      "label": "Oracle",
+      "at": [
+        5.3,
+        1.25,
+        -12
+      ],
+      "positions": [
+        "ex3"
+      ],
+      "doneWhen": {
+        "discovered": "museum_oracle"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_oracle"
+        },
+        {
+          "do": "inspect",
+          "title": "Oracle",
+          "text": "Oracle is Skye's custom-designed AI interface for finding her files and working across her projects. It connects her requests with the documents, tools and saved work in SLOS.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "inventions",
+      "kind": "inspect",
+      "label": "The AI Pages",
+      "at": [
+        -2.8,
+        0.65,
+        -4.15
+      ],
+      "positions": [
+        "inventions-view"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_inventions"
+        },
+        {
+          "do": "inspect",
+          "title": "The AI Pages",
+          "text": "The AI Pages is Skye’s concept for a platform where AI creators share how their work was made. Alongside the finished result, they would document prompts, iterations, experiments and failures so other people could learn from the process.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "museum_inventions"
+      }
+    },
+    {
+      "id": "people-studies",
+      "kind": "inspect",
+      "label": "Great Generals · People studies",
+      "positions": [
+        "expanded"
+      ],
+      "at": [
+        -6.3,
+        2,
+        -15.79
+      ],
+      "doneWhen": {
+        "discovered": "museum_generals"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_generals"
+        },
+        {
+          "do": "inspect",
+          "title": "Great Generals · People studies",
+          "text": "Great Generals is Skye’s strategy game on real time rather than turns: kingdoms keep running while players are away, and delegated officers carry out their orders across a 14-day campaign from thaw to first snow. This sheet, “Peoples: Base Studies I,” draws seven of its peoples to one scale, 0 to 210 cm: Humans, High Elves, Shadow Elves, Dwarves, Stonekin, Beastkin and Vampires, with close-ups of a human head, an elf’s arm joint, a dwarf’s vest pattern and a stonekin shoulder. The humans, elves, dwarves and vampires are all drawn with dark brown skin, and the sheet’s own note says why: anatomy study, culture and role remain separate.",
+          "image": "assets/discoveries/museum/great-generals.webp"
+        }
+      ]
+    },
+    {
+      "id": "realm-map",
+      "kind": "inspect",
+      "label": "The Realm · Worlds on paper",
+      "positions": [
+        "realm"
+      ],
+      "at": [
+        6.3,
+        2,
+        -15.79
+      ],
+      "doneWhen": {
+        "discovered": "museum_realm"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_realm"
+        },
+        {
+          "do": "inspect",
+          "title": "The Realm · Terra",
+          "text": "The wall map shows Terra, the world The Realm is set on, as a canonical terrain map: an icy north-west, a long continent with a mountain spine through the middle and a violet band labelled “Unstable Region” along the eastern edge. The Realm’s locations database places cities on it. Cameron City, the RIA stronghold, sits where New York would be on an alternate Earth, and the elven city of Silvermoon keeps Hearth Law, under which water is given before names are asked and judgment waits until a guest can stand upright.",
+          "image": "assets/discoveries/museum/terra.webp"
+        }
+      ]
+    },
+    {
+      "id": "codex",
+      "kind": "inspect",
+      "label": "The Codex of Humanity",
+      "at": [
+        0,
+        1.2,
+        -9
+      ],
+      "positions": [
+        "codex"
+      ],
+      "doneWhen": {
+        "discovered": "museum_codex"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_codex"
+        },
+        {
+          "do": "inspect",
+          "title": "The Codex of Humanity",
+          "text": "Skye’s Laws of Humanity and their supporting writings form The Codex of Humanity, organized into Books, Chapters and Verses. The Twelve Laws consider truth, life, strength, sovereignty, community and the responsibilities people carry toward one another and future generations. This open volume reproduces Laws 1 and 4 from Book II, version 0.6. Law 1 begins: “Seek truth, and change your understanding when better knowledge requires it.”",
+          "image": "assets/discoveries/museum/codex-spread.png",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "commons",
+      "kind": "inspect",
+      "label": "The Commons",
+      "at": [
+        8.8,
+        1.9,
+        -9
+      ],
+      "positions": [
+        "commons"
+      ],
+      "doneWhen": {
+        "discovered": "museum_commons"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "museum_commons"
+        },
+        {
+          "do": "inspect",
+          "title": "The Commons",
+          "text": "The Commons is Skye’s browser-based meeting place for different AI models. She can address one model directly, invite a group conversation, or put a question into debate; the models can answer her and respond to each other. Channels separate the workshop, everyday chat, music and lounge conversations. This image shows the actual interface in an empty demonstration channel, without private conversation history.",
+          "image": "assets/discoveries/museum/commons-interface.png",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "opening-tv",
+      "kind": "inspect",
+      "label": "Agents of Chaos · Opening",
+      "at": [
+        0,
+        2.15,
+        -15.68
+      ],
+      "positions": [
+        "museum-tv"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Agents of Chaos · Opening",
+        "text": "Agents of Chaos is Skye’s workplace sitcom set in Frequen City, starring the agents you have been meeting. This is its opening. Watch the full video with sound. It loops quietly while you explore.",
+        "video": "assets/video/agents-of-chaos-opening.mp4",
+        "poster": "assets/video/agents-of-chaos-opening.jpg",
+        "kicker": "Television"
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "curator",
+      "character": "curator",
+      "at": [
+        -7.07,
+        0,
+        -1.85
+      ],
+      "facing": 96.1,
+      "dialogue": "npc_curator",
+      "positions": [
+        "entrance"
+      ]
+    }
+  ],
+  "lights": "assets/interiors/museum.lights.json",
+  "lampScale": 0.36,
+  "outlines": "assets/outlines/museum-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "windowView": {
+    "street": "museum",
+    "rotation": 7.59,
+    "origin": [
+      -300,
+      1.98,
+      -45.75
+    ],
+    "day": "assets/city/views/museum-doorway-day.jpg",
+    "late": "assets/city/views/museum-doorway-late.jpg"
+  },
+  "onFirstEnter": [
+    {
+      "do": "greet",
+      "speaker": "curator",
+      "text": "Come in. Have a look around."
+    }
+  ]
+}

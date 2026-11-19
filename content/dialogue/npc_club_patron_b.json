@@ -1,0 +1,21 @@
+{
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "club_patron_b",
+      "text": "The regular on the dance floor says Skye’s not missing, she’s offline. Offline is missing.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "club_patron_b",
+      "text": "They call it a lifestyle. I call it a missing user report.",
+      "effects": [
+        {
+          "do": "discover",
+          "id": "club_patrons"
+        }
+      ],
+      "end": true
+    }
+  }
+}

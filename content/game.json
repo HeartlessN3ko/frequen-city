@@ -1,0 +1,132 @@
+{
+  "title": "Frequen City: Missing User",
+  "version": "0.1.0",
+  "locations": [
+    "usb-port",
+    "police",
+    "police-interior",
+    "apartment",
+    "slos-hq",
+    "slos-hq-interior",
+    "voidworks",
+    "voidworks-interior",
+    "studio",
+    "studio-interior",
+    "boutique",
+    "boutique-interior",
+    "bar-street",
+    "bar",
+    "museum",
+    "museum-interior",
+    "library",
+    "library-interior",
+    "club",
+    "club-interior",
+    "rooftop"
+  ],
+  "dialogue": [
+    "port_manager_cube",
+    "port_manager",
+    "port_officer",
+    "police_chief",
+    "police_rookie",
+    "agent_opus",
+    "agent_sonnet",
+    "agent_haiku",
+    "agent_sprocket",
+    "agent_grok",
+    "agent_terra",
+    "npc_dev",
+    "npc_engineer",
+    "npc_clerk",
+    "npc_bartender",
+    "npc_curator",
+    "npc_librarian",
+    "npc_dj",
+    "skye_finale",
+    "leevee_apartment",
+    "leevee_library",
+    "npc_neighbor",
+    "npc_bar_regular",
+    "npc_club_patron_a",
+    "npc_club_patron_b",
+    "port_outside"
+  ],
+  "cinematics": [
+    "opening"
+  ],
+  "titleBackdrop": {
+    "location": "usb-port",
+    "position": "threshold"
+  },
+  "opening": "opening",
+  "start": {
+    "location": "usb-port",
+    "position": "officer"
+  },
+  "invite": {
+    "url": "https://discord.gg/nuKpNJWJvK",
+    "button": "Join the Discord",
+    "kicker": "Case closed · Candidate {candidate}",
+    "title": "You found her.",
+    "body": "Skye made this game to meet people. Come say hi, see what she is working on, and hang out with the rest of the city."
+  },
+  "about": {
+    "kicker": "The person behind the city",
+    "title": "Skye is real.",
+    "body": [
+      "Frequen City is built from one person’s real work. Skye has released music as ChaosDesigned since 2009, builds games at Voidworks, writes about making things with AI, designs anime-inspired streetwear, and has spent twenty years building a world called The Realm.",
+      "She made this game so you could get to know her."
+    ],
+    "found": "You learned {count} of {total} things about her",
+    "more": "The rest is still in the city. Keep exploring after the credits.",
+    "all": "You found everything she left in the city."
+  },
+  "links": [],
+  "mapNote": "drawn on a bar napkin",
+  "map": {
+    "water": [
+      "M0 610 C 180 590 320 640 520 620 S 860 600 1000 630",
+      "M860 0 C 870 120 900 220 1000 260"
+    ],
+    "roads": [
+      "M60 520 C 260 500 460 470 640 470 S 900 480 960 470",
+      "M500 60 C 510 220 490 380 520 680",
+      "M120 160 C 300 200 520 200 880 150"
+    ],
+    "minor": [
+      "M260 120 C 280 260 300 380 280 560",
+      "M700 120 C 690 260 720 380 740 560",
+      "M140 340 C 320 330 560 350 860 330"
+    ],
+    "labels": [
+      {
+        "x": 640,
+        "y": 655,
+        "r": -2,
+        "text": "the harbour"
+      },
+      {
+        "x": 120,
+        "y": 120,
+        "r": -6,
+        "text": "uptown?"
+      },
+      {
+        "x": 860,
+        "y": 520,
+        "r": 4,
+        "text": "docks"
+      }
+    ]
+  },
+  "text": {
+    "titleKicker": "A Frequen City mystery",
+    "selectConfirm": "Take the case",
+    "selectKicker": "Candidate {candidate} · Choose your detective",
+    "selectHint": "Choose the body you’ll use to investigate."
+  },
+  "config": {
+    "towerYear": "1987"
+  }
+}

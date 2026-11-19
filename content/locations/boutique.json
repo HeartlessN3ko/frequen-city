@@ -1,0 +1,167 @@
+{
+  "name": "Stealth & Glitter",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Boutique",
+  "mapName": "Stealth & Glitter",
+  "mapPin": {
+    "x": 36,
+    "y": 56
+  },
+  "interior": "boutique-interior",
+  "models": [
+    {
+      "url": "assets/city/ext-boutique.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        204,
+        -376,
+        316,
+        -274
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        204,
+        -376,
+        316,
+        -274
+      ]
+    },
+    {
+      "url": "assets/city/boutique-lettering.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/boutique.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/boutique.glb"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "fill": 0.9
+  },
+  "ambient": {
+    "pedestrians": 5,
+    "paths": [
+      [
+        [
+          246,
+          0.36,
+          -329
+        ],
+        [
+          274,
+          0.36,
+          -329
+        ]
+      ],
+      [
+        [
+          274,
+          0.36,
+          -330.5
+        ],
+        [
+          246,
+          0.36,
+          -330.5
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street"
+    ],
+    "greetings": [
+      "The window changes faster than my wardrobe.",
+      "I come past just to see which print they put up.",
+      "The cashier remembers every design by name.",
+      "I bought one jacket here and now three agents at work own the same one.",
+      "Stealth & Glitter started online. Now it has a door, and I still check the site first."
+    ],
+    "repeatLine": "We weren’t programmed with very many dialogue options."
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Across the street",
+      "camera": {
+        "position": [
+          258,
+          2.2,
+          -334.5
+        ],
+        "target": [
+          259.644,
+          2.2,
+          -324.636
+        ],
+        "fov": 47.2,
+        "portrait": {
+          "target": [
+            260,
+            3.2,
+            -322.8
+          ],
+          "fov": 74
+        }
+      },
+      "links": []
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        260,
+        1.66,
+        -322.8
+      ],
+      "positions": [
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "boutique-interior"
+      }
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "boutique_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "That’s Stealth & Glitter. Browsing is free."
+    }
+  ],
+  "unlockWhen": {
+    "evidence": "e2_transfer"
+  },
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter the boutique"
+  },
+  "horizon": {
+    "day": "assets/city/views/boutique-day.jpg",
+    "late": "assets/city/views/boutique-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      258,
+      2.2,
+      -334.5
+    ],
+    "surfaceDepth": "assets/city/street-depth/boutique-street.png"
+  }
+}

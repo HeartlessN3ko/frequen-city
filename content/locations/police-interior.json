@@ -1,0 +1,1022 @@
+{
+  "name": "Police Department",
+  "ambience": "assets/audio/amb/office.mp3",
+  "subtitle": "Bullpen",
+  "exterior": "police",
+  "hideOnMap": true,
+  "continuousInterior": true,
+  "models": [
+    {
+      "url": "assets/interiors/police.glb",
+      "lightScale": 0.002,
+      "floorFinish": {
+        "image": "assets/interiors/police-floor.jpg",
+        "bounds": [
+          -10.2,
+          -19.2,
+          20.4
+        ]
+      }
+    },
+    {
+      "url": "assets/interiors/police-furniture.glb"
+    },
+    {
+      "url": "assets/interiors/police-construction.glb"
+    },
+    {
+      "url": "assets/interiors/police-hardware.glb"
+    },
+    {
+      "url": "assets/props/missing-user-folder.glb",
+      "position": [
+        -5.1,
+        0.741,
+        -6.8
+      ],
+      "rotationY": 33,
+      "highlightFor": "casefile"
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#0f121a",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.38,
+    "key": 0.35,
+    "ambient": 0.07,
+    "exposure": 1.05,
+    "reflections": 0.26,
+    "fog": false
+  },
+  "startPosition": "entrance",
+  "_measure": "Positions come from the gameplay cameras in Police Department.blend (LOC_PoliceDepartment), converted to game axes (x, z, -y). Front door at x 0, z 0; the room runs toward -z.",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Read shift handover",
+      "camera": {
+        "position": [
+          0,
+          1.17,
+          -2.8
+        ],
+        "target": [
+          -3.236,
+          1.06,
+          -5.151
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -3.236,
+            1.06,
+            -5.151
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/entrance.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "notices",
+          "label": "File a report",
+          "dir": "right"
+        },
+        {
+          "to": "desks",
+          "label": "Incident records",
+          "dir": "forward"
+        },
+        {
+          "to": "operations",
+          "label": "Evidence board",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "notices",
+      "label": "File a report",
+      "camera": {
+        "position": [
+          5.7,
+          1.52,
+          -4.15
+        ],
+        "target": [
+          5.7,
+          2.082,
+          -0.15
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            5.7,
+            2.082,
+            -0.15
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/notices.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Read shift handover",
+          "dir": "right"
+        },
+        {
+          "to": "operations",
+          "label": "Evidence board",
+          "dir": "back"
+        },
+        {
+          "to": "investigations",
+          "label": "Last known activity report",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "desks",
+      "label": "Incident records",
+      "camera": {
+        "position": [
+          -3.82,
+          1.25,
+          -5.41
+        ],
+        "target": [
+          -5.636,
+          0.825,
+          -8.974
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -5.636,
+            0.825,
+            -8.974
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/desks.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Read shift handover",
+          "dir": "back"
+        },
+        {
+          "to": "recovery",
+          "label": "Before you reboot",
+          "dir": "forward"
+        },
+        {
+          "to": "evidence-room",
+          "label": "Chain of custody",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "operations",
+      "label": "Evidence board",
+      "camera": {
+        "position": [
+          4.03,
+          1.25,
+          -7.47
+        ],
+        "target": [
+          7.684,
+          1.424,
+          -9.097
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            7.684,
+            1.424,
+            -9.097
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/operations.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Read shift handover",
+          "dir": "back"
+        },
+        {
+          "to": "notices",
+          "label": "File a report",
+          "dir": "right"
+        },
+        {
+          "to": "investigations",
+          "label": "Last known activity report",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "investigations",
+      "label": "Last known activity report",
+      "camera": {
+        "position": [
+          4.03,
+          1.25,
+          -13.48
+        ],
+        "target": [
+          6.707,
+          0.688,
+          -16.453
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            6.707,
+            0.688,
+            -16.453
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/investigations.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "notices",
+          "label": "File a report",
+          "dir": "right"
+        },
+        {
+          "to": "operations",
+          "label": "Evidence board",
+          "dir": "back"
+        },
+        {
+          "to": "evidence-room",
+          "label": "Chain of custody",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "recovery",
+      "label": "Before you reboot",
+      "camera": {
+        "position": [
+          -7.12,
+          1.25,
+          -13.43
+        ],
+        "target": [
+          -10.093,
+          1.772,
+          -16.107
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -10.093,
+            1.772,
+            -16.107
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/recovery.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "desks",
+          "label": "Incident records",
+          "dir": "back"
+        },
+        {
+          "to": "evidence-room",
+          "label": "Chain of custody",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "evidence-room",
+      "label": "Chain of custody",
+      "camera": {
+        "position": [
+          0,
+          1.17,
+          -12.5
+        ],
+        "target": [
+          -0.626,
+          0.719,
+          -16.451
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -0.626,
+            0.719,
+            -16.451
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/police-workshop/evidence-room.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "desks",
+          "label": "Incident records",
+          "dir": "back"
+        },
+        {
+          "to": "investigations",
+          "label": "Last known activity report",
+          "dir": "right"
+        },
+        {
+          "to": "recovery",
+          "label": "Before you reboot",
+          "dir": "left"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        -0.15
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "police"
+      }
+    },
+    {
+      "id": "casefile",
+      "kind": "inspect",
+      "label": "Missing user folder",
+      "at": [
+        -5.1,
+        0.76,
+        -6.8
+      ],
+      "positions": [
+        "entrance",
+        "desks"
+      ],
+      "when": {
+        "all": [
+          {
+            "flag": "briefed"
+          },
+          {
+            "not": {
+              "evidence": "missing_report"
+            }
+          }
+        ]
+      },
+      "action": [
+        {
+          "do": "inspect",
+          "evidence": "missing_report"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "missing_report"
+      }
+    },
+    {
+      "id": "board",
+      "kind": "inspect",
+      "label": "Evidence board",
+      "at": [
+        9.53,
+        2.08,
+        -8
+      ],
+      "positions": [
+        "operations"
+      ],
+      "action": [
+        {
+          "do": "narrate",
+          "line": "police_board"
+        },
+        {
+          "do": "inspect",
+          "kicker": "How the board works",
+          "title": "Your evidence board",
+          "text": "Everything you collect goes on your own board (the pinboard button). Connect two clues that agree with red string. When the right clues are connected, the board tells you where to go."
+        }
+      ]
+    },
+    {
+      "id": "activity",
+      "kind": "inspect",
+      "label": "Last known activity report",
+      "at": [
+        5.1,
+        0.78,
+        -14.7
+      ],
+      "positions": [
+        "investigations"
+      ],
+      "when": {
+        "flag": "briefed"
+      },
+      "action": [
+        {
+          "do": "inspect",
+          "evidence": "police_activity"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "police_activity"
+      }
+    },
+    {
+      "id": "records",
+      "kind": "inspect",
+      "label": "Incident records",
+      "at": [
+        -5.55,
+        1.16,
+        -8.824
+      ],
+      "positions": [
+        "desks"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "police_records"
+        },
+        {
+          "do": "inspect",
+          "title": "Department incident records",
+          "text": "Every case in the department’s history is marked “pending further prompting.” In this city an agent acts when it is given a direction, and until one arrives the case stays open. Skye runs her own workshop the same way: she sets the intent, her agents do the work, and they come back to her only for creative judgment and for anything destructive, expensive or public.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "police_records"
+      }
+    },
+    {
+      "id": "dispatch",
+      "kind": "inspect",
+      "label": "Dispatch terminal",
+      "at": [
+        4.85,
+        1.15,
+        -8.85
+      ],
+      "positions": [
+        "operations"
+      ],
+      "when": {
+        "flag": "briefed"
+      },
+      "doneWhen": {
+        "flag": "unlocked:apartment"
+      },
+      "action": [
+        {
+          "do": "inspect",
+          "kicker": "Dispatch",
+          "title": "Dispatch terminal",
+          "text": "Two addresses on file for the missing user. Home: Robot Arms Apartments. Work: SLOS Headquarters. The chief said home first, so Robot Arms is on your city map now."
+        },
+        {
+          "do": "unlockLocation",
+          "id": "apartment"
+        }
+      ]
+    },
+    {
+      "id": "intake-guide",
+      "kind": "inspect",
+      "label": "Public assistance",
+      "at": [
+        -6,
+        1.23,
+        -3.914
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Public assistance",
+        "image": "assets/discoveries/civic/intake.png",
+        "kicker": "Police Department",
+        "text": "The public desk takes missing-user reports and issues one ticket per agent, forks included. In a city of agents, where copies of one assistant can run at the same time, a record has to say which copy was where. Skye’s own workshop keeps the same discipline in its Oracle notes, which record which model made a file and what was checked."
+      }
+    },
+    {
+      "id": "found-notice",
+      "kind": "inspect",
+      "label": "Lost and found",
+      "at": [
+        6.7,
+        2.1,
+        -0.245
+      ],
+      "positions": [
+        "notices"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Lost and found",
+        "image": "assets/discoveries/civic/found.png",
+        "kicker": "Police Department",
+        "text": "The property desk matches found hardware to its owner by description and serial number, and the claim stub belongs to whoever found the item. A cable looks like every other cable, which is why the serial number is the proof."
+      }
+    },
+    {
+      "id": "service-notice",
+      "kind": "inspect",
+      "label": "File a report",
+      "at": [
+        5.7,
+        2.1,
+        -0.245
+      ],
+      "positions": [
+        "notices"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "File a report",
+        "image": "assets/discoveries/civic/service.png",
+        "kicker": "Police Department",
+        "text": "Reports start at the public assistance desk, and the stamped copy is the one to keep: it carries the intake number dispatch uses to find the file again."
+      }
+    },
+    {
+      "id": "records-notice",
+      "kind": "inspect",
+      "label": "Keep the original",
+      "at": [
+        4.7,
+        2.1,
+        -0.245
+      ],
+      "positions": [
+        "notices"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Keep the original",
+        "image": "assets/discoveries/civic/record.png",
+        "kicker": "Police Department",
+        "text": "The records office wants the original, labelled with its source and collection time, and every handoff logged: a screenshot of a receipt is not the receipt. It is the rule behind Skye’s essay “A Place for Arguments With Receipts” and behind The Life of Skye, where raw files are never summarized over and every quote must say who, when and where."
+      }
+    },
+    {
+      "id": "custody-slip",
+      "kind": "inspect",
+      "label": "Chain of custody",
+      "at": [
+        -0.18,
+        1.05,
+        -13.55
+      ],
+      "positions": [
+        "evidence-room"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Chain of custody",
+        "image": "assets/discoveries/civic/seal.png",
+        "kicker": "Police Department",
+        "text": "Chain of custody is the record of who held an item, when, and in what condition. The slip’s rule: log the item, tag the enclosure, sign across the seal before it moves, and record a broken seal before reopening. Evidence is only as trustworthy as that record, and my own case file arrived the same way, through Port Authority intake, with the next signature still to come."
+      }
+    },
+    {
+      "id": "intake-terminal",
+      "kind": "inspect",
+      "label": "Read shift handover",
+      "at": [
+        -5.55,
+        1.16,
+        -6.824
+      ],
+      "positions": [
+        "entrance",
+        "desks"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Shift handover",
+        "text": "Intake: Port referral. Next: request the transfer record. The night shift left one open item for the day desk: the missing-user report I am carrying."
+      }
+    },
+    {
+      "id": "recovery-sheet",
+      "kind": "inspect",
+      "label": "Before you reboot",
+      "positions": [
+        "recovery"
+      ],
+      "at": [
+        -9.7,
+        1.71,
+        -15.83
+      ],
+      "action": [
+        {
+          "do": "inspect",
+          "title": "Before you reboot",
+          "text": "Agents here hold what they know in a working cache, and a reboot clears it. Afterward the cache refills only from what is on file, so a witness with nothing written down is, in the department’s words, a very confident stranger. Save the statement with the time and your badge number first. Skye’s workshop is built around the same problem: an AI session that ends forgets everything, so she keeps decision logs, Oracle notes and project records for the next one to start from. If you need a quiet minute, the cot is yours.",
+          "image": "assets/discoveries/civic/reboot.png"
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "chief",
+      "character": "chief",
+      "at": [
+        -2.6,
+        0,
+        -6.4
+      ],
+      "facing": 35.8,
+      "dialogue": "police_chief",
+      "positions": [
+        "entrance"
+      ],
+      "hideAt": [
+        "desks"
+      ]
+    },
+    {
+      "id": "rookie",
+      "character": "rookie",
+      "at": [
+        -5.0,
+        -0.08,
+        -5.31
+      ],
+      "facing": 12,
+      "dialogue": "police_rookie",
+      "positions": [
+        "entrance"
+      ],
+      "hideAt": [
+        "desks"
+      ]
+    },
+    {
+      "id": "officer_c",
+      "character": "staff_policeofficer_c",
+      "at": [
+        7.68,
+        0,
+        -9.1
+      ],
+      "facing": -66,
+      "positions": [
+        "operations"
+      ]
+    }
+  ],
+  "lights": "assets/interiors/police.lights.json",
+  "screens": [
+    {
+      "id": "dispatch-display",
+      "style": "desk",
+      "at": [
+        4.85,
+        1.16,
+        -8.824
+      ],
+      "size": [
+        0.579,
+        0.328
+      ],
+      "yaw": 0,
+      "title": "DISPATCH",
+      "rows": [
+        [
+          "Port intake",
+          "Received"
+        ],
+        [
+          "Transfer record",
+          "Requested"
+        ],
+        [
+          "Witness account",
+          "Pending"
+        ]
+      ],
+      "rowsVisible": 3,
+      "highlightFor": "dispatch",
+      "station": {
+        "palette": "police",
+        "service": "FCPD  /  OPERATIONS",
+        "status": "DISPATCH DESK",
+        "keyboard": [
+          4.85,
+          0.77,
+          -8.57
+        ]
+      }
+    },
+    {
+      "id": "police-desk-1",
+      "at": [
+        -6,
+        1.23,
+        -4.251
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 180,
+      "station": {
+        "palette": "police",
+        "service": "FCPD  /  CASE SERVICES",
+        "status": "SHIFT TERMINAL",
+        "keyboard": [
+          -6,
+          0.84,
+          -4.57
+        ]
+      },
+      "title": "Intake queue",
+      "rows": [
+        [
+          "Case",
+          "Missing user"
+        ],
+        [
+          "Source",
+          "Port Authority"
+        ]
+      ]
+    },
+    {
+      "id": "police-desk-2",
+      "at": [
+        -5.55,
+        1.16,
+        -6.824
+      ],
+      "size": [
+        0.579,
+        0.328
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "police",
+        "service": "FCPD  /  CASE SERVICES",
+        "status": "SHIFT TERMINAL",
+        "keyboard": [
+          -5.55,
+          0.77,
+          -6.57
+        ]
+      },
+      "title": "Shift handover",
+      "rows": [
+        [
+          "Intake",
+          "Port referral"
+        ],
+        [
+          "Next",
+          "Request transfer record"
+        ]
+      ],
+      "highlightFor": "intake-terminal"
+    },
+    {
+      "id": "police-desk-3",
+      "at": [
+        -5.55,
+        1.16,
+        -8.824
+      ],
+      "size": [
+        0.579,
+        0.328
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "police",
+        "service": "FCPD  /  CASE SERVICES",
+        "status": "SHIFT TERMINAL",
+        "keyboard": [
+          -5.55,
+          0.77,
+          -8.57
+        ]
+      },
+      "title": "Records desk",
+      "rows": [
+        [
+          "Case",
+          "Missing user"
+        ],
+        [
+          "File",
+          "Witness accounts"
+        ]
+      ],
+      "highlightFor": "records"
+    },
+    {
+      "id": "police-desk-4",
+      "at": [
+        4.85,
+        1.16,
+        -6.824
+      ],
+      "size": [
+        0.579,
+        0.328
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "police",
+        "service": "FCPD  /  CASE SERVICES",
+        "status": "SHIFT TERMINAL",
+        "keyboard": [
+          4.85,
+          0.77,
+          -6.57
+        ]
+      },
+      "title": "Incident log",
+      "rows": [
+        [
+          "Port intake",
+          "Received"
+        ],
+        [
+          "Witness account",
+          "Pending"
+        ]
+      ]
+    },
+    {
+      "id": "public-intake",
+      "at": [
+        -6,
+        1.23,
+        -3.914
+      ],
+      "size": [
+        0.56,
+        0.315
+      ],
+      "yaw": 0,
+      "title": "Public assistance",
+      "rows": [
+        [
+          "Missing person",
+          "File a report"
+        ],
+        [
+          "Existing case",
+          "Ask at intake"
+        ]
+      ],
+      "station": {
+        "palette": "police",
+        "service": "FCPD  /  RECEPTION",
+        "status": "PUBLIC INTAKE"
+      }
+    }
+  ],
+  "lampScale": 0.36,
+  "outlines": "assets/outlines/police-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "windowView": {
+    "street": "police",
+    "rotation": -82.41,
+    "origin": [
+      72.9,
+      1.98,
+      -305
+    ],
+    "day": "assets/city/views/police-doorway-day.jpg",
+    "late": "assets/city/views/police-doorway-late.jpg"
+  },
+  "onFirstEnter": {
+    "do": "dialogue",
+    "tree": "police_chief",
+    "npc": "chief",
+    "when": {
+      "not": {
+        "flag": "briefed"
+      }
+    },
+    "greeting": true
+  },
+  "photoOccluders": [
+    {
+      "center": [
+        -6,
+        0.435,
+        -4.2
+      ],
+      "size": [
+        4.4,
+        0.65,
+        0.6
+      ]
+    },
+    {
+      "center": [
+        -6,
+        0.785,
+        -4.2
+      ],
+      "size": [
+        4.44,
+        0.05,
+        0.64
+      ]
+    },
+    {
+      "center": [
+        -6,
+        0.79,
+        -3.78
+      ],
+      "size": [
+        4.6,
+        0.065,
+        0.45
+      ]
+    },
+    {
+      "center": [
+        -6,
+        0.055,
+        -4.2
+      ],
+      "size": [
+        4.28,
+        0.11,
+        0.48
+      ]
+    }
+  ]
+}

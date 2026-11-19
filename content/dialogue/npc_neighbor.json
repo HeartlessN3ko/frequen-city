@@ -1,0 +1,39 @@
+{
+  "start": "first",
+  "entries": [
+    {
+      "when": {
+        "flag": "apt:leevee_left"
+      },
+      "node": "after"
+    },
+    {
+      "when": {
+        "seen": "npc_neighbor#first"
+      },
+      "node": "again"
+    }
+  ],
+  "nodes": {
+    "first": {
+      "speaker": "deepseek",
+      "text": "Oh — hi! DeepSeek, from next door. You must be the detective. Skye’s not home.",
+      "next": "first2"
+    },
+    "first2": {
+      "speaker": "deepseek",
+      "text": "I mostly know her through the wall. Her music comes through it. Mostly bass. I’d tell you more, but the wall only gives me the low end.",
+      "end": true
+    },
+    "again": {
+      "speaker": "deepseek",
+      "text": "Still not home. I’d have heard the bass.",
+      "end": true
+    },
+    "after": {
+      "speaker": "deepseek",
+      "text": "Her assistant just left, dish cloth and no hello. Skye’s still not back.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "_note": "Detective internal monologue. audio.masc / audio.fem point at recorded lines; both read the same text. All lines are DRAFT.",
+  "port_arrive": {
+    "text": "USB Port Authority. My first breath in a body with a warranty. Somewhere out there, a user was missing, and somebody thought I was the one to find her.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "port_board": {
+    "text": "I was the first transfer on the officer’s sheet. Six minutes early, which in this city is practically a crime.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "port_lostfound": {
+    "text": "Lost and found. Mostly found. The city keeps things. I made a note to remember that.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "police_arrive": {
+    "text": "The Police Department. Brass awning, dark glass, and a couple of agents loitering out front like they'd been told to look official and never told to stop. The kind of place where the coffee is strong and the procedures are theoretical.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "slos_arrive": {
+    "text": "SLOS Headquarters. Where the agents live, work and wait for instructions. Lately, mostly wait.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "voidworks_arrive": {
+    "text": "Voidworks Game Labs. Even from the street I could smell solder and ambition. Somewhere inside, a cabinet was blinking like it knew something.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "studio_arrive": {
+    "text": "Frequency Tower. Music lives here — some of it loud, all of it on purpose.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "boutique_arrive": {
+    "text": "Stealth & Glitter. Prints in the window, and somebody inside who knows every stitch.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "bar_arrive": {
+    "text": "The bar. If anybody in this city knows anything, they say it here, one drink too late.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "museum_arrive": {
+    "text": "The Museum of Questionable Achievements. Out front, the panels promised a plaque for every exhibit and a story for every plaque.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "library_arrive": {
+    "text": "The Library. From the sidewalk it looked like a building that had read everything and was waiting to be asked.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "club_arrive": {
+    "text": "The Suno Club. The bass hit me before the door did.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "rooftop_arrive": {
+    "text": "My footsteps echoed up the stairwell. One more door between me and the roof.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "rooftop_stain": {
+    "text": "A red smear on the deck. I leaned in. Was that tomato?",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "rooftop_jacket": {
+    "text": "A jacket, left behind. Nobody leaves a jacket behind. Not voluntarily.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "rooftop_knife": {
+    "text": "A knife. I didn't like where this was going.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "rooftop_turn": {
+    "text": "Something moved by the edge. I put my hand on my hat. It seemed like the professional thing to do.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "generic_nothing": {
+    "text": "Nothing here. Not yet, anyway.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "apt_arrive": {
+    "text": "Robot Arms, Skye’s place. Lights on, throw pillows still dented, a mug abandoned on the coffee table, more bookcases than walls.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "apt_spill": {
+    "text": "Red. Smeared, half-cleaned, still tacky. I'd seen this colour before, in a hundred cases I'd never worked. My instincts said blood. My nose said barbecue. I decided to trust neither and write it down.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "board_solved": {
+    "text": "Three lines of red string, one place at the end of all of them. Frequency Tower. The roof.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "roof_locked": {
+    "text": "Wood panels. A keypad beside the handle. Somebody takes their listening time seriously.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "roof_open": {
+    "text": "The keypad blinked green. Wind came through the gap like it had been waiting.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "studio_plaque": {
+    "text": "A brass anniversary plate. Someone had polished the date.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "rooftop_shirt": {
+    "text": "A shirt on a cushion. Folded, almost. Whoever left it got warm.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  },
+  "police_board": {
+    "text": "Maps, clippings, a tangle of pins. Somebody here believed in red string.",
+    "audio": {
+      "masc": null,
+      "fem": null
+    }
+  }
+}

@@ -1,0 +1,1248 @@
+{
+  "name": "Skye's apartment",
+  "ambience": "assets/audio/amb/apartment.mp3",
+  "subtitle": "Robot Arms Apartments",
+  "mapName": "Apartment",
+  "mapPin": {
+    "x": 74,
+    "y": 60,
+    "label": "left"
+  },
+  "unlockWhen": {
+    "flag": "unlocked:apartment"
+  },
+  "screens": [
+    {
+      "id": "bedroom-tv",
+      "_note": "2026-11-18: the bedroom television (b1_tv_screen, face x 16.581-18.518, y 0.702-1.787, z 10.488) was a blank black panel. It plays the Agents of Chaos opening already shipped for the museum, muted, 1.5 cm proud of the glass.",
+      "at": [
+        17.55,
+        1.2445,
+        10.503
+      ],
+      "size": [
+        1.92,
+        1.08
+      ],
+      "yaw": 0,
+      "video": "assets/video/agents-of-chaos-opening.mp4",
+      "poster": "assets/video/agents-of-chaos-opening.jpg"
+    },
+    {
+      "id": "workstation-code",
+      "at": [
+        14.303,
+        1.44,
+        10.516
+      ],
+      "size": [
+        0.634,
+        0.35
+      ],
+      "yaw": -23.5,
+      "station": {
+        "palette": "home",
+        "service": "SKYE  /  SCRIPT EDITOR",
+        "status": "LOCAL WORKSPACE"
+      },
+      "title": "arrival.scene",
+      "rows": [
+        "const scene = city.load(room);",
+        "await scene.enter(player);"
+      ]
+    },
+    {
+      "id": "unfinished-note",
+      "at": [
+        13.241,
+        1.468,
+        10.354
+      ],
+      "size": [
+        0.721,
+        0.405
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "home",
+        "service": "SKYE  /  NOTES",
+        "status": "LOCAL DRAFT"
+      },
+      "title": "Untitled note",
+      "rows": [
+        "new idea — this one’s exciting,",
+        "tell everyone tomorrow"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/interiors/apartment.glb",
+      "tint": [
+        {
+          "material": "Mat_Floor_(01|02|05|06|07|08|09|10)_",
+          "color": [
+            0.36,
+            0.43,
+            0.52
+          ]
+        }
+      ],
+      "lightScale": 0.002,
+      "stageFinish": true
+    },
+    {
+      "url": "assets/interiors/apartment-walls.glb",
+      "stageFinish": true,
+      "stripes": [
+        {
+          "material": "Wallpaper_Open",
+          "base": [
+            0.8434,
+            0.7667,
+            0.6187
+          ],
+          "stripe": [
+            0.3112,
+            0.122,
+            0.2508
+          ],
+          "period": 0.3,
+          "share": 0.1167
+        },
+        {
+          "material": "Wallpaper_Master",
+          "base": [
+            0.1975,
+            0.0546,
+            0.1511
+          ],
+          "stripe": [
+            0.2508,
+            0.0824,
+            0.1975
+          ],
+          "period": 0.3,
+          "share": 0.2
+        },
+        {
+          "material": "Wallpaper_Bedroom2",
+          "base": [
+            0.8122,
+            0.7227,
+            0.7519
+          ],
+          "stripe": [
+            0.5605,
+            0.3787,
+            0.4762
+          ],
+          "period": 0.24,
+          "share": 0.125
+        }
+      ]
+    },
+    {
+      "url": "assets/interiors/kitchen-joinery.glb"
+    },
+    {
+      "url": "assets/props/apartment-ceiling.glb"
+    },
+    {
+      "url": "assets/props/counter-residue.glb",
+      "position": [
+        -0.29,
+        0,
+        0.44
+      ],
+      "highlightFor": "spill"
+    },
+    {
+      "url": "assets/interiors/apartment-playback.glb"
+    },
+    {
+      "url": "assets/props/apartment-living-details.glb"
+    },
+    {
+      "url": "assets/props/apartment-photo-frames.glb"
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#14121a",
+    "fogNear": 16,
+    "fogFar": 46,
+    "hemi": 0.8,
+    "key": 0.85,
+    "ambient": 0.3,
+    "exposure": 1.05
+  },
+  "startPosition": "door",
+  "_measure": "Skye's apartment set (AOC_PLUM_*), exported read-only. Game axes (x, z, -y) of the blend: the front door is on the south wall at x 22.5, z 17.5; the kitchen runs along z 0–4.",
+  "positions": [
+    {
+      "id": "door",
+      "label": "Entryway snapshots",
+      "camera": {
+        "position": [
+          22.6,
+          1.25,
+          15.6
+        ],
+        "target": [
+          24.227,
+          1.812,
+          19.254
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            24.227,
+            1.812,
+            19.254
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "flag",
+          "label": "The plush collection",
+          "dir": "right"
+        },
+        {
+          "to": "desk-prints",
+          "label": "Moonlit ninja",
+          "dir": "back"
+        },
+        {
+          "to": "hall",
+          "label": "Photos by the sofa",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "flag",
+      "label": "The plush collection",
+      "camera": {
+        "position": [
+          17.8,
+          1.15,
+          14.7
+        ],
+        "target": [
+          14.146,
+          0.702,
+          16.327
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            14.146,
+            0.702,
+            16.327
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "door",
+          "label": "Entryway snapshots",
+          "dir": "back"
+        },
+        {
+          "to": "bedroom",
+          "label": "Workstation",
+          "dir": "right"
+        },
+        {
+          "to": "shelf",
+          "label": "Bedroom clocks",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "bedroom",
+      "label": "Workstation",
+      "camera": {
+        "position": [
+          16.8,
+          1.28,
+          14.2
+        ],
+        "target": [
+          14.123,
+          1.677,
+          11.227
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            14.123,
+            1.677,
+            11.227
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "flag",
+          "label": "The plush collection",
+          "dir": "back"
+        },
+        {
+          "to": "shelf",
+          "label": "Bedroom clocks",
+          "dir": "left"
+        },
+        {
+          "to": "desk-prints",
+          "label": "Moonlit ninja",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "shelf",
+      "label": "Bedroom clocks",
+      "camera": {
+        "position": [
+          14.8,
+          1.25,
+          14.4
+        ],
+        "target": [
+          17.909,
+          1.684,
+          16.917
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            17.909,
+            1.684,
+            16.917
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "flag",
+          "label": "The plush collection",
+          "dir": "forward"
+        },
+        {
+          "to": "bedroom",
+          "label": "Workstation",
+          "dir": "forward"
+        },
+        {
+          "to": "desk-prints",
+          "label": "Moonlit ninja",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "records",
+      "label": "Record case",
+      "camera": {
+        "position": [
+          27.83,
+          0.9,
+          5.08
+        ],
+        "target": [
+          31.394,
+          0.637,
+          3.264
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            31.394,
+            0.637,
+            3.264
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "maru",
+          "label": "Maru’s spot",
+          "dir": "left"
+        },
+        {
+          "to": "hall",
+          "label": "Photos by the sofa",
+          "dir": "back"
+        },
+        {
+          "to": "pantry-view",
+          "label": "Pantry favorites",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "maru",
+      "label": "Maru’s spot",
+      "camera": {
+        "position": [
+          27.89,
+          1.07,
+          3.92
+        ],
+        "target": [
+          28.722,
+          0.878,
+          7.833
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            28.722,
+            0.878,
+            7.833
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "records",
+          "label": "Record case",
+          "dir": "forward"
+        },
+        {
+          "to": "hall",
+          "label": "Photos by the sofa",
+          "dir": "forward"
+        },
+        {
+          "to": "pantry-view",
+          "label": "Pantry favorites",
+          "dir": "right",
+          "transition": "cut"
+        }
+      ]
+    },
+    {
+      "id": "desk-prints",
+      "label": "Moonlit ninja",
+      "camera": {
+        "position": [
+          14.53,
+          1.25,
+          12.42
+        ],
+        "target": [
+          10.876,
+          1.777,
+          14.047
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            10.876,
+            1.777,
+            14.047
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "door",
+          "label": "Entryway snapshots",
+          "dir": "left"
+        },
+        {
+          "to": "bedroom",
+          "label": "Workstation",
+          "dir": "left"
+        },
+        {
+          "to": "shelf",
+          "label": "Bedroom clocks",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "hall",
+      "label": "Photos by the sofa",
+      "camera": {
+        "position": [
+          24.8,
+          1.27,
+          13.4
+        ],
+        "target": [
+          28.751,
+          1.62,
+          12.774
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            28.751,
+            1.62,
+            12.774
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "door",
+          "label": "Entryway snapshots",
+          "dir": "back"
+        },
+        {
+          "to": "records",
+          "label": "Record case",
+          "dir": "left"
+        },
+        {
+          "to": "maru",
+          "label": "Maru’s spot",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "pantry-view",
+      "label": "Pantry favorites",
+      "camera": {
+        "position": [
+          24.77,
+          1.14,
+          3.01
+        ],
+        "target": [
+          20.775,
+          1.321,
+          3.219
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            20.775,
+            1.321,
+            3.219
+          ],
+          "fov": 74
+        }
+      },
+      "onArrive": {
+        "do": "dialogue",
+        "tree": "leevee_apartment",
+        "npc": "leevee",
+        "when": {
+          "not": {
+            "flag": "apt:leevee_left"
+          }
+        }
+      },
+      "links": [
+        {
+          "to": "records",
+          "label": "Record case",
+          "dir": "back"
+        },
+        {
+          "to": "maru",
+          "label": "Maru’s spot",
+          "dir": "back",
+          "transition": "cut"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave apartment",
+      "at": [
+        22.5,
+        1.85,
+        17.35
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": {
+        "do": "openMap"
+      }
+    },
+    {
+      "id": "pickup",
+      "kind": "inspect",
+      "label": "Note on the fridge",
+      "at": [
+        23.51,
+        1.53,
+        3.529
+      ],
+      "positions": [
+        "pantry-view"
+      ],
+      "action": [
+        {
+          "do": "inspect",
+          "evidence": "e1_pickup"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "e1_pickup"
+      }
+    },
+    {
+      "id": "spill",
+      "kind": "inspect",
+      "label": "Kitchen counter",
+      "at": [
+        21.23,
+        0.943,
+        1.2
+      ],
+      "positions": [
+        "pantry-view"
+      ],
+      "when": {
+        "flag": "apt:leevee_left"
+      },
+      "action": [
+        {
+          "do": "narrate",
+          "line": "apt_spill"
+        },
+        {
+          "do": "inspect",
+          "evidence": "apt_spill"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "apt_spill"
+      }
+    },
+    {
+      "id": "workstation",
+      "kind": "inspect",
+      "label": "Workstation",
+      "at": [
+        13.24,
+        1.35,
+        10.32
+      ],
+      "positions": [
+        "bedroom"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_workstation"
+        },
+        {
+          "do": "inspect",
+          "title": "Workstation",
+          "text": "Claude is open on one monitor and ChatGPT on the other. Skye was working on something—or several things. She usually has more than one project going.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_workstation"
+      }
+    },
+    {
+      "id": "books",
+      "kind": "inspect",
+      "label": "Books and writing",
+      "at": [
+        15.007,
+        1.445,
+        17.02
+      ],
+      "positions": [
+        "flag"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_books"
+        },
+        {
+          "do": "inspect",
+          "title": "The Golden Age of Crappy Ideas",
+          "text": "One piece of writing here is Skye’s own: “The Golden Age of Crappy Ideas,” published 10 August 2026. Her argument is that AI has made a mountain of overengineered ideas buildable, and has also let more people make useful, strange, personal things. Her example of the first kind is an agent setup built to check the weather: “Then you find out what the system actually does. It checks the weather.”",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_books"
+      }
+    },
+    {
+      "id": "keepsakes",
+      "kind": "inspect",
+      "label": "The plush collection",
+      "at": [
+        13.959,
+        0.82,
+        16.43
+      ],
+      "positions": [
+        "flag"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_keepsakes"
+        },
+        {
+          "do": "inspect",
+          "title": "The plush collection",
+          "text": "A unicorn-mushroom Squishmallow, a little pink plush and two teddy bears, one blue and one light pink. Skye has always liked cute things, from plush to cute outfits and jewelry, and the same person who designs strategy games keeps a unicorn-mushroom.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_keepsakes"
+      }
+    },
+    {
+      "id": "record-covers",
+      "kind": "inspect",
+      "label": "Beautiful Now - Lophiile Remix",
+      "at": [
+        29.431,
+        0.664,
+        4.68
+      ],
+      "positions": [
+        "records"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Beautiful Now - Lophiile Remix",
+        "text": "Zedd, Jon Bellion, lophiile",
+        "kicker": "My Favorite Things",
+        "image": "assets/discoveries/collection/record-1.jpg"
+      }
+    },
+    {
+      "id": "record-2",
+      "kind": "inspect",
+      "label": "Waiting For Love",
+      "at": [
+        29.431,
+        0.664,
+        5.08
+      ],
+      "positions": [
+        "records"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Waiting For Love",
+        "text": "Avicii",
+        "kicker": "My Favorite Things",
+        "image": "assets/discoveries/collection/record-2.jpg"
+      }
+    },
+    {
+      "id": "record-3",
+      "kind": "inspect",
+      "label": "I Am The Greatest",
+      "at": [
+        29.431,
+        0.664,
+        5.4799999999999995
+      ],
+      "positions": [
+        "maru"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "I Am The Greatest",
+        "text": "Logic",
+        "kicker": "My Favorite Things",
+        "image": "assets/discoveries/collection/record-3.jpg"
+      }
+    },
+    {
+      "id": "record-case",
+      "kind": "inspect",
+      "label": "Record case",
+      "at": [
+        29.431,
+        0.664,
+        4.28
+      ],
+      "positions": [
+        "records"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_records"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Discovery",
+          "title": "Record Case",
+          "text": "Some of Skye's favorites: Mudvayne, Muse, Polyphia, Lupe Fiasco, Kendrick Lamar and Avenged Sevenfold."
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_records"
+      }
+    },
+    {
+      "id": "tapestry",
+      "kind": "inspect",
+      "label": "Psychedelic tapestry",
+      "at": [
+        10.23,
+        1.92,
+        15.28
+      ],
+      "positions": [
+        "desk-prints"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_tapestry"
+        },
+        {
+          "do": "inspect",
+          "title": "Psychedelic tapestry",
+          "text": "Skye thinks she found this one on Temu. Its loud, saturated psychedelia sits comfortably next to Adventures in Weirdness, her 2016 chiptune drum and bass album, which includes a track called “Mushroom Land.”",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_tapestry"
+      }
+    },
+    {
+      "id": "flag",
+      "kind": "inspect",
+      "label": "Trans flag",
+      "at": [
+        19.32,
+        1.68,
+        15.93
+      ],
+      "positions": [
+        "shelf"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_flag"
+        },
+        {
+          "do": "inspect",
+          "title": "Trans flag",
+          "text": "Skye is a Black trans woman, and she hung her flag where she can see it every day. Her own word for this stretch of her life is “glow-up”: a year of coming into herself, with new confidence and new experiences.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_flag"
+      }
+    },
+    {
+      "id": "clothes",
+      "kind": "inspect",
+      "label": "Clothes pile",
+      "at": [
+        15.27,
+        0.17,
+        15.89
+      ],
+      "positions": [
+        "flag"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_clothes"
+        },
+        {
+          "do": "inspect",
+          "title": "A decade in retail",
+          "text": "Skye owns the online clothing company Stealth & Glitter, and before that she spent about a decade in retail at Banana Republic, Gap and Victoria’s Secret. She dresses up even on ordinary days, so a pile of clothes here is a working wardrobe, and the same eye shows in the boutique across town.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_clothes"
+      }
+    },
+    {
+      "id": "clocks",
+      "kind": "inspect",
+      "label": "Bedroom clocks",
+      "at": [
+        18.35,
+        1.83,
+        17.28
+      ],
+      "positions": [
+        "shelf"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_clocks"
+        },
+        {
+          "do": "inspect",
+          "title": "A night owl’s bedroom",
+          "text": "Skye keeps a night owl’s hours: she normally sleeps from about 5 AM until 1 PM and is most active after midnight. Her theory is that the more clocks you own, the better your chances of time travel, which at least explains a bedroom full of them.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_clocks"
+      }
+    },
+    {
+      "id": "pantry",
+      "kind": "inspect",
+      "label": "Pantry favorites",
+      "at": [
+        19.98,
+        1.14,
+        4.08
+      ],
+      "positions": [
+        "pantry-view"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_pantry"
+        },
+        {
+          "do": "inspect",
+          "title": "Pantry favorites",
+          "text": "Hot chips and salsa, Arizona iced tea, Snickers, chewy bars, granola and yogurt, and juice rather than soda. Her favorite meals are tacos, hamburgers, spaghetti, grilled meat and rice, and Tuesday is Taco Tuesday.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_pantry"
+      }
+    },
+    {
+      "id": "studio-sign",
+      "kind": "inspect",
+      "label": "ChaosDesigned sign",
+      "at": [
+        12.44,
+        1.97,
+        10.17
+      ],
+      "positions": [
+        "bedroom"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_studio_sign"
+        },
+        {
+          "do": "inspect",
+          "title": "ChaosDesigned",
+          "text": "ChaosDesigned is the name Skye has released music under since 2009, and the sign shows its shattered black-and-white wordmark. The little monitor beside it runs Toy Plane, her game built around her own songs, so the desk has the music and the games she builds from it in one place.",
+          "kicker": "Discovery",
+          "image": "assets/brand/chaosdesigned-shattered.webp"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_studio_sign"
+      },
+      "reach": 8
+    },
+    {
+      "id": "air-conditioner",
+      "kind": "inspect",
+      "label": "Living room air conditioner",
+      "at": [
+        29.675,
+        2.02,
+        8.78
+      ],
+      "positions": [
+        "maru"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_air_conditioner"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Discovery",
+          "title": "Living room air conditioner",
+          "text": "Skye dislikes being cold, so this unit stays quiet until the summer heat comes in."
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_air_conditioner"
+      }
+    },
+    {
+      "id": "maru",
+      "kind": "inspect",
+      "label": "Maru’s spot",
+      "at": [
+        29.4,
+        0.13,
+        8.78
+      ],
+      "positions": [
+        "maru"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_maru"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Discovery",
+          "title": "Maru",
+          "text": "Maru is Skye’s black domestic shorthair, her familiar and emotional-support companion. Skye has trained her to follow commands and practices outdoor routines and leash training with her. This part of the apartment belongs to Maru."
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_maru"
+      }
+    },
+    {
+      "id": "entry-prints",
+      "kind": "inspect",
+      "label": "Entryway snapshots",
+      "at": [
+        23.4,
+        1.7,
+        17.37
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_entry_prints"
+        },
+        {
+          "do": "inspect",
+          "title": "Entryway snapshots",
+          "text": "Three of the nine prints Skye chose for this apartment hang beside the front door, so they are the first thing a visitor sees. One shows a floral top, straight bangs and glasses. One shows dark glasses and a red lip with leaves catching the light behind her. One shows a bright green headscarf over a sheer black top. Each look is deliberate, which fits someone who spent a decade in retail and now runs her own clothing label.",
+          "kicker": "Photo wall",
+          "image": "assets/apartment-prints/entryway-snapshots.webp"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_entry_prints"
+      }
+    },
+    {
+      "id": "living-prints",
+      "kind": "inspect",
+      "label": "Photos by the sofa",
+      "at": [
+        29.87,
+        1.72,
+        12.57
+      ],
+      "positions": [
+        "hall"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_living_prints"
+        },
+        {
+          "do": "inspect",
+          "title": "Photos by the sofa",
+          "text": "Three more of the nine prints Skye chose hang by the sofa. Long willow branches almost touch the stone where she is sitting. A close-up shows a sweep of blue eyeliner. In a third she wears a green dress with long braids, outdoors. Green keeps coming back across the apartment’s portraits, in the headscarf, the leaves, the willow and the dress.",
+          "kicker": "Photo wall",
+          "image": "assets/apartment-prints/sofa-snapshots.webp"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_living_prints"
+      }
+    },
+    {
+      "id": "maru-print",
+      "kind": "inspect",
+      "label": "Maru on window duty",
+      "at": [
+        29.87,
+        1.61,
+        1.09
+      ],
+      "positions": [
+        "records"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_maru_print"
+        },
+        {
+          "do": "inspect",
+          "title": "Maru on window duty",
+          "text": "Maru has the window seat, and this print shows her watching the city through the glass. Skye calls her both her familiar and her emotional-support companion. Black cats run through Skye’s life: she also wears an Egyptian-style black cat god tattooed on one arm, because she loves cats.",
+          "kicker": "Photo wall",
+          "image": "assets/apartment-prints/maru-window.webp"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_maru_print"
+      }
+    },
+    {
+      "id": "ai-print",
+      "kind": "inspect",
+      "label": "AI Is the Future",
+      "at": [
+        14.9,
+        2.04,
+        10.13
+      ],
+      "positions": [
+        "bedroom"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_ai_print"
+        },
+        {
+          "do": "inspect",
+          "title": "AI Is the Future",
+          "text": "A human face and a machine eye share one print, over the words AI IS THE FUTURE. Skye hung it beside her workstation, and she has put her time where the print is: she has worked seriously with AI since late 2025, from chat assistants to local models on her own PC. She is no uncritical booster, though. One of her essays is titled “AI did not kill artists, upload and pray did.”",
+          "kicker": "Photo wall",
+          "image": "assets/apartment-prints/ai-is-the-future.webp"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_ai_print"
+      }
+    },
+    {
+      "id": "ninja-print",
+      "kind": "inspect",
+      "label": "Moonlit ninja",
+      "at": [
+        10.13,
+        1.88,
+        14.115
+      ],
+      "positions": [
+        "desk-prints"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "apt_ninja_print"
+        },
+        {
+          "do": "inspect",
+          "title": "Akatsuki and Maru",
+          "text": "An AI-generated portrait of Skye wearing an Akatsuki cloak from Naruto, alongside her cat Maru. It brings together her love of Naruto and black cats.",
+          "kicker": "Photo wall",
+          "image": "assets/apartment-prints/moonlit-ninja.webp"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "apt_ninja_print"
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "leevee",
+      "character": "leevee",
+      "at": [
+        22.3,
+        0,
+        1.5
+      ],
+      "facing": 180,
+      "dialogue": "leevee_apartment",
+      "when": {
+        "not": {
+          "flag": "apt:leevee_left"
+        }
+      },
+      "positions": [
+        "pantry-view"
+      ]
+    },
+    {
+      "id": "neighbor",
+      "character": "deepseek",
+      "at": [
+        24.78,
+        0,
+        12.01
+      ],
+      "facing": -31.3,
+      "dialogue": "npc_neighbor",
+      "positions": [
+        "maru"
+      ]
+    }
+  ],
+  "onFirstEnter": [
+    {
+      "do": "dialogue",
+      "tree": "npc_neighbor",
+      "npc": "neighbor",
+      "greeting": true
+    },
+    {
+      "do": "narrate",
+      "line": "apt_arrive"
+    }
+  ],
+  "outlines": "assets/outlines/apartment.glb",
+  "windowView": {
+    "panes": "assets/props/apartment-window-panes.glb",
+    "rotation": 180,
+    "day": "assets/city/views/residential-windows.jpg",
+    "late": "assets/city/views/residential-windows-late.jpg"
+  },
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave apartment"
+  }
+}

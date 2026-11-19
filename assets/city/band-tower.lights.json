@@ -1,0 +1,18 @@
+{
+  "_note": "Band Tower V2 stair and canopy lights, converted from the kit's review.js (local [x,y,z] -> glTF [63+x, 54.95+z, -2-y]). The GLB carries no lights. Names mark them indoor so they stay on by day. Energies tuned for nightlights.js (k = energy/280).",
+  "fixedSet": {
+    "spots": [
+      { "at": [66.12, 61.85, -9.12], "target": [68.0, 56.45, -12.8], "color": "#ffd7aa", "intensity": 245 },
+      { "at": [71.88, 61.85, -9.12], "target": [70.8, 56.45, -12.6], "color": "#b2d9f2", "intensity": 215 }
+    ]
+  },
+  "lights": [
+    { "name": "Return landing sconce", "type":"POINT", "group":"interior", "energy":130, "color":[1.0,0.83,0.65], "at":[63.8,56.42,-0.91] },
+    { "name": "BT_stair_pendant_low", "type": "POINT", "energy": 110, "color": [1.0, 0.765, 0.545], "at": [63.16, 54.42, -5.72] },
+    { "name": "BT_stair_pendant_mid", "type": "POINT", "energy": 150, "color": [1.0, 0.765, 0.545], "at": [64.5, 58.4, -2.8] },
+    { "name": "BT_stair_pendant_top", "type": "POINT", "energy": 170, "color": [1.0, 0.765, 0.545], "at": [64.5, 58.4, -4.75] },
+    { "name": "BT_canopy_spot_1", "type": "POINT", "energy": 190, "color": [1.0, 0.76, 0.573], "at": [68.79, 57.95, -3.4] },
+    { "name": "BT_canopy_spot_2", "type": "POINT", "energy": 190, "color": [1.0, 0.76, 0.573], "at": [70.42, 57.95, -3.4] },
+    { "name": "BT_canopy_spot_3", "type": "POINT", "energy": 190, "color": [1.0, 0.76, 0.573], "at": [72.05, 57.95, -3.4] }
+  ]
+}

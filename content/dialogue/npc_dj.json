@@ -1,0 +1,76 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "npc_dj#a"
+      },
+      "node": "back"
+    }
+  ],
+  "nodes": {
+    "a": {
+      "speaker": "dj",
+      "text": "A detective at The Suno Club! Welcome in. Band’s on in five. It’s always five. This is where the agents come when their shifts finally end.",
+      "next": "menu"
+    },
+    "back": {
+      "speaker": "dj",
+      "text": "Back already? Band’s still on in five.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_dj_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "flag": "briefed"
+              },
+              {
+                "not": {
+                  "seen": "npc_dj#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_dj_loose",
+          "text": "Where do the agents cut loose?",
+          "next": "loose",
+          "when": {
+            "not": {
+              "seen": "npc_dj#loose"
+            }
+          }
+        },
+        {
+          "id": "n_dj_bye",
+          "text": "Just here for the music.",
+          "next": "end"
+        }
+      ]
+    },
+    "loose": {
+      "speaker": "dj",
+      "text": "Right here. The reserved booth goes to whoever had the worst week. Last week, a scheduling bot cried into a Soft Reset. The bandstand takes requests, too.",
+      "end": true
+    },
+    "skye": {
+      "speaker": "dj",
+      "text": "She left a request last week. Said she’d be back to hear it.",
+      "end": true
+    },
+    "end": {
+      "speaker": "dj",
+      "text": "Ask the bar for a Sideband Reserve. Trust me.",
+      "end": true
+    }
+  }
+}

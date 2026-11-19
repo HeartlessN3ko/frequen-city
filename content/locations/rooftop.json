@@ -1,0 +1,375 @@
+{
+  "name": "Rooftop",
+  "ambience": "assets/audio/amb/rooftop.mp3",
+  "subtitle": "Frequency Tower listening roof",
+  "mapName": "Rooftop",
+  "mapPin": {
+    "x": 50,
+    "y": 12,
+    "label": "right"
+  },
+  "unlockWhen": {
+    "flag": "board:solved"
+  },
+  "models": [
+    {
+      "url": "assets/city/rooftop.glb"
+    },
+    {
+      "url": "assets/city/band-tower.glb"
+    },
+    {
+      "url": "assets/city/band-tower-door.glb",
+      "swing": {
+        "node": "VIP_Door_Hinge",
+        "degrees": 94,
+        "when": {
+          "flag": "roof:open"
+        }
+      }
+    },
+    {
+      "url": "assets/props/listening-roof-picnic.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "behindHorizon": true,
+      "outside": [
+        4,
+        -66,
+        136,
+        46
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "behindHorizon": true,
+      "outside": [
+        4,
+        -66,
+        136,
+        46
+      ]
+    },
+    {
+      "url": "assets/city/rooftop-lettering.glb"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "exposureScale": 0.78
+  },
+  "startPosition": "stairs",
+  "_measure": "Band Tower V2 listening roof (Skye's kit, Band Tower listening roof V2). Camera stops are the kit walkthrough views (review.js local -> glTF [63+x, 54.95+z, -2-y]); clue and Skye heights measured by raycast on the terrace deck 2026-11-07. The door leaf swings 94 degrees once roof:open is set; the ending song begins when Skye speaks.",
+  "positions": [
+    {
+      "id": "stairs",
+      "label": "Foot of the stairs",
+      "camera": {
+        "position": [
+          63.77,
+          53.86,
+          -5.93
+        ],
+        "target": [
+          63.75,
+          55.1,
+          -2.04
+        ],
+        "fov": 55
+      },
+      "links": [
+        {
+          "to": "landing",
+          "label": "Up the stairs",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "landing",
+      "label": "Roof door",
+      "camera": {
+        "position": [
+          65.23,
+          57.06,
+          -5.58
+        ],
+        "target": [
+          65.9,
+          57.12,
+          -4.95
+        ],
+        "fov": 55,
+        "portrait": {
+          "target": [
+            65.86,
+            57.15,
+            -4.95
+          ],
+          "fov": 68
+        }
+      },
+      "links": [
+        {
+          "to": "stairs",
+          "label": "Foot of the stairs",
+          "dir": "back"
+        },
+        {
+          "to": "terrace",
+          "label": "Through the door",
+          "dir": "forward",
+          "when": {
+            "flag": "roof:open"
+          }
+        }
+      ]
+    },
+    {
+      "id": "terrace",
+      "label": "Listening roof",
+      "camera": {
+        "position": [
+          68.3,
+          57.45,
+          -3.9
+        ],
+        "target": [
+          70.35,
+          56.85,
+          -3.85
+        ],
+        "fov": 62,
+        "portrait": {
+          "target": [
+            70.35,
+            56.96,
+            -3.57
+          ],
+          "fov": 75
+        }
+      },
+      "links": [
+        {
+          "to": "landing",
+          "label": "Roof door",
+          "dir": "back"
+        },
+        {
+          "to": "lounge",
+          "label": "Toward the couch",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "lounge",
+      "label": "Rooftop couch",
+      "camera": {
+        "position": [
+          69.35,
+          57.25,
+          -6.37
+        ],
+        "target": [
+          70.35,
+          56.99,
+          -3.62
+        ],
+        "fov": 53,
+        "yawRange": 52,
+        "portrait": {
+          "target": [
+            70.35,
+            57.25,
+            -3.62
+          ],
+          "fov": 54
+        }
+      },
+      "links": [
+        {
+          "to": "terrace",
+          "label": "Listening roof",
+          "dir": "back"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "keypad",
+      "kind": "inspect",
+      "label": "Roof door keypad",
+      "at": [
+        65.85,
+        57.14,
+        -4.69
+      ],
+      "positions": [
+        "landing"
+      ],
+      "doneWhen": {
+        "flag": "roof:open"
+      },
+      "action": [
+        {
+          "do": "narrate",
+          "line": "roof_locked"
+        },
+        {
+          "do": "keypad",
+          "title": "Roof door",
+          "text": "Four digits. The maintenance notice said: the tower's dedication year.",
+          "codeKey": "towerYear",
+          "flag": "roof:open",
+          "then": [
+            {
+              "do": "narrate",
+              "line": "roof_open"
+            }
+          ],
+          "wrongText": "Not that one. The notice said the year the tower was first dedicated, not its anniversary."
+        }
+      ]
+    },
+    {
+      "id": "stain",
+      "kind": "inspect",
+      "label": "Red stain",
+      "at": [
+        70,
+        55.95,
+        -3.85
+      ],
+      "positions": [
+        "terrace"
+      ],
+      "action": [
+        {
+          "do": "narrate",
+          "line": "rooftop_stain"
+        },
+        {
+          "do": "inspect",
+          "evidence": "roof_stain"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "roof_stain"
+      }
+    },
+    {
+      "id": "shirt",
+      "kind": "inspect",
+      "label": "Discarded shirt",
+      "at": [
+        69.49,
+        56.58,
+        -3.38
+      ],
+      "positions": [
+        "terrace"
+      ],
+      "action": [
+        {
+          "do": "narrate",
+          "line": "rooftop_shirt"
+        },
+        {
+          "do": "inspect",
+          "evidence": "roof_shirt"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "roof_shirt"
+      }
+    },
+    {
+      "id": "knife",
+      "kind": "inspect",
+      "label": "Knife",
+      "at": [
+        70.42,
+        56.39,
+        -4.8
+      ],
+      "positions": [
+        "terrace"
+      ],
+      "action": [
+        {
+          "do": "narrate",
+          "line": "rooftop_knife"
+        },
+        {
+          "do": "inspect",
+          "evidence": "roof_knife"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "roof_knife"
+      }
+    },
+    {
+      "id": "food",
+      "kind": "inspect",
+      "label": "Food packaging",
+      "at": [
+        69.67,
+        56.45,
+        -4.82
+      ],
+      "positions": [
+        "terrace"
+      ],
+      "action": [
+        {
+          "do": "inspect",
+          "evidence": "roof_food"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "roof_food"
+      }
+    }
+  ],
+  "onFirstEnter": {
+    "do": "narrate",
+    "line": "rooftop_arrive"
+  },
+  "lights": "assets/city/band-tower.lights.json",
+  "lampScale": 0.45,
+  "horizon": {
+    "image": "assets/city/tower-horizon.jpg",
+    "radius": 32,
+    "origin": [
+      68.5,
+      57.3,
+      -4.8
+    ]
+  },
+  "outlines": "assets/outlines/rooftop.glb",
+  "npcs": [
+    {
+      "id": "skye",
+      "character": "skye",
+      "at": [
+        70.315,
+        56.185,
+        -3.564
+      ],
+      "facing": 180,
+      "seated": true,
+      "dialogue": "skye_finale",
+      "positions": [
+        "lounge"
+      ],
+      "when": {
+        "flag": "roof:open"
+      }
+    }
+  ]
+}

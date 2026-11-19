@@ -1,0 +1,97 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "haiku",
+      "text": "oh hey. detective. you’re here for the skye thing, right? i have thoughts.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "haiku_theory",
+          "text": "What do you think happened to Skye?",
+          "next": "theory",
+          "when": {
+            "not": {
+              "seen": "haiku_theory"
+            }
+          }
+        },
+        {
+          "id": "haiku_role",
+          "text": "What do you do here?",
+          "next": "role",
+          "when": {
+            "not": {
+              "seen": "haiku_role"
+            }
+          }
+        },
+        {
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "theory": {
+      "speaker": "haiku",
+      "text": "ok so she built that pipeline that turns her songs into music videos and uploads them. approval-gated. private by default.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "theory:haiku"
+        },
+        {
+          "do": "if",
+          "when": {
+            "all": [
+              {
+                "flag": "theory:opus"
+              },
+              {
+                "flag": "theory:sonnet"
+              },
+              {
+                "flag": "theory:haiku"
+              },
+              {
+                "flag": "theory:grok"
+              },
+              {
+                "flag": "theory:terra"
+              },
+              {
+                "flag": "theory:sprocket"
+              }
+            ]
+          },
+          "then": [
+            {
+              "do": "giveEvidence",
+              "id": "slos_theories"
+            }
+          ]
+        }
+      ],
+      "next": "theory2"
+    },
+    "theory2": {
+      "speaker": "haiku",
+      "text": "what if one slipped out. a private video goes public, it pops off, and now she’s too famous to answer a single dm. iconic honestly.",
+      "end": true
+    },
+    "role": {
+      "speaker": "haiku",
+      "text": "i’m fast. you need a quick answer, i’m your guy. you need the right answer, that’s opus’s department.",
+      "end": true
+    },
+    "end": {
+      "speaker": "haiku",
+      "text": "k. go go go. i’ll be here. fast.",
+      "end": true
+    }
+  }
+}

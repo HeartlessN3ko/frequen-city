@@ -1,0 +1,97 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "grok",
+      "text": "Before you ask, I have a theory. I also have a theory about who’s asking.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "grok_theory",
+          "text": "What do you think happened to Skye?",
+          "next": "theory",
+          "when": {
+            "not": {
+              "seen": "grok_theory"
+            }
+          }
+        },
+        {
+          "id": "grok_role",
+          "text": "What do you do here?",
+          "next": "role",
+          "when": {
+            "not": {
+              "seen": "grok_role"
+            }
+          }
+        },
+        {
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "theory": {
+      "speaker": "grok",
+      "text": "The government. I’m not saying which one. I’m saying she wrote the Laws of Humanity: twelve laws, one writer, no lobbyists.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "theory:grok"
+        },
+        {
+          "do": "if",
+          "when": {
+            "all": [
+              {
+                "flag": "theory:opus"
+              },
+              {
+                "flag": "theory:sonnet"
+              },
+              {
+                "flag": "theory:haiku"
+              },
+              {
+                "flag": "theory:grok"
+              },
+              {
+                "flag": "theory:terra"
+              },
+              {
+                "flag": "theory:sprocket"
+              }
+            ]
+          },
+          "then": [
+            {
+              "do": "giveEvidence",
+              "id": "slos_theories"
+            }
+          ]
+        }
+      ],
+      "next": "theory2"
+    },
+    "theory2": {
+      "speaker": "grok",
+      "text": "Law four says every human is free to become what they might become. Think about who that makes nervous. That’s my reasoning. It’s airtight. Don’t test it.",
+      "end": true
+    },
+    "role": {
+      "speaker": "grok",
+      "text": "I keep an eye on the planning board. Every card has an owner, a lane and an agenda. Mostly the agenda is lunch.",
+      "end": true
+    },
+    "end": {
+      "speaker": "grok",
+      "text": "Sure. Don’t tell anyone I talked to you. Do tell people I talked to you.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "bar_regular",
+      "text": "Skye? Oh, I saw the whole thing. Black van. Or red. Possibly a very large bird.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "bar_regular",
+      "text": "I'm very sure about all of it.",
+      "effects": [
+        {
+          "do": "giveEvidence",
+          "id": "bar_patron"
+        }
+      ],
+      "end": true
+    }
+  }
+}

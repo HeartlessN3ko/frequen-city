@@ -1,0 +1,358 @@
+{
+  "_note": "Optional finds that count toward 100%. Text uses supplied project facts only; entries marked placeholder wait for Skye-approved source text.",
+  "port_transfer": {
+    "title": "Transfer Terminal",
+    "hint": "USB Port",
+    "description": "Visitor packets download here. Most arrivals are data. Humans are considerably less common."
+  },
+  "port_arrivals": {
+    "title": "Unclaimed Luggage",
+    "hint": "USB Port · Baggage claim",
+    "description": "An arrival was logged four hours before the detective's transfer. This one brought luggage. It's still waiting at baggage claim."
+  },
+  "police_records": {
+    "title": "Department incident records",
+    "hint": "Police Department",
+    "description": "Every case in the department’s history is marked “pending further prompting.” In this city an agent acts when it is given a direction, and until one arrives the case stays open. Skye runs her own workshop the same way: she sets the intent, her agents do the work, and they come back to her only for creative judgment and for anything destructive, expensive or public."
+  },
+  "apt_workstation": {
+    "title": "Workstation",
+    "hint": "Skye’s apartment",
+    "description": "Claude is open on one monitor and ChatGPT on the other. Skye was working on something—or several things. She usually has more than one project going."
+  },
+  "apt_books": {
+    "title": "The Golden Age of Crappy Ideas",
+    "hint": "Skye’s apartment",
+    "description": "One piece of writing here is Skye’s own: “The Golden Age of Crappy Ideas,” published 10 August 2026. Her argument is that AI has made a mountain of overengineered ideas buildable, and has also let more people make useful, strange, personal things. Her example of the first kind is an agent setup built to check the weather: “Then you find out what the system actually does. It checks the weather.”"
+  },
+  "apt_keepsakes": {
+    "title": "The plush collection",
+    "hint": "Skye’s apartment",
+    "description": "A unicorn-mushroom Squishmallow, a little pink plush and two teddy bears, one blue and one light pink. Skye has always liked cute things, from plush to cute outfits and jewelry, and the same person who designs strategy games keeps a unicorn-mushroom."
+  },
+  "slos_prompt": {
+    "title": "Main Prompt Display",
+    "hint": "SLOS Headquarters",
+    "description": "The latest message is from Skye, bringing the agents a new game idea to work on together. There are no follow-up instructions. That's unusual for her."
+  },
+  "slos_workstations": {
+    "title": "Agent Workstations",
+    "hint": "SLOS Headquarters",
+    "description": "Workstations for Sonnet, Haiku, Sol, Terra, Luna, Opus, Astra and the rest of the agents. Each has a little corner of the SLOS floor."
+  },
+  "slos_planning": {
+    "title": "Production planning display",
+    "hint": "SLOS Headquarters",
+    "description": "The planning board keeps a lane for each family of projects, and every project is registered once so that, in SLOS’s own words, no project starts from zero. A new project begins by pulling the research, prompts and lessons from the ones before it. The lanes are staffed by agents, and the work stays Skye’s to direct."
+  },
+  "slos_old_prompts": {
+    "title": "The prompt library",
+    "hint": "SLOS Headquarters",
+    "description": "SLOS keeps a library of versioned prompts, so a good request is reused instead of rewritten. Songs made with Suno keep their exact lyrics and style prompts, and when those went missing they were recovered from the original conversations, which is how the inputs for Taku’s “Never Let Go” were rebuilt. Saved prompts mean a result Skye likes can be reproduced, and one she doesn’t can be traced back to the words that made it."
+  },
+  "arcade_megabytes": {
+    "title": "MEGA-BYTES",
+    "hint": "A cabinet at Voidworks",
+    "description": "A virtual-pet game inspired by Tamagotchi, where you care for your own digital pet. Skye began it in 2024, making it one of her first major games developed with AI."
+  },
+  "arcade_generals": {
+    "title": "Great Generals",
+    "hint": "A cabinet at Voidworks",
+    "description": "A grand 4X strategy game where you take control of a kingdom. Its world runs through 24-hour real-time days, tracking the systems that keep the kingdom going."
+  },
+  "arcade_toyplane": {
+    "title": "Toy Plane: Alien Assault",
+    "hint": "A cabinet at Voidworks",
+    "description": "You're a toy airplane in a garage when aliens attack. Skye developed the project in about a week with multiple AI agents, creating the assets in Blender and building the game in Godot."
+  },
+  "arcade_smartest": {
+    "title": "Who's the Smartest?",
+    "hint": "A cabinet at Voidworks",
+    "description": "A GameHub trivia game made for Jeopardy-style rounds with the shared-screen, play-together format of Jackbox."
+  },
+  "arcade_squad": {
+    "title": "Squad Dungeon",
+    "hint": "A cabinet at Voidworks",
+    "description": "Squad Dungeon is a Godot 4 top-down dungeon crawler. The playable slice runs 10 floors with 10 classes, a Goblin Shaman Chief on floor 5, a Slime King on floor 10 and original music."
+  },
+  "vw_devdesk": {
+    "title": "Studio project index",
+    "hint": "Voidworks Game Labs",
+    "description": "The development desk lists everything Voidworks has built or tried. Besides the cabinets there is Shinobi Dash, a Phaser 3 browser platformer with parallax scenery; Realm Knights, a turn-based RPG played in Discord; and a GameHub archive of online games (Battle Rock, Prism Pop Survival, Street Siren, Unit-0, Marble Mayhem, District Rush, Card Table, Meow UNO, Connect 4, Battleship, Risk and Plotluck). It also lists mod and asset work: Project Zomboid mods, Hull Breach hairstyles and furniture, a Voxel Destruction experiment, a Pokémon Battle Advanced patch, a PokéPath TD quality-of-life mod and a PokeMMO battlefield art study. Frequen City: Missing User, the game this desk sits inside, is on the list too."
+  },
+  "boutique_collection": {
+    "title": "KOMG",
+    "hint": "Stealth & Glitter",
+    "description": "Anime-inspired streetwear for Black people, built around the idea of a Black Girls Magical Academy."
+  },
+  "boutique_racks": {
+    "title": "Racks",
+    "hint": "Stealth & Glitter",
+    "description": "The pieces carry names rather than product codes: the Pastel Prism Star crop hoodie, the Kura Gakuen sigil boyfriend hoodie in Pastel Aurora, Neon Cat Cloud and neon flame-head tees, the Cosmic Aura dress, Android Tear leggings, and the Rendered Emotion and Muse Mode On totes. The line covers hoodies, tees, a dress, leggings and bags, a small but complete wardrobe, and its names pull anime, space and machines into one vocabulary."
+  },
+  "boutique_ads": {
+    "title": "Catalog campaign",
+    "hint": "Stealth & Glitter",
+    "description": "The framed print is Stealth & Glitter’s catalog campaign. The same collection was advertised in a varsity ad, a full-drop ad and a behind-the-design film. Skye makes the campaign images with an AI pipeline: images generated with gpt-image, a quality-control pass, then Kling for video, feeding the brand’s social posting."
+  },
+  "boutique_design": {
+    "title": "Design Station",
+    "hint": "Stealth & Glitter",
+    "description": "Stealth & Glitter is an online clothing company Skye started in 2024, where she sells her custom clothing designs, including anime-inspired graphics and streetwear."
+  },
+  "studio_albums": {
+    "title": "Adventures in Weirdness",
+    "hint": "Savage Cat Productions",
+    "description": "ChaosDesigned’s 2016 chiptune drum and bass album includes “Mushroom Land.”"
+  },
+  "studio_listening": {
+    "title": "Listening station",
+    "hint": "Savage Cat Productions",
+    "description": "The archive desk plays three of Skye’s recordings that span more than a decade: “Cold Hearted Machine,” a 2010 ChaosDesigned single; “Mushroom Land,” from her 2016 chiptune drum and bass album Adventures in Weirdness; and “Our Youth Never Dies,” a Taku song that began as an older melody she turned into drum and bass around 2015 and later rebuilt as anime-opening rock with Suno."
+  },
+  "studio_instruments": {
+    "title": "Custom instruments",
+    "hint": "Savage Cat Productions",
+    "description": "Skye produced for years in Reason, and this is its patch archive: about 189 instruments, among them The Rave Master, Atari Arp, Angel Rhodes and 808 Destruction. A separate Instrument Building folder holds eleven more she was still developing, including Horn Section, Strings All, Drum Processor and Toy Machine, which is also the title of a 2013 drum and bass single in her discography."
+  },
+  "studio_console": {
+    "title": "Petpet Park",
+    "hint": "Savage Cat Productions",
+    "description": "Skye composed two songs and several sound effects for Nickelodeon's Petpet Park. The songs include “Mystimar Glenn” and “Pukapuka Island.”"
+  },
+  "bar_register": {
+    "title": "Pickup register",
+    "hint": "The bar",
+    "description": "Today’s takeaway pickup list has one ticked line: food and snacks, collected by Skye. It matches the slip on her fridge, so the errand itself is confirmed. A tick is only the bartender’s handwriting, though: it says an order left the counter, not where it went afterward."
+  },
+  "bar_counter": {
+    "title": "Food counter",
+    "hint": "The bar",
+    "description": "Every order leaves in a takeaway box with a handful of ketchup packets, the kind that burst when pressed, and with a real knife, because the plastic ones “lack conviction.” Skye’s order went out the way everyone’s does."
+  },
+  "bar_memorabilia": {
+    "title": "Memorabilia display",
+    "hint": "The bar",
+    "description": "Posters from around the city crowd the wall: Karaoke Night, Reboot Ramen, Static Bloom, Null Pointers, Coolant Cola, Sprocket Parcel Co and Antenna Gin. Reboot Ramen, Coolant Cola, Antenna Gin and Sprocket Parcel Co are the city’s own brands, named the way a city of robots would name its noodles, its drinks and its couriers, and the rest read as nights out."
+  },
+  "museum_secondbrain": {
+    "title": "Second Brain",
+    "hint": "Museum",
+    "description": "Second Brain is the reference system Skye built in April 2026, and it is not a to-do list. It records what she is working on, where every project’s files live across her drives, why she made each decision (a decision log) and how fast she ships, with a section called My Lore for her creative philosophy. She writes to it as she works, in a journal of what shipped each day, so that future-Skye and any new AI session can start from what is on file. It was the foundation for a visualizer meant to show who she actually is."
+  },
+  "museum_oracle": {
+    "title": "Oracle",
+    "hint": "Museum",
+    "description": "Oracle is Skye's custom-designed AI interface for finding her files and working across her projects. It connects her requests with the documents, tools and saved work in SLOS."
+  },
+  "museum_hud": {
+    "title": "SLOS",
+    "hint": "Museum",
+    "description": "Skye's AI workspace: the place where she stores AI data and manages her projects, driven by a locally running language model."
+  },
+  "museum_melinin": {
+    "title": "Melaninated",
+    "hint": "Museum",
+    "description": "Melaninated is a photo-editor project designed for melanin-rich skin. Its color-processing approach aims to smooth skin without lightening the original tone, and add glow without a washed-out result."
+  },
+  "museum_inventions": {
+    "title": "The AI Pages",
+    "hint": "Museum · Rotating case",
+    "description": "The AI Pages is Skye’s concept for a platform where AI creators share how their work was made. Alongside the finished result, they would document prompts, iterations, experiments and failures so other people could learn from the process."
+  },
+  "library_life": {
+    "title": "The Life of Skye",
+    "hint": "Library",
+    "description": "A documentary about Skye's life, told from the perspective of AIs a thousand years in the future. They gather the data she left across the internet and try to reconstruct what she lived through."
+  },
+  "library_blog": {
+    "title": "Building Weird Little Things",
+    "hint": "Library · Blogs",
+    "description": "Skye writes about using AI to learn unfamiliar skills and begin building ideas without already knowing every technical detail.\n\n“You can start with an idea instead of a perfect plan. You can say, “I want something inspired by a retro handheld companion, but not a copy. No arms. No legs. Just a face screen, buttons, a speaker, and a printable shell.” Then AI can help translate that vague shape into something more concrete: proportions, display size, vents, button placement, Raspberry Pi clearance, sensor holes, USB-C access, screw posts, and shell seams.”\n\n— AI Makes Building Weird Little Things Possible Again"
+  },
+  "library_journals": {
+    "title": "Learning the Ropes",
+    "hint": "Library · Journals",
+    "description": "An early entry about Skye teaching herself to customize LiveJournal and making an HTML prototype of her ideal layout.\n\n“A quick overview. I changed my LJ, I did it myself this time. I learned the ropes and I've got the hang of it now. I experimented for about 3 hours until I got back to what I liked. I even made my own HTML prototype of my dream layout.”\n\n— Mercury — journal, February 23, 2004"
+  },
+  "library_stories": {
+    "title": "The Realm: A World in the Making",
+    "hint": "Library · The Realm",
+    "description": "A fantasy and science-fiction world Skye has been developing for twenty years, with its own geography, cultures and extensive history. It began in AIM roleplay, where she founded the company behind SRX and Shinra. That world now extends into Realm Knights, a Discord adventure game; The Realm: Third Age, a fully AI-driven roleplaying experience built for Discord; and numerous videos and characters."
+  },
+  "library_aifacts": {
+    "title": "Skye AI",
+    "hint": "Library",
+    "description": "Skye AI is a chatbot Skye built to introduce people to her. Visitors can ask about her interests, projects and personality through a conversational interface backed by information she has provided about herself."
+  },
+  "club_booth": {
+    "title": "A request for the band",
+    "hint": "The Suno Club",
+    "description": "“Cold Hearted Machine” was a 2010 ChaosDesigned single, one of Skye’s earliest releases, and someone has requested it from a club named for Suno, the AI music tool she writes with. Her method is to keep an old song’s melody and chord progression and give it new lyrics and a separate style prompt, which is how her 2017 song “Hold Me Close” became the Taku song “Never Let Go.”"
+  },
+  "club_floor": {
+    "title": "School House Bangers",
+    "hint": "The Suno Club · Dance floor",
+    "description": "School House Bangers are Skye’s educational songs, each chorus teaching one lesson in the spacious, retro style of 1970s educational jazz-funk, with sung exchanges between two reusable characters, Sister Girl and Chatty. The approved fifth version is “One Thing Leads to Another,” and the series was inspired by “Three Is a Magic Number.” They are made with Suno from her own lyrics and style prompts."
+  },
+  "club_posters": {
+    "title": "House drinks",
+    "hint": "The Suno Club",
+    "description": "House Current (citrus and mineral), Soft Reset (warm and sparkling) and Sideband Reserve (copper coil, aged) were designed as Art Deco robot-coolant cocktail labels for the Sideband Club, the jazz nightclub that stood on this stage before it became The Suno Club. The room changed, but the Sideband Reserve label stayed on its own shelf."
+  },
+  "club_patrons": {
+    "title": "Patron chatter",
+    "hint": "The Suno Club",
+    "description": "Regulars at a club named for the AI tool Skye makes songs with argue over whether she is missing or just offline in a cool way. For someone who sleeps from about 5 AM until 1 PM and works after midnight, offline really is a lifestyle."
+  },
+  "apt_tapestry": {
+    "title": "Psychedelic tapestry",
+    "hint": "Skye’s apartment",
+    "description": "Skye thinks she found this one on Temu. Its loud, saturated psychedelia sits comfortably next to Adventures in Weirdness, her 2016 chiptune drum and bass album, which includes a track called “Mushroom Land.”"
+  },
+  "apt_flag": {
+    "title": "Trans flag",
+    "hint": "Skye’s apartment",
+    "description": "Skye is a Black trans woman, and she hung her flag where she can see it every day. Her own word for this stretch of her life is “glow-up”: a year of coming into herself, with new confidence and new experiences."
+  },
+  "apt_clothes": {
+    "title": "A decade in retail",
+    "hint": "Skye’s apartment",
+    "description": "Skye owns the online clothing company Stealth & Glitter, and before that she spent about a decade in retail at Banana Republic, Gap and Victoria’s Secret. She dresses up even on ordinary days, so a pile of clothes here is a working wardrobe, and the same eye shows in the boutique across town."
+  },
+  "apt_clocks": {
+    "title": "A night owl’s bedroom",
+    "hint": "Skye’s apartment",
+    "description": "Skye keeps a night owl’s hours: she normally sleeps from about 5 AM until 1 PM and is most active after midnight. Her theory is that the more clocks you own, the better your chances of time travel, which at least explains a bedroom full of them."
+  },
+  "apt_pantry": {
+    "title": "Pantry favorites",
+    "hint": "Skye’s apartment",
+    "description": "Hot chips and salsa, Arizona iced tea, Snickers, chewy bars, granola and yogurt, and juice rather than soda. Her favorite meals are tacos, hamburgers, spaghetti, grilled meat and rice, and Tuesday is Taco Tuesday."
+  },
+  "apt_studio_sign": {
+    "title": "ChaosDesigned",
+    "hint": "Skye’s apartment",
+    "description": "ChaosDesigned is the name Skye has released music under since 2009, and the sign is its wordmark: white neon with a glitch edge and a mirrored final D. The little monitor beside it runs Toy Plane, her game built around her own songs, so the desk has the music and the games she builds from it in one place."
+  },
+  "apt_air_conditioner": {
+    "title": "Living room air conditioner",
+    "hint": "Skye’s apartment",
+    "description": "Skye dislikes being cold, so this unit stays quiet until the summer heat comes in."
+  },
+  "apt_maru": {
+    "title": "Maru",
+    "hint": "Skye’s apartment",
+    "description": "Maru is Skye’s black domestic shorthair, her familiar and emotional-support companion. Skye has trained her to follow commands and practices outdoor routines and leash training with her. This part of the apartment belongs to Maru."
+  },
+  "apt_records": {
+    "title": "Record Case",
+    "hint": "Skye’s apartment",
+    "description": "Some of Skye's favorites: Mudvayne, Muse, Polyphia, Lupe Fiasco, Kendrick Lamar and Avenged Sevenfold."
+  },
+  "apt_entry_prints": {
+    "title": "Entryway snapshots",
+    "hint": "Skye’s apartment",
+    "description": "Three of the nine prints Skye chose for this apartment hang beside the front door, so they are the first thing a visitor sees. One shows a floral top, straight bangs and glasses. One shows dark glasses and a red lip with leaves catching the light behind her. One shows a bright green headscarf over a sheer black top. Each look is deliberate, which fits someone who spent a decade in retail and now runs her own clothing label."
+  },
+  "apt_living_prints": {
+    "title": "Photos by the sofa",
+    "hint": "Skye’s apartment",
+    "description": "Three more of the nine prints Skye chose hang by the sofa. Long willow branches almost touch the stone where she is sitting. A close-up shows a sweep of blue eyeliner. In a third she wears a green dress with long braids, outdoors. Green keeps coming back across the apartment’s portraits, in the headscarf, the leaves, the willow and the dress."
+  },
+  "apt_maru_print": {
+    "title": "Maru on window duty",
+    "hint": "Skye’s apartment",
+    "description": "Maru has the window seat, and this print shows her watching the city through the glass. Skye calls her both her familiar and her emotional-support companion. Black cats run through Skye’s life: she also wears an Egyptian-style black cat god tattooed on one arm, because she loves cats."
+  },
+  "apt_ai_print": {
+    "title": "AI Is the Future",
+    "hint": "Skye’s apartment",
+    "description": "A human face and a machine eye share one print, over the words AI IS THE FUTURE. Skye hung it beside her workstation, and she has put her time where the print is: she has worked seriously with AI since late 2025, from chat assistants to local models on her own PC. She is no uncritical booster, though. One of her essays is titled “AI did not kill artists, upload and pray did.”"
+  },
+  "apt_ninja_print": {
+    "title": "Akatsuki and Maru",
+    "hint": "Skye’s apartment",
+    "description": "An AI-generated portrait of Skye wearing an Akatsuki cloak from Naruto, alongside her cat Maru. It brings together her love of Naruto and black cats."
+  },
+  "museum_generals": {
+    "title": "Great Generals · People studies",
+    "hint": "Museum",
+    "description": "Great Generals is Skye’s strategy game on real time rather than turns: kingdoms keep running while players are away, and delegated officers carry out their orders across a 14-day campaign from thaw to first snow. This sheet, “Peoples: Base Studies I,” draws seven of its peoples to one scale, 0 to 210 cm: Humans, High Elves, Shadow Elves, Dwarves, Stonekin, Beastkin and Vampires, with close-ups of a human head, an elf’s arm joint, a dwarf’s vest pattern and a stonekin shoulder. The humans, elves, dwarves and vampires are all drawn with dark brown skin, and the sheet’s own note says why: anatomy study, culture and role remain separate."
+  },
+  "museum_realm": {
+    "title": "The Realm · Terra",
+    "hint": "Museum",
+    "description": "The wall map shows Terra, the world The Realm is set on, as a canonical terrain map: an icy north-west, a long continent with a mountain spine through the middle and a violet band labelled “Unstable Region” along the eastern edge. The Realm’s locations database places cities on it. Cameron City, the RIA stronghold, sits where New York would be on an alternate Earth, and the elven city of Silvermoon keeps Hearth Law, under which water is given before names are asked and judgment waits until a guest can stand upright."
+  },
+  "studio_audiochaos": {
+    "title": "Audio Chaos",
+    "hint": "Savage Cat Productions",
+    "description": "Skye’s Audio Chaos archive spans three volumes from 2009 to 2011. The first includes “Designing Chaos.”"
+  },
+  "studio_bsides": {
+    "title": "B-Sides",
+    "hint": "Savage Cat Productions",
+    "description": "A collection of unfinished ChaosDesigned tracks."
+  },
+  "studio_taku": {
+    "title": "Taku",
+    "hint": "Savage Cat Productions",
+    "description": "Taku is a fictional J-rock band named for its lead singer, inspired by Skye’s first Japanese childhood friend. Taku sings and plays rhythm guitar, Ren plays lead guitar, Nao plays bass, and Fren drums and sings backing vocals, a band from a commuter town outside Yokohama. Skye reimagines older compositions of hers as anime-opening-style rock with Suno, keeping each song’s melody and chord progression and writing new lyrics and a separate style prompt. “Never Let Go” was her 2017 future-bass song “Hold Me Close,” and “Our Youth Never Dies” began as “Like Father Like Son,” an older Reason melody she turned into drum and bass around 2015. An album, “Tomorrow Was Already Here,” is a concept, not yet a release."
+  },
+  "arcade_toyplane_model": {
+    "title": "Toy Plane airframe",
+    "hint": "A cabinet at Voidworks",
+    "description": "The jet on the display is the kind of asset Skye builds in Blender: an F-22 airframe, exported to the game, where Toy Plane reads plane models by name and gives every one the same toon finish for its colors and glow. That is how a hard-surface jet ends up looking like a toy."
+  },
+  "arcade_canyon_run": {
+    "title": "Canyon Run",
+    "hint": "A cabinet at Voidworks",
+    "description": "Canyon Run is the premise of Toy Plane in one picture. From the ground it is a gap between buildings; from a toy cockpit it is the course. The city is a model inside a house, so what looks like a canyon is a tabletop street, and at the transitions the real room shows through."
+  },
+  "library_rift": {
+    "title": "The Great Rift",
+    "hint": "Library · The Realm",
+    "description": "The Great Rift tore through the barriers between Terra and other realities. For roughly seventy-two hours, gravity shifted, time behaved differently from place to place, and fragments of other worlds collided with the planet. When the tears closed, the people they had brought through were stranded on Terra. The event reshaped its geography and the civilizations that followed."
+  },
+  "library_midgar": {
+    "title": "The Realm Locations",
+    "hint": "Library · The Realm",
+    "description": "Midgar is divided into eight sectors around Shinra Tower. Its districts include finance, industry, commerce, housing and recreation, alongside restricted military and research areas. Wall Market has its own underground economy and a much lighter SRX presence. The city is one setting within the wider world of Terra."
+  },
+  "library_knights": {
+    "title": "Adventures in Terra",
+    "hint": "Library · The Realm",
+    "description": "Realm Knights is a Discord RPG Skye made in the world of Terra. Players choose a class, fight turn-based battles, explore biomes and develop their characters through class evolutions. Between adventures, the town hub offers a blacksmith, alchemist, inn and the Klickalack Tavern."
+  },
+  "library_third_age": {
+    "title": "The Realm: Third Age",
+    "hint": "Library · The Realm",
+    "description": "The Realm: Third Age is a fully AI-driven roleplaying experience Skye built for Discord. Players bring original characters into the world, where AI-powered NPCs respond to them and world events develop from the directions she gives as game master."
+  },
+  "library_bedtime": {
+    "title": "Bedtime in the Realm",
+    "hint": "Library · The Realm",
+    "description": "A planned animated story series drawing on the Realm's lore and history. Told by a narrator with a storybook feel, the episodes are intended as long-form bedtime listening."
+  },
+  "library_blog_portland": {
+    "title": "A City Worth Exploring",
+    "hint": "Library · Blogs",
+    "description": "Skye argues for making Portland’s existing businesses and culture easier to reach.\n\n“The city should stop treating that identity like an accidental side effect and start building an economic strategy around it.\nNot by turning every neighborhood into a tourist trap. Not by replacing what people like with a row of chain stores, branded murals, and $19 cocktails named after the color beige. I mean making it easier for people to find, reach, and spend money at the places that already make Portland worth visiting.”\n\n— How I Would Fix Portland: Stop Treating It Like It Has Nothing to Offer"
+  },
+  "library_blog_nightlife": {
+    "title": "Designing a Night Out",
+    "hint": "Library · Blogs",
+    "description": "Skye examines how venue design shapes the experience of going out.\n\n“Instead, many Portland bars and clubs feel like they were assembled with almost no thought about how people actually experience them.\nNot because the owners don't care, but because design decisions compound into an experience that feels frustrating before the night even begins.”\n\n— Portland’s Nightlife Doesn’t Have a People Problem. It Has a Design Problem."
+  },
+  "museum_codex": {
+    "title": "The Codex of Humanity",
+    "hint": "Museum",
+    "description": "Skye’s Laws of Humanity and their supporting writings form The Codex of Humanity, organized into Books, Chapters and Verses. The Twelve Laws consider truth, life, strength, sovereignty, community and the responsibilities people carry toward one another and future generations. This open volume reproduces Laws 1 and 4 from Book II, version 0.6. Law 1 begins: “Seek truth, and change your understanding when better knowledge requires it.”"
+  },
+  "museum_commons": {
+    "title": "The Commons",
+    "hint": "Museum",
+    "description": "The Commons is Skye’s browser-based meeting place for different AI models. She can address one model directly, invite a group conversation, or put a question into debate; the models can answer her and respond to each other. Channels separate the workshop, everyday chat, music and lounge conversations. This image shows the actual interface in an empty demonstration channel, without private conversation history."
+  }
+}

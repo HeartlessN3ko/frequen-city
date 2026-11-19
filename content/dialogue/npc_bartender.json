@@ -1,0 +1,113 @@
+{
+  "start": "hello",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "evidence": "e3_sighting"
+      },
+      "node": "after"
+    },
+    {
+      "when": {
+        "seen": "npc_bartender#hello"
+      },
+      "node": "a"
+    }
+  ],
+  "nodes": {
+    "hello": {
+      "speaker": "bartender",
+      "text": "A detective. In my bar. Sit anywhere that isn’t sticky. What brings you in?",
+      "next": "a"
+    },
+    "a": {
+      "speaker": "bartender",
+      "text": "What’ll it be? Information costs extra. Gossip is free.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_bartender_pickup",
+          "text": "Skye left a pickup slip from here. Did she collect her order?",
+          "next": "pickup",
+          "when": {
+            "all": [
+              {
+                "evidence": "e1_pickup"
+              },
+              {
+                "not": {
+                  "seen": "npc_bartender#pickup"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_bartender_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "not": {
+                  "evidence": "e1_pickup"
+                }
+              },
+              {
+                "not": {
+                  "seen": "npc_bartender#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_bartender_bye",
+          "text": "Just looking around.",
+          "next": "end"
+        }
+      ]
+    },
+    "skye": {
+      "speaker": "bartender",
+      "text": "Lots of people come through. I’d need more than a name to go on.",
+      "end": true
+    },
+    "pickup": {
+      "speaker": "bartender",
+      "text": "Big smile. Picked up her food and snacks, then walked off toward Frequency Tower.",
+      "next": "leevee"
+    },
+    "leevee": {
+      "speaker": "bartender",
+      "text": "Leevee came asking for her a little later. I told her the same.",
+      "effects": [
+        {
+          "do": "inspect",
+          "evidence": "e3_sighting",
+          "when": {
+            "not": {
+              "evidence": "e3_sighting"
+            }
+          }
+        }
+      ],
+      "end": true
+    },
+    "after": {
+      "speaker": "bartender",
+      "text": "Same story as before, detective. Food, snacks, Frequency Tower. If you find her, tell her the ketchup’s on the house.",
+      "end": true,
+      "final": true
+    },
+    "end": {
+      "speaker": "bartender",
+      "text": "Come back anytime.",
+      "end": true
+    }
+  }
+}

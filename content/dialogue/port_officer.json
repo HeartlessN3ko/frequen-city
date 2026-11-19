@@ -1,0 +1,67 @@
+{
+  "entries": [
+    {
+      "when": {
+        "flag": "met_officer"
+      },
+      "node": "again"
+    }
+  ],
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "port_officer",
+      "text": "There’s your stamp. Keep that report handy. Want directions to the officers who called it in?",
+      "choices": [
+        {
+          "id": "po_fit_case",
+          "text": "Yes. Where are they?",
+          "next": "d"
+        },
+        {
+          "id": "po_why_me",
+          "text": "Why did they ask for me?",
+          "next": "why"
+        }
+      ]
+    },
+    "d": {
+      "speaker": "port_officer",
+      "text": "Here. Drew you a map on a napkin. That circle is Police. Ask for the Chief.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "met_officer"
+        },
+        {
+          "do": "unlockLocation",
+          "id": "police"
+        },
+        {
+          "do": "narrate",
+          "line": "port_arrive",
+          "when": {
+            "not": {
+              "flag": "port:reflected"
+            }
+          }
+        },
+        {
+          "do": "setFlag",
+          "flag": "port:reflected"
+        }
+      ],
+      "end": true
+    },
+    "why": {
+      "speaker": "port_officer",
+      "text": "You were the only result. Good thing you picked up.",
+      "next": "d"
+    },
+    "again": {
+      "speaker": "port_officer",
+      "text": "Police is marked on your napkin. Open Map whenever you’re ready.",
+      "end": true
+    }
+  }
+}

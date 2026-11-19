@@ -1,0 +1,388 @@
+{
+  "name": "The Suno Club",
+  "ambience": "assets/audio/amb/club.mp3",
+  "exterior": "club",
+  "hideOnMap": true,
+  "env": {
+    "sky": "interior",
+    "background": "#0c0a12",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.53,
+    "key": 0.7,
+    "ambient": 0.17,
+    "exposure": 1.1
+  },
+  "startPosition": "entrance",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Booth regular",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          6
+        ],
+        "target": [
+          1.816,
+          1.138,
+          2.436
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            1.816,
+            1.138,
+            2.436
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/club-views/entrance.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "bar",
+          "label": "House drinks",
+          "dir": "left"
+        },
+        {
+          "to": "vault",
+          "label": "Dance floor",
+          "dir": "forward"
+        },
+        {
+          "to": "floor",
+          "label": "Reserved booth",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "bar",
+      "label": "House drinks",
+      "camera": {
+        "position": [
+          -5.32,
+          1.54,
+          2.23
+        ],
+        "target": [
+          -9.32,
+          1.463,
+          2.23
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -9.32,
+            1.463,
+            2.23
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/club-views/bar.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Booth regular",
+          "dir": "back"
+        },
+        {
+          "to": "vault",
+          "label": "Dance floor",
+          "dir": "back"
+        },
+        {
+          "to": "floor",
+          "label": "Reserved booth",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "vault",
+      "label": "Dance floor",
+      "camera": {
+        "position": [
+          4.2,
+          1.5,
+          2.6
+        ],
+        "target": [
+          1.227,
+          0.938,
+          -0.077
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            1.227,
+            0.938,
+            -0.077
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/club-views/vault.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Booth regular",
+          "dir": "left"
+        },
+        {
+          "to": "bar",
+          "label": "House drinks",
+          "dir": "forward"
+        },
+        {
+          "to": "floor",
+          "label": "Reserved booth",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "floor",
+      "label": "Reserved booth",
+      "camera": {
+        "position": [
+          1.24,
+          1.64,
+          3.49
+        ],
+        "target": [
+          5.235,
+          1.225,
+          3.281
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            5.235,
+            1.225,
+            3.281
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/club-views/floor.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Booth regular",
+          "dir": "right"
+        },
+        {
+          "to": "bar",
+          "label": "House drinks",
+          "dir": "back"
+        },
+        {
+          "to": "vault",
+          "label": "Dance floor",
+          "dir": "forward"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        7
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "club",
+        "position": "street"
+      }
+    },
+    {
+      "id": "booth",
+      "kind": "inspect",
+      "label": "Bandstand",
+      "at": [
+        1.85,
+        0.89,
+        -4.01
+      ],
+      "positions": [
+        "vault"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "club_booth"
+        },
+        {
+          "do": "inspect",
+          "title": "A request for the band",
+          "text": "“Cold Hearted Machine” was a 2010 ChaosDesigned single, one of Skye’s earliest releases, and someone has requested it from a club named for Suno, the AI music tool she writes with. Her method is to keep an old song’s melody and chord progression and give it new lyrics and a separate style prompt, which is how her 2017 song “Hold Me Close” became the Taku song “Never Let Go.”",
+          "kicker": "Discovery",
+          "print": {
+            "style": "request",
+            "lines": [
+              "The Suno Club · Requests",
+              "Cold Hearted Machine",
+              "ChaosDesigned"
+            ]
+          }
+        }
+      ],
+      "doneWhen": {
+        "discovered": "club_booth"
+      }
+    },
+    {
+      "id": "dancefloor",
+      "kind": "inspect",
+      "label": "Dance floor",
+      "at": [
+        1.5,
+        0.3,
+        0.2
+      ],
+      "positions": [
+        "entrance",
+        "vault"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "club_floor"
+        },
+        {
+          "do": "inspect",
+          "title": "School House Bangers",
+          "text": "School House Bangers are Skye’s educational songs, each chorus teaching one lesson in the spacious, retro style of 1970s educational jazz-funk, with sung exchanges between two reusable characters, Sister Girl and Chatty. The approved fifth version is “One Thing Leads to Another,” and the series was inspired by “Three Is a Magic Number.” They are made with Suno from her own lyrics and style prompts.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "club_floor"
+      }
+    },
+    {
+      "id": "drinks",
+      "kind": "inspect",
+      "label": "House drinks",
+      "at": [
+        -7.39,
+        1.5,
+        2.18
+      ],
+      "positions": [
+        "bar"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "club_posters"
+        },
+        {
+          "do": "inspect",
+          "title": "House drinks",
+          "text": "House Current (citrus and mineral), Soft Reset (warm and sparkling) and Sideband Reserve (copper coil, aged) were designed as Art Deco robot-coolant cocktail labels for the Sideband Club, the jazz nightclub that stood on this stage before it became The Suno Club. The room changed, but the Sideband Reserve label stayed on its own shelf.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "club_posters"
+      }
+    }
+  ],
+  "npcs": [
+    {
+      "id": "dj",
+      "character": "dj",
+      "at": [
+        4.6,
+        0,
+        -1.2
+      ],
+      "facing": -35,
+      "dialogue": "npc_dj",
+      "positions": [
+        "entrance"
+      ]
+    },
+    {
+      "id": "patron_a",
+      "character": "club_patron_a",
+      "at": [
+        -2.1,
+        0,
+        -0.25
+      ],
+      "facing": -60,
+      "dialogue": "npc_club_patron_a",
+      "positions": [
+        "vault"
+      ]
+    },
+    {
+      "id": "patron_b",
+      "character": "club_patron_b",
+      "at": [
+        2.6,
+        0,
+        0.6
+      ],
+      "facing": 200,
+      "dialogue": "npc_club_patron_b",
+      "positions": [
+        "entrance",
+        "vault"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/interiors/club.glb",
+      "lightScale": 0.002
+    },
+    {
+      "url": "assets/interiors/club-service.glb"
+    }
+  ],
+  "_measure": "The Suno Club.blend, exported read-only. Entrance portal on the south wall at z 7; the bandstand is at the north end (z -2 to -7), the bar along the west wall (x -7.8), the vault booth on the east wall.",
+  "outlines": "assets/outlines/club-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave The Suno Club"
+  },
+  "onFirstEnter": [
+    {
+      "do": "dialogue",
+      "tree": "npc_dj",
+      "npc": "dj",
+      "greeting": true
+    }
+  ]
+}

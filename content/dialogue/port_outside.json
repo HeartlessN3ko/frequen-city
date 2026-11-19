@@ -1,0 +1,33 @@
+{
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "port_manager",
+      "text": "Arrivals is just inside. I keep an eye on the waterfront deliveries.",
+      "choices": [
+        {
+          "text": "See you around.",
+          "next": "bye"
+        },
+        {
+          "text": "Could you show me the city map?",
+          "when": {
+            "flag": "unlocked:police"
+          },
+          "next": "directory"
+        }
+      ]
+    },
+    "bye": {
+      "end": true
+    },
+    "directory": {
+      "effects": [
+        {
+          "do": "openMap"
+        }
+      ],
+      "end": true
+    }
+  }
+}

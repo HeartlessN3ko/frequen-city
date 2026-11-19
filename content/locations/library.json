@@ -1,0 +1,167 @@
+{
+  "name": "Library",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Frequen City Library",
+  "mapName": "Library",
+  "mapPin": {
+    "x": 66,
+    "y": 24
+  },
+  "interior": "library-interior",
+  "models": [
+    {
+      "url": "assets/city/ext-library.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        -206,
+        -366,
+        -94,
+        -244
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        -206,
+        -366,
+        -94,
+        -244
+      ]
+    },
+    {
+      "url": "assets/city/library-lettering.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/library.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/library.glb"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "fill": 0.9
+  },
+  "ambient": {
+    "pedestrians": 5,
+    "paths": [
+      [
+        [
+          -146.5,
+          0.36,
+          -319
+        ],
+        [
+          -146.5,
+          0.36,
+          -291
+        ]
+      ],
+      [
+        [
+          -145,
+          0.36,
+          -291
+        ],
+        [
+          -145,
+          0.36,
+          -319
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street"
+    ],
+    "greetings": [
+      "I meant to return one book. Now look at my bag.",
+      "It’s my favorite quiet spot on this street.",
+      "The card catalog still works. The librarian refuses to let it retire.",
+      "There’s a map of RAM in there. I stared at it for ten minutes and learned where my lunch went.",
+      "The shelves in there are older than the street."
+    ]
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Across the street",
+      "camera": {
+        "position": [
+          -137,
+          2.06,
+          -310
+        ],
+        "target": [
+          -146.637,
+          2.892,
+          -307.464
+        ],
+        "fov": 52.5,
+        "portrait": {
+          "target": [
+            -151.7,
+            3.1,
+            -305.0
+          ],
+          "fov": 67
+        }
+      },
+      "links": []
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        -152.7,
+        1.66,
+        -305
+      ],
+      "positions": [
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "library-interior"
+      }
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "library_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "Quiet in there. Whisper."
+    }
+  ],
+  "unlockWhen": {
+    "evidence": "e3_sighting"
+  },
+  "optional": true,
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter the library"
+  },
+  "horizon": {
+    "day": "assets/city/views/library-day.jpg",
+    "late": "assets/city/views/library-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      -137,
+      2.06,
+      -310
+    ],
+    "surfaceDepth": "assets/city/street-depth/library-street.png"
+  }
+}

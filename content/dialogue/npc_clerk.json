@@ -1,0 +1,82 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "npc_clerk#a"
+      },
+      "node": "back"
+    }
+  ],
+  "nodes": {
+    "a": {
+      "speaker": "clerk",
+      "text": "Welcome to Stealth & Glitter! Every print in here started as one of Skye’s designs. Everything is limited edition, including my patience.",
+      "next": "menu"
+    },
+    "back": {
+      "speaker": "clerk",
+      "text": "Back again? The jackets missed you.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_clerk_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "flag": "briefed"
+              },
+              {
+                "not": {
+                  "seen": "npc_clerk#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_clerk_about",
+          "text": "Tell me about her.",
+          "next": "about",
+          "when": {
+            "not": {
+              "seen": "npc_clerk#about"
+            }
+          }
+        },
+        {
+          "id": "n_clerk_bye",
+          "text": "Just browsing.",
+          "next": "end"
+        }
+      ]
+    },
+    "skye": {
+      "speaker": "clerk",
+      "text": "Obviously she went to Tokyo Fashion Week. Didn’t tell anyone. Iconic. I’d do the same.",
+      "effects": [
+        {
+          "do": "giveEvidence",
+          "id": "sg_tokyo"
+        }
+      ],
+      "end": true
+    },
+    "about": {
+      "speaker": "clerk",
+      "text": "This is her business. Every print starts as her design, and she built the online store around them. The Kura Gakuen Varsity Bomber leads the Collection.",
+      "end": true
+    },
+    "end": {
+      "speaker": "clerk",
+      "text": "Don’t touch the varsity jackets. Okay, touch them a little.",
+      "end": true
+    }
+  }
+}

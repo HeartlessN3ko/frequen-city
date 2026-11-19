@@ -1,0 +1,216 @@
+{
+  "name": "Voidworks Game Labs",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Game studio",
+  "mapName": "Voidworks Game Labs",
+  "mapPin": {
+    "x": 44,
+    "y": 22
+  },
+  "interior": "voidworks-interior",
+  "models": [
+    {
+      "url": "assets/city/ext-voidworks.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        279,
+        -221,
+        386,
+        -114
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        279,
+        -221,
+        386,
+        -114
+      ]
+    },
+    {
+      "url": "assets/city/voidworks-lettering.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/voidworks.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/voidworks.glb"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "fill": 0.9
+  },
+  "ambient": {
+    "pedestrians": 5,
+    "paths": [
+      [
+        [
+          344,
+          0.36,
+          -161.5
+        ],
+        [
+          316,
+          0.36,
+          -161.5
+        ]
+      ],
+      [
+        [
+          316,
+          0.36,
+          -160
+        ],
+        [
+          344,
+          0.36,
+          -160
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street",
+      "approach"
+    ],
+    "greetings": [
+      "Voidworks never sleeps. Neither do I, but I have an excuse.",
+      "I owe that arcade cabinet a rematch.",
+      "They’re testing a toy plane game in there. I crashed into a cereal box.",
+      "The dev once explained Great Generals to me for an hour. I took notes. They were snack orders.",
+      "The flight lab smells like glue and ambition."
+    ]
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Across the street",
+      "camera": {
+        "position": [
+          334,
+          2.06,
+          -153.5
+        ],
+        "target": [
+          331.632,
+          4.215,
+          -162.973
+        ],
+        "fov": 47.2,
+        "portrait": {
+          "target": [
+            330,
+            4.45,
+            -167.1
+          ],
+          "fov": 61
+        },
+        "trackFrontage": true
+      },
+      "links": [
+        {
+          "to": "approach",
+          "label": "Step back and look",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "approach",
+      "label": "Street-level lookout",
+      "camera": {
+        "position": [
+          337.5,
+          1.94,
+          -154
+        ],
+        "target": [
+          328.8,
+          4.12,
+          -167.6
+        ],
+        "fov": 64,
+        "yawRange": 75,
+        "trackFrontage": true
+      },
+      "links": [
+        {
+          "to": "street",
+          "label": "Across the street",
+          "dir": "forward"
+        }
+      ],
+      "scenery": {
+        "day": "assets/city/views/voidworks-ground-day.jpg",
+        "late": "assets/city/views/voidworks-ground-late.jpg",
+        "lateHour": 15,
+        "shadowFill": 0.22,
+        "surfaceDepth": "assets/city/street-depth/voidworks-approach.png",
+        "detail": {
+          "day": "assets/city/views/voidworks-approach-detail-day.jpg",
+          "late": "assets/city/views/voidworks-approach-detail-late.jpg"
+        }
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        330,
+        1.66,
+        -167.7
+      ],
+      "positions": [
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "voidworks-interior"
+      }
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "voidworks_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "Voidworks Game Labs. Sounds busy in there."
+    }
+  ],
+  "unlockWhen": {
+    "evidence": "e2_transfer"
+  },
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter Voidworks"
+  },
+  "horizon": {
+    "day": "assets/city/views/voidworks-day.jpg",
+    "late": "assets/city/views/voidworks-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      334,
+      2.06,
+      -153.5
+    ],
+    "shadowFill": 0.22,
+    "surfaceDepth": "assets/city/street-depth/voidworks-street.png",
+    "detail": {
+      "day": "assets/city/views/voidworks-street-detail-day.jpg",
+      "late": "assets/city/views/voidworks-street-detail-late.jpg"
+    }
+  }
+}

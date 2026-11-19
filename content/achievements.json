@@ -1,0 +1,232 @@
+{
+  "_note": "Achievement content and completion thresholds are NOT final (handoff §13). Each `when` is an ordinary condition, so thresholds change here without code.",
+  "completion": {
+    "rule": "completionist = every discovery + E1–E4 + case closed",
+    "draft": true
+  },
+  "items": [
+    {
+      "id": "hired",
+      "title": "Expertly Selected",
+      "description": "Accepted the case.",
+      "when": {
+        "flag": "briefed"
+      },
+      "icon": "badge"
+    },
+    {
+      "id": "first_lead",
+      "title": "Gumshoe",
+      "description": "Found your first essential clue.",
+      "when": {
+        "any": [
+          {
+            "evidence": "e1_pickup"
+          },
+          {
+            "evidence": "e2_transfer"
+          },
+          {
+            "evidence": "e3_sighting"
+          },
+          {
+            "evidence": "e4_access"
+          }
+        ]
+      },
+      "icon": "inspect"
+    },
+    {
+      "id": "string_theory",
+      "title": "String Theory",
+      "description": "Tied red string on the board.",
+      "when": {
+        "flag": "board:strung"
+      },
+      "icon": "board"
+    },
+    {
+      "id": "tourist",
+      "title": "Frequent Flyer",
+      "description": "Visited every main investigation location.",
+      "when": {
+        "all": [
+          {
+            "visited": "apartment"
+          },
+          {
+            "visited": "slos-hq-interior"
+          },
+          {
+            "visited": "voidworks-interior"
+          },
+          {
+            "visited": "studio-interior"
+          },
+          {
+            "visited": "boutique-interior"
+          },
+          {
+            "visited": "bar"
+          }
+        ]
+      },
+      "icon": "map"
+    },
+    {
+      "id": "case_closed",
+      "title": "Case Closed",
+      "description": "Found Skye.",
+      "when": {
+        "flag": "case:complete"
+      },
+      "icon": "trophy"
+    },
+    {
+      "id": "completionist",
+      "title": "Thorough",
+      "description": "100% — every discovery, all four essential clues, case closed.",
+      "secret": false,
+      "when": {
+        "all": [
+          {
+            "flag": "case:complete"
+          },
+          {
+            "evidence": "e1_pickup"
+          },
+          {
+            "evidence": "e2_transfer"
+          },
+          {
+            "evidence": "e3_sighting"
+          },
+          {
+            "evidence": "e4_access"
+          },
+          {
+            "discovered": "port_transfer"
+          },
+          {
+            "discovered": "port_arrivals"
+          },
+          {
+            "discovered": "police_records"
+          },
+          {
+            "discovered": "apt_workstation"
+          },
+          {
+            "discovered": "apt_books"
+          },
+          {
+            "discovered": "apt_keepsakes"
+          },
+          {
+            "discovered": "slos_prompt"
+          },
+          {
+            "discovered": "slos_workstations"
+          },
+          {
+            "discovered": "slos_planning"
+          },
+          {
+            "discovered": "arcade_megabytes"
+          },
+          {
+            "discovered": "arcade_generals"
+          },
+          {
+            "discovered": "arcade_toyplane"
+          },
+          {
+            "discovered": "arcade_smartest"
+          },
+          {
+            "discovered": "arcade_squad"
+          },
+          {
+            "discovered": "vw_devdesk"
+          },
+          {
+            "discovered": "boutique_collection"
+          },
+          {
+            "discovered": "boutique_racks"
+          },
+          {
+            "discovered": "boutique_ads"
+          },
+          {
+            "discovered": "boutique_design"
+          },
+          {
+            "discovered": "studio_albums"
+          },
+          {
+            "discovered": "studio_listening"
+          },
+          {
+            "discovered": "studio_instruments"
+          },
+          {
+            "discovered": "studio_console"
+          },
+          {
+            "discovered": "bar_register"
+          },
+          {
+            "discovered": "bar_counter"
+          },
+          {
+            "discovered": "bar_memorabilia"
+          },
+          {
+            "discovered": "museum_secondbrain"
+          },
+          {
+            "discovered": "museum_oracle"
+          },
+          {
+            "discovered": "museum_hud"
+          },
+          {
+            "discovered": "museum_melinin"
+          },
+          {
+            "discovered": "museum_inventions"
+          },
+          {
+            "discovered": "library_life"
+          },
+          {
+            "discovered": "library_blog"
+          },
+          {
+            "discovered": "library_journals"
+          },
+          {
+            "discovered": "library_stories"
+          },
+          {
+            "discovered": "library_aifacts"
+          },
+          {
+            "discovered": "club_booth"
+          },
+          {
+            "discovered": "club_floor"
+          },
+          {
+            "discovered": "club_posters"
+          },
+          {
+            "discovered": "club_patrons"
+          }
+        ]
+      },
+      "icon": "star"
+    }
+  ]
+}

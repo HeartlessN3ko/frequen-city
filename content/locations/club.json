@@ -1,0 +1,134 @@
+{
+  "name": "The Suno Club",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Lot 15 · club entrance",
+  "mapName": "The Suno Club",
+  "mapPin": {
+    "x": 74,
+    "y": 40
+  },
+  "interior": "club-interior",
+  "env": {
+    "fogNear": 65,
+    "fogFar": 240
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Across from The Suno Club",
+      "camera": {
+        "position": [
+          397,
+          2.2,
+          -280.45
+        ],
+        "target": [
+          400,
+          4.25,
+          -266.4
+        ],
+        "fov": 60,
+        "yawRange": 65,
+        "portrait": {
+          "target": [
+            402.6,
+            3.65,
+            -266.4
+          ],
+          "fov": 67
+        }
+      },
+      "links": [],
+      "scenery": {
+        "day": "assets/city/views/suno-club-day.jpg",
+        "late": "assets/city/views/suno-club-late.jpg",
+        "lateHour": 15,
+        "surfaceDepth": "assets/city/street-depth/club-street.png"
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "The Suno Club",
+      "at": [
+        404.39,
+        1.96,
+        -265.62
+      ],
+      "positions": [
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "club-interior",
+        "position": "entrance"
+      }
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/city/ext-club.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/club.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/club.glb"
+    }
+  ],
+  "lights": "assets/city/ext-club.lights.json",
+  "npcs": [],
+  "onFirstEnter": {
+    "do": "narrate",
+    "line": "club_arrive"
+  },
+  "unlockWhen": {
+    "visited": "studio"
+  },
+  "optional": true,
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter The Suno Club"
+  },
+  "ambient": {
+    "pedestrians": 3,
+    "paths": [
+      [
+        [
+          385,
+          0.36,
+          -268.65
+        ],
+        [
+          415.0,
+          0.36,
+          -268.65
+        ]
+      ],
+      [
+        [
+          415.0,
+          0.36,
+          -269.25
+        ],
+        [
+          385,
+          0.36,
+          -269.25
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street"
+    ],
+    "greetings": [
+      "I've got time for one more song. I always say that outside this door.",
+      "They still call the drink Sideband Reserve. That name stuck.",
+      "The DJ keeps the requests in order. Persistence won't move you up the list."
+    ]
+  }
+}

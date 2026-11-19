@@ -1,0 +1,808 @@
+{
+  "name": "SLOS Headquarters",
+  "ambience": "assets/audio/amb/office.mp3",
+  "subtitle": "Operations floor",
+  "exterior": "slos-hq",
+  "hideOnMap": true,
+  "env": {
+    "sky": "interior",
+    "background": "#10141a",
+    "fogNear": 22,
+    "fogFar": 60,
+    "hemi": 1.2,
+    "key": 0.9,
+    "ambient": 0.48,
+    "exposure": 1.05
+  },
+  "startPosition": "entrance",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Sprocket",
+      "camera": {
+        "_note": "2026-11-18: was [3, 1.25, -4.98] aimed at the back of the front cubicle, which hid Sprocket. Now 4.1 m from him at eye height in the open aisle, with a clear line to head, chest and feet (surveyed against the set; the face-on side at [1.4, -11.6] looks over a desk partition).",
+        "position": [
+          5.75,
+          1.25,
+          -15.25
+        ],
+        "target": [
+          5.2,
+          0.85,
+          -11.2
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            5.2,
+            0.85,
+            -11.2
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "prompt",
+          "label": "Older prompts",
+          "dir": "forward"
+        },
+        {
+          "to": "planning-view",
+          "label": "Production planning display",
+          "dir": "right"
+        },
+        {
+          "to": "terminal",
+          "label": "Activity log",
+          "transition": "cut"
+        }
+      ]
+    },
+    {
+      "id": "prompt",
+      "label": "Older prompts",
+      "camera": {
+        "position": [
+          4.55,
+          1.26,
+          -24.31
+        ],
+        "target": [
+          4.55,
+          1.822,
+          -28.31
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            4.55,
+            1.822,
+            -28.31
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Sprocket",
+          "dir": "back"
+        },
+        {
+          "to": "floor",
+          "label": "Agent workstations",
+          "dir": "back"
+        },
+        {
+          "to": "sonnet",
+          "label": "Sonnet",
+          "dir": "back",
+          "transition": "cut"
+        }
+      ]
+    },
+    {
+      "id": "floor",
+      "label": "Agent workstations",
+      "camera": {
+        "position": [
+          4.75,
+          1.25,
+          -14.77
+        ],
+        "target": [
+          7.101,
+          0.922,
+          -18.006
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            7.101,
+            0.922,
+            -18.006
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "prompt",
+          "label": "Older prompts",
+          "dir": "forward"
+        },
+        {
+          "to": "planning-view",
+          "label": "Production planning display",
+          "dir": "right",
+          "transition": "cut"
+        },
+        {
+          "to": "sonnet",
+          "label": "Sonnet",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "planning-view",
+      "label": "Production planning display",
+      "camera": {
+        "position": [
+          7.75,
+          1.26,
+          -7.17
+        ],
+        "target": [
+          10.723,
+          1.393,
+          -4.493
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            10.723,
+            1.393,
+            -4.493
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Sprocket",
+          "dir": "right"
+        },
+        {
+          "to": "floor",
+          "label": "Agent workstations",
+          "dir": "back",
+          "transition": "cut"
+        },
+        {
+          "to": "sonnet",
+          "label": "Sonnet",
+          "dir": "back",
+          "transition": "cut"
+        }
+      ]
+    },
+    {
+      "id": "sonnet",
+      "label": "Sonnet",
+      "camera": {
+        "position": [
+          4.68,
+          1.25,
+          -17.92
+        ],
+        "target": [
+          0.685,
+          0.995,
+          -17.711
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            0.685,
+            0.995,
+            -17.711
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "prompt",
+          "label": "Older prompts",
+          "dir": "right",
+          "transition": "cut"
+        },
+        {
+          "to": "floor",
+          "label": "Agent workstations",
+          "dir": "left"
+        },
+        {
+          "to": "planning-view",
+          "label": "Production planning display",
+          "dir": "left",
+          "transition": "cut"
+        }
+      ]
+    },
+    {
+      "id": "terminal",
+      "label": "Activity log",
+      "camera": {
+        "position": [
+          3.55,
+          1.26,
+          -12.41
+        ],
+        "target": [
+          2.573,
+          1.17,
+          -9.239
+        ],
+        "fov": 61,
+        "yawRange": 44
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Sprocket",
+          "transition": "cut"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        3,
+        1.45,
+        -4.15
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "slos-hq"
+      }
+    },
+    {
+      "id": "log",
+      "kind": "inspect",
+      "label": "Last activity log",
+      "at": [
+        2.56,
+        1.17,
+        -9.3
+      ],
+      "positions": [
+        "entrance",
+        "terminal"
+      ],
+      "when": {
+        "flag": "briefed"
+      },
+      "action": [
+        {
+          "do": "inspect",
+          "evidence": "e2_transfer"
+        }
+      ],
+      "doneWhen": {
+        "evidence": "e2_transfer"
+      }
+    },
+    {
+      "id": "prompt",
+      "kind": "inspect",
+      "label": "Main prompt display",
+      "at": [
+        4.5,
+        4.2,
+        -32.6
+      ],
+      "positions": [
+        "prompt"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "slos_prompt"
+        },
+        {
+          "do": "inspect",
+          "title": "Main Prompt Display",
+          "text": "The latest message is from Skye, bringing the agents a new game idea to work on together. There are no follow-up instructions. That's unusual for her.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "slos_prompt"
+      },
+      "reach": 10
+    },
+    {
+      "id": "workstations",
+      "kind": "inspect",
+      "label": "Agent workstations",
+      "at": [
+        7.23,
+        0.815,
+        -18.05
+      ],
+      "positions": [
+        "floor"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "slos_workstations"
+        },
+        {
+          "do": "inspect",
+          "title": "Agent Workstations",
+          "text": "Workstations for Sonnet, Haiku, Sol, Terra, Luna, Opus, Astra and the rest of the agents. Each has a little corner of the SLOS floor.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "slos_workstations"
+      }
+    },
+    {
+      "id": "planning",
+      "kind": "inspect",
+      "label": "Production planning display",
+      "at": [
+        10.8,
+        2.3,
+        -4.2
+      ],
+      "positions": [
+        "planning-view"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "slos_planning"
+        },
+        {
+          "do": "inspect",
+          "title": "Production planning display",
+          "text": "The planning board keeps a lane for each family of projects, and every project is registered once so that, in SLOS’s own words, no project starts from zero. A new project begins by pulling the research, prompts and lessons from the ones before it. The lanes are staffed by agents, and the work stays Skye’s to direct.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "slos_planning"
+      }
+    },
+    {
+      "id": "old_prompts",
+      "kind": "inspect",
+      "label": "Older prompts",
+      "at": [
+        4.5,
+        3.57,
+        -32.7
+      ],
+      "positions": [
+        "prompt"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "slos_old_prompts"
+        },
+        {
+          "do": "inspect",
+          "title": "The prompt library",
+          "kicker": "Discovery",
+          "text": "SLOS keeps a library of versioned prompts, so a good request is reused instead of rewritten. Songs made with Suno keep their exact lyrics and style prompts, and when those went missing they were recovered from the original conversations, which is how the inputs for Taku’s “Never Let Go” were rebuilt. Saved prompts mean a result Skye likes can be reproduced, and one she doesn’t can be traced back to the words that made it."
+        }
+      ],
+      "doneWhen": {
+        "discovered": "slos_old_prompts"
+      },
+      "reach": 10
+    }
+  ],
+  "npcs": [
+    {
+      "id": "opus",
+      "character": "opus",
+      "at": [
+        5.75,
+        0,
+        -26.65
+      ],
+      "facing": -20,
+      "dialogue": "agent_opus",
+      "positions": [
+        "prompt"
+      ]
+    },
+    {
+      "id": "sonnet",
+      "character": "sonnet",
+      "at": [
+        2.15,
+        0,
+        -17.9
+      ],
+      "facing": 180,
+      "dialogue": "agent_sonnet",
+      "positions": [
+        "sonnet"
+      ]
+    },
+    {
+      "id": "haiku",
+      "character": "haiku",
+      "at": [
+        6.3,
+        0,
+        -18.75
+      ],
+      "facing": 200,
+      "dialogue": "agent_haiku",
+      "positions": [
+        "floor"
+      ]
+    },
+    {
+      "id": "sprocket",
+      "character": "sprocket",
+      "at": [
+        5.2,
+        0,
+        -11.2
+      ],
+      "facing": -118,
+      "dialogue": "agent_sprocket",
+      "positions": [
+        "entrance"
+      ]
+    },
+    {
+      "id": "grok",
+      "character": "grok",
+      "at": [
+        9.1,
+        0,
+        -6.55
+      ],
+      "facing": -30,
+      "dialogue": "agent_grok",
+      "positions": [
+        "planning-view"
+      ]
+    },
+    {
+      "id": "terra",
+      "character": "terra",
+      "at": [
+        -3.8,
+        0,
+        -15.85
+      ],
+      "facing": 140,
+      "dialogue": "agent_terra",
+      "positions": [
+        "sonnet"
+      ]
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/interiors/slos-hq.glb",
+      "lightScale": 0.002
+    },
+    {
+      "url": "assets/interiors/slos-hq-furniture.glb"
+    }
+  ],
+  "_measure": "Office.blend (LOC_Office), exported read-only. The player arrives from the main elevator on the south wall (x 3, z -4); the prompt wall fills the north wall at z -32.8.",
+  "screens": [
+    {
+      "id": "prompt",
+      "size": [
+        18.96,
+        6.96
+      ],
+      "at": [
+        4.5,
+        5.7,
+        -32.738
+      ],
+      "style": "desk",
+      "title": "Last message",
+      "rowsVisible": 3,
+      "rows": [
+        [
+          "SKYE"
+        ],
+        [
+          "New project queued."
+        ],
+        [
+          "Awaiting next prompt"
+        ]
+      ],
+      "highlightFor": "prompt",
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  PRODUCTION",
+        "status": "USER CHANNEL",
+        "centerColumn": 0.27,
+        "footer": "Request history"
+      }
+    },
+    {
+      "id": "build",
+      "size": [
+        4.37,
+        2.43
+      ],
+      "at": [
+        -7.7,
+        5.6,
+        -32.911
+      ],
+      "style": "desk",
+      "title": "BUILD QUEUE",
+      "rowsVisible": 2,
+      "rows": [
+        [
+          "Last activity"
+        ],
+        [
+          "Music transfer"
+        ]
+      ],
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  PRODUCTION",
+        "status": "BUILD MONITOR"
+      }
+    },
+    {
+      "id": "pr",
+      "size": [
+        4.37,
+        2.43
+      ],
+      "at": [
+        16.7,
+        5.6,
+        -32.911
+      ],
+      "style": "desk",
+      "title": "REQUESTS",
+      "rowsVisible": 2,
+      "rows": [
+        [
+          "New project"
+        ],
+        [
+          "Awaiting brief"
+        ]
+      ],
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  PRODUCTION",
+        "status": "REQUEST INBOX"
+      }
+    },
+    {
+      "id": "plan",
+      "size": [
+        8.81,
+        3.24
+      ],
+      "at": [
+        10.8,
+        2.3,
+        -4.09
+      ],
+      "style": "desk",
+      "title": "Production planning",
+      "rowsVisible": 3,
+      "rows": [
+        [
+          "New project (Skye)"
+        ],
+        [
+          "Assignee: open"
+        ],
+        [
+          "Waiting on brief"
+        ]
+      ],
+      "yaw": 180,
+      "highlightFor": "planning",
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  PRODUCTION",
+        "status": "PLANNING BOARD",
+        "centerColumn": 0.36
+      }
+    },
+    {
+      "id": "activity-log",
+      "size": [
+        1.57,
+        0.88
+      ],
+      "at": [
+        2.573,
+        1.17,
+        -9.239
+      ],
+      "yaw": 135,
+      "style": "desk",
+      "title": "LEEVEE  /  ACTIVITY LOG",
+      "rowsVisible": 3,
+      "rows": [
+        [
+          "Music transfer"
+        ],
+        [
+          "To: Frequency Tower"
+        ],
+        [
+          "Status: delivered"
+        ]
+      ],
+      "highlightFor": "log",
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  WORKSTATION",
+        "status": "LEEVEE   /   TRANSFER HISTORY"
+      }
+    },
+    {
+      "id": "astra-terminal",
+      "at": [
+        21.513,
+        1.008,
+        -10
+      ],
+      "size": [
+        0.918,
+        0.504
+      ],
+      "yaw": 90,
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  ASTRA",
+        "status": "AGENT WORKSTATION"
+      },
+      "title": "Visual review",
+      "rows": [
+        [
+          "Review",
+          "Scene lighting"
+        ],
+        [
+          "Inspect",
+          "Player camera"
+        ]
+      ]
+    },
+    {
+      "id": "fable-terminal",
+      "at": [
+        21.513,
+        1.008,
+        -16
+      ],
+      "size": [
+        0.918,
+        0.504
+      ],
+      "yaw": 90,
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  FABLE",
+        "status": "AGENT WORKSTATION"
+      },
+      "title": "Story desk",
+      "rows": [
+        [
+          "Scene notes",
+          "Dialogue"
+        ],
+        [
+          "Review",
+          "Case continuity"
+        ]
+      ]
+    },
+    {
+      "id": "opus-terminal",
+      "at": [
+        21.513,
+        1.008,
+        -28
+      ],
+      "size": [
+        0.918,
+        0.504
+      ],
+      "yaw": 90,
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  OPUS",
+        "status": "AGENT WORKSTATION"
+      },
+      "title": "Production desk",
+      "rows": [
+        [
+          "Requests",
+          "New project"
+        ],
+        [
+          "Brief",
+          "Awaiting Skye"
+        ]
+      ]
+    },
+    {
+      "id": "sprocket-terminal",
+      "at": [
+        5.932,
+        1.17,
+        -9.663
+      ],
+      "size": [
+        1.57,
+        0.88
+      ],
+      "yaw": -135,
+      "station": {
+        "palette": "office",
+        "service": "SLOS HQ  /  SPROCKET",
+        "status": "AGENT WORKSTATION"
+      },
+      "title": "Service desk",
+      "rows": [
+        [
+          "Requests",
+          "Production planning"
+        ],
+        [
+          "Handoff",
+          "Agent floor"
+        ]
+      ]
+    }
+  ],
+  "outlines": "assets/outlines/slos-hq-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "onFirstEnter": [
+    {
+      "do": "moveTo",
+      "position": "entrance"
+    }
+  ]
+}

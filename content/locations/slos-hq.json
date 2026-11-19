@@ -1,0 +1,207 @@
+{
+  "name": "SLOS Headquarters",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Where the agents work",
+  "mapName": "SLOS HQ",
+  "mapPin": {
+    "x": 28,
+    "y": 30
+  },
+  "unlockWhen": {
+    "flag": "unlocked:apartment"
+  },
+  "interior": "slos-hq-interior",
+  "models": [
+    {
+      "url": "assets/city/slos.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        -206,
+        -286,
+        46,
+        -104
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        -206,
+        -286,
+        46,
+        -104
+      ]
+    },
+    {
+      "url": "assets/props/hq-lobby-doors.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/slos-hq.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/slos-hq.glb"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400
+  },
+  "ambient": {
+    "pedestrians": 6,
+    "paths": [
+      [
+        [
+          -56,
+          0.37,
+          -159.85
+        ],
+        [
+          -28,
+          0.37,
+          -159.85
+        ]
+      ],
+      [
+        [
+          -21,
+          0.37,
+          -150.12
+        ],
+        [
+          -44,
+          0.37,
+          -150.12
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "approach"
+    ],
+    "greetings": [
+      "Shift change. Half the floor is debating whose turn it is to make coffee.",
+      "Those doors go to the agent floor. I’m taking the scenic route home.",
+      "Shinra Leevee Operating System. Say it fast three times, I dare you.",
+      "Someone up there spent a week’s tokens arguing about a semicolon.",
+      "The floor manager keeps the whole place on a schedule. Don’t be late. Don’t be early either.",
+      "The prompt wall changes every day. Today’s is a good one."
+    ]
+  },
+  "startPosition": "approach",
+  "positions": [
+    {
+      "id": "approach",
+      "label": "Entrance approach",
+      "camera": {
+        "position": [
+          -52.5,
+          2,
+          -150.95
+        ],
+        "target": [
+          -47.75,
+          3.15,
+          -162
+        ],
+        "fov": 62,
+        "yawRange": 42,
+        "portrait": {
+          "target": [
+            -47.9,
+            2.8,
+            -161.3
+          ],
+          "fov": 62
+        }
+      },
+      "links": [
+        {
+          "to": "tower",
+          "transition": "overlook",
+          "label": "Look up at the tower",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "tower",
+      "label": "The tower",
+      "camera": {
+        "position": [
+          -111,
+          55,
+          -121
+        ],
+        "target": [
+          -42,
+          104,
+          -187
+        ],
+        "fov": 56,
+        "yawRange": 13,
+        "pitchRange": 6
+      },
+      "links": [
+        {
+          "to": "approach",
+          "transition": "overlook",
+          "label": "Entrance approach",
+          "dir": "back"
+        }
+      ],
+      "scenery": {
+        "day": "assets/city/views/headquarters-overlook-day.jpg",
+        "late": "assets/city/views/headquarters-overlook-late.jpg",
+        "lateHour": 15,
+        "surfaceDepth": "assets/city/street-depth/slos-hq-tower.png"
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        -47.59,
+        5.39,
+        -163.05
+      ],
+      "positions": [
+        "approach"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "slos-hq-interior"
+      }
+    }
+  ],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "slos_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "SLOS Headquarters. Don’t mind the pacing. Everybody’s worried."
+    }
+  ],
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter SLOS HQ"
+  },
+  "horizon": {
+    "day": "assets/city/views/slos-hq-day.jpg",
+    "late": "assets/city/views/slos-hq-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      -52.5,
+      2,
+      -150.95
+    ],
+    "shadowFill": 0.19,
+    "surfaceDepth": "assets/city/street-depth/slos-hq-approach.png"
+  }
+}

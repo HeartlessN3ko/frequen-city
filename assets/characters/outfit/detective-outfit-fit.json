@@ -1,0 +1,96 @@
+{
+ "_note": "Per Bitty robot: coat morph target and fedora seat (Blender z = three.js y) in robot model units. Garment v2 by Codex (wardrobe/Detective Trench), fitted by tools/fit_trench_v2.py.",
+ "robots": {
+  "bitty": {
+   "y": 1.448,
+   "scale": 1.0,
+   "antennaLimit": 1.0,
+   "headHalfX": 0.373,
+   "morph": "fit_bitty"
+  },
+  "dusk": {
+   "y": 1.3685,
+   "scale": 1.1474,
+   "antennaLimit": 1.148,
+   "headHalfX": 0.482,
+   "morph": "fit_dusk"
+  },
+  "lavi": {
+   "y": 1.607,
+   "scale": 0.8421,
+   "antennaLimit": 0.744,
+   "headHalfX": 0.433,
+   "morph": "fit_lavi"
+  },
+  "lemo": {
+   "y": 1.5677,
+   "scale": 0.9989,
+   "antennaLimit": 0.998,
+   "headHalfX": 0.435,
+   "morph": "fit_lemo"
+  },
+  "mintie": {
+   "y": 1.5291,
+   "scale": 0.8547,
+   "antennaLimit": 0.854,
+   "headHalfX": 0.422,
+   "morph": "fit_mintie"
+  },
+  "moss": {
+   "y": 1.607,
+   "scale": 0.8421,
+   "antennaLimit": 0.744,
+   "headHalfX": 0.363,
+   "morph": "fit_moss"
+  },
+  "nox": {
+   "y": 1.4479,
+   "scale": 0.9842,
+   "antennaLimit": 0.984,
+   "headHalfX": 0.405,
+   "morph": "fit_nox"
+  },
+  "patchwork": {
+   "y": 1.5291,
+   "scale": 0.8547,
+   "antennaLimit": 0.854,
+   "headHalfX": 0.408,
+   "morph": "fit_patchwork"
+  },
+  "peachy": {
+   "y": 1.507,
+   "scale": 0.8421,
+   "antennaLimit": 0.653,
+   "headHalfX": 0.397,
+   "morph": "fit_peachy"
+  },
+  "pip": {
+   "y": 1.5677,
+   "scale": 0.9989,
+   "antennaLimit": 0.998,
+   "headHalfX": 0.442,
+   "morph": "fit_pip"
+  },
+  "skyline": {
+   "y": 1.3685,
+   "scale": 1.1474,
+   "antennaLimit": 1.148,
+   "headHalfX": 0.433,
+   "morph": "fit_skyline"
+  },
+  "sunny": {
+   "y": 1.507,
+   "scale": 0.8421,
+   "antennaLimit": 0.653,
+   "headHalfX": 0.463,
+   "morph": "fit_sunny"
+  }
+ },
+ "generic": {
+  "y": 1.6,
+  "scale": 0.8421,
+  "antennaLimit": 0.744,
+  "headHalfX": 0.463,
+  "morph": null
+ }
+}

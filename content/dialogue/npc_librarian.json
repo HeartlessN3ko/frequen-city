@@ -1,0 +1,91 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "npc_librarian#a"
+      },
+      "node": "back"
+    }
+  ],
+  "nodes": {
+    "a": {
+      "speaker": "librarian",
+      "text": "Shh. Welcome to the library. Reading is allowed. Everything else is negotiable.",
+      "next": "menu"
+    },
+    "back": {
+      "speaker": "librarian",
+      "text": "You again. Library voice, please.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "n_librarian_skye",
+          "text": "Have you seen Skye?",
+          "next": "skye",
+          "when": {
+            "all": [
+              {
+                "flag": "briefed"
+              },
+              {
+                "not": {
+                  "seen": "npc_librarian#skye"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "n_librarian_wrote",
+          "text": "What did Skye write?",
+          "next": "wrote",
+          "when": {
+            "not": {
+              "seen": "npc_librarian#wrote"
+            }
+          }
+        },
+        {
+          "id": "n_librarian_card",
+          "text": "Do you have a favorite card in the catalog?",
+          "next": "card",
+          "when": {
+            "not": {
+              "seen": "npc_librarian#card"
+            }
+          }
+        },
+        {
+          "id": "n_librarian_bye",
+          "text": "Just looking around.",
+          "next": "end"
+        }
+      ]
+    },
+    "skye": {
+      "speaker": "librarian",
+      "text": "I can point you to her books. Her whereabouts are another matter.",
+      "end": true
+    },
+    "wrote": {
+      "speaker": "librarian",
+      "text": "The Life of Skye. For that one she built a make-believe browser that digs through the old internet.",
+      "end": true
+    },
+    "card": {
+      "speaker": "librarian",
+      "text": "Taku. Her band is named for her first Japanese childhood friend. That card is my favorite in the whole catalog.",
+      "end": true
+    },
+    "end": {
+      "speaker": "librarian",
+      "text": "Come back anytime. Quietly.",
+      "end": true
+    }
+  }
+}

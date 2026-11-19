@@ -1,0 +1,175 @@
+{
+  "_note": "Investigation design v0.2. kind \"essential\" = the four clues (E1–E4) that converge on Frequency Tower; kind \"theory\" = notes the player can pin but that lead nowhere on their own. Entries marked draft wait on the story team.",
+  "missing_report": {
+    "title": "Missing user report",
+    "description": "Official report: Skye is missing. Time missing: “a long time” (according to the agents).",
+    "source": "Arrivals entry papers · filed by Frequen City Police",
+    "kind": "record",
+    "print": {
+      "style": "cue",
+      "lines": [
+        "FREQUEN CITY POLICE",
+        "Missing user report",
+        "Skye · address requested"
+      ]
+    },
+    "boardImage": "assets/evidence/missing_report.jpg"
+  },
+  "e1_pickup": {
+    "code": "E1",
+    "kind": "essential",
+    "title": "Bar pickup confirmation",
+    "description": "A pickup slip stuck to Skye’s fridge: one order of food and snacks from the bar, marked “ready for pickup today”.",
+    "source": "Skye's apartment",
+    "print": {
+      "style": "cue",
+      "lines": [
+        "BAR · PICKUP SLIP",
+        "Food and snacks",
+        "COLLECT AT THE BAR"
+      ]
+    },
+    "boardImage": "assets/evidence/e1_pickup.jpg",
+    "points": "The slip names The Bar. It records an order, but there’s no signature for collection.",
+    "place": "apartment",
+    "strengthen": "On its own, the slip shows an order was placed. It doesn’t show who collected it."
+  },
+  "e2_transfer": {
+    "code": "E2",
+    "kind": "essential",
+    "title": "Last activity log",
+    "description": "The activity log on Leevee’s desk: Skye requested the latest song renders be transferred to “Frequency Tower”. Status: delivered. Her earlier transfers in the log all went to Voidworks.",
+    "source": "SLOS Headquarters · Leevee’s desk",
+    "print": {
+      "style": "cue",
+      "lines": [
+        "SLOS · ACTIVITY LOG",
+        "Requested by Skye",
+        "Earlier renders · Voidworks",
+        "Latest renders · Frequency Tower"
+      ]
+    },
+    "boardImage": "assets/evidence/e2_transfer.jpg",
+    "points": "Skye asked for the latest renders to go to Frequency Tower. Her earlier requests went to Voidworks.",
+    "place": "slos-hq",
+    "strengthen": "The log shows where the music went and who asked. It doesn’t show what happened after it arrived."
+  },
+  "e3_sighting": {
+    "code": "E3",
+    "kind": "essential",
+    "title": "Bartender's sighting",
+    "description": "The bartender handed Skye her food and watched her head toward Frequency Tower, snacks in one arm. Later, Leevee came in asking where she went.",
+    "source": "The bar",
+    "print": {
+      "style": "cue",
+      "lines": [
+        "WITNESS STATEMENT",
+        "Bartender",
+        "Collected order · walked toward tower"
+      ]
+    },
+    "boardImage": "assets/evidence/e3_sighting.jpg",
+    "points": "She left The Bar carrying her order, heading toward Frequency Tower.",
+    "place": "bar-street",
+    "strengthen": "The bartender saw which way she went. It doesn’t show where she ended up."
+  },
+  "e4_access": {
+    "code": "E4",
+    "kind": "essential",
+    "title": "Tower access records",
+    "description": "A rooftop entry was logged outside normal hours. The maintenance slip notes that the roof door code follows the tower’s original dedication year.",
+    "source": "Savage Cat Productions",
+    "print": {
+      "style": "cue",
+      "lines": [
+        "TOWER · ENTRY LOG",
+        "Rooftop access",
+        "Door code · dedication year"
+      ]
+    },
+    "boardImage": "assets/evidence/e4_access.jpg",
+    "points": "Someone used the rooftop entrance outside normal hours. The log doesn’t name them.",
+    "place": "studio",
+    "strengthen": "The log shows someone went up to the roof. It doesn’t show who."
+  },
+  "police_activity": {
+    "kind": "theory",
+    "title": "Last known activity report",
+    "description": "The department’s version of events: “She was online. Then she wasn’t.” Signed by four officers, none of whom checked.",
+    "source": "Police Department",
+    "boardImage": "assets/evidence/police_activity.jpg",
+    "image": "assets/evidence/police_activity.jpg"
+  },
+  "apt_spill": {
+    "kind": "theory",
+    "title": "Red residue on the counter",
+    "description": "A red smear by the sink. Leevee wiped most of it before I got a look. Blood? Sauce? In this city it could be either, and it could be art.",
+    "source": "Skye's apartment",
+    "boardImage": "assets/evidence/apt_spill.jpg",
+    "image": "assets/evidence/apt_spill.jpg"
+  },
+  "slos_theories": {
+    "kind": "theory",
+    "title": "Agent theories",
+    "description": "The agents’ working theories, each proposed with total confidence: (1) she gave herself one of her own Great Generals orders and went elsewhere; (2) a standing order from the Realm finally fired; (3) a private video went public and she’s hiding from fame; (4) the government; (5) one of her MEGA-BYTES hatched; (6) the city model in the garage swallowed her.",
+    "source": "SLOS Headquarters",
+    "boardImage": "assets/evidence/slos_theories.jpg",
+    "image": "assets/evidence/slos_theories.jpg"
+  },
+  "vw_rival": {
+    "kind": "theory",
+    "title": "Rival publisher theory",
+    "description": "The Voidworks developer is sure a rival publisher poached Skye. Evidence offered: “vibes”, and a competitor’s logo he finds suspicious.",
+    "source": "Voidworks Game Labs",
+    "boardImage": "assets/evidence/vw_rival.jpg",
+    "image": "assets/evidence/vw_rival.jpg"
+  },
+  "sg_tokyo": {
+    "kind": "theory",
+    "title": "Tokyo Fashion Week theory",
+    "description": "The boutique clerk thinks Skye flew to Tokyo Fashion Week without telling anyone. The clerk would have.",
+    "source": "Stealth & Glitter",
+    "boardImage": "assets/evidence/sg_tokyo.jpg",
+    "image": "assets/evidence/sg_tokyo.jpg"
+  },
+  "bar_patron": {
+    "kind": "theory",
+    "title": "A regular's account",
+    "description": "A regular swears Skye left in a black van, or a red one, or got carried off by a very large bird. Unreliable, but very committed.",
+    "source": "The bar",
+    "boardImage": "assets/evidence/bar_patron.jpg",
+    "image": "assets/evidence/bar_patron.jpg"
+  },
+  "roof_stain": {
+    "kind": "theory",
+    "title": "Red stain",
+    "description": "A red smear on the deck. It smells suspiciously like ketchup.",
+    "source": "Frequency Tower rooftop",
+    "boardImage": "assets/evidence/roof_stain.jpg",
+    "image": "assets/evidence/roof_stain.jpg"
+  },
+  "roof_shirt": {
+    "kind": "theory",
+    "title": "Discarded shirt",
+    "description": "A shirt on a lounge cushion, folded at the hem. Someone got warm up here.",
+    "source": "Frequency Tower rooftop",
+    "boardImage": "assets/evidence/roof_shirt.jpg",
+    "image": "assets/evidence/roof_shirt.jpg"
+  },
+  "roof_knife": {
+    "kind": "theory",
+    "title": "Knife",
+    "description": "A knife with crumbs on the blade. The kind the bar hands out with the food.",
+    "source": "Frequency Tower rooftop",
+    "boardImage": "assets/evidence/roof_knife.jpg",
+    "image": "assets/evidence/roof_knife.jpg"
+  },
+  "roof_food": {
+    "kind": "theory",
+    "title": "Food packaging",
+    "description": "Takeaway boxes and burst ketchup packets from the bar. Somebody had a picnic up here.",
+    "source": "Frequency Tower rooftop",
+    "boardImage": "assets/evidence/roof_food.jpg",
+    "image": "assets/evidence/roof_food.jpg"
+  }
+}

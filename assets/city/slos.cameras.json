@@ -1,0 +1,30 @@
+{
+ "AOC_HERO_SLOS_Entrance_Approach": {
+  "position": [
+   -42.0,
+   10.0,
+   -151.0
+  ],
+  "target": [
+   -42.0,
+   6.637,
+   -160.417
+  ],
+  "lensMm": 16.0,
+  "fovDeg": 54.4
+ },
+ "AOC_HERO_SLOS_Tower": {
+  "position": [
+   -200.0,
+   180.0,
+   -80.0
+  ],
+  "target": [
+   -192.233,
+   176.461,
+   -85.211
+  ],
+  "lensMm": 50.0,
+  "fovDeg": 22.3
+ }
+}

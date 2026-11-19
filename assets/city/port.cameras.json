@@ -1,0 +1,226 @@
+{
+ "01 Shelter pavement": {
+  "position": [
+   172.0,
+   2.65,
+   120.0
+  ],
+  "target": [
+   181.259,
+   3.4,
+   116.297
+  ],
+  "lensMm": 32.0,
+  "fovDeg": 33.0
+ },
+ "02 Arrivals frontage": {
+  "position": [
+   162.0,
+   7.0,
+   157.0
+  ],
+  "target": [
+   168.055,
+   6.374,
+   149.066
+  ],
+  "lensMm": 29.0,
+  "fovDeg": 35.8
+ },
+ "02 Pickup doors": {
+  "position": [
+   217.0,
+   3.62,
+   119.0
+  ],
+  "target": [
+   221.856,
+   3.775,
+   127.741
+  ],
+  "lensMm": 29.0,
+  "fovDeg": 35.8
+ },
+ "03 Curb waiting": {
+  "position": [
+   173.0,
+   3.7,
+   121.7
+  ],
+  "target": [
+   182.785,
+   3.613,
+   119.638
+  ],
+  "lensMm": 31.0,
+  "fovDeg": 33.9
+ },
+ "04 Hall from entrance": {
+  "position": [
+   183.0,
+   4.3,
+   162.0
+  ],
+  "target": [
+   192.373,
+   4.487,
+   158.519
+  ],
+  "lensMm": 26.0,
+  "fovDeg": 39.0
+ },
+ "05 Agents at entry": {
+  "position": [
+   176.0,
+   3.54,
+   164.6
+  ],
+  "target": [
+   184.532,
+   3.113,
+   159.401
+  ],
+  "lensMm": 29.0,
+  "fovDeg": 35.8
+ },
+ "05 Claim information": {
+  "position": [
+   198.0,
+   4.05,
+   156.0
+  ],
+  "target": [
+   204.459,
+   4.021,
+   148.366
+  ],
+  "lensMm": 37.0,
+  "fovDeg": 29.2
+ },
+ "06 Entrance threshold": {
+  "position": [
+   214.0,
+   3.0,
+   118.0
+  ],
+  "target": [
+   219.882,
+   2.926,
+   126.087
+  ],
+  "lensMm": 31.0,
+  "fovDeg": 33.9
+ },
+ "07 Entrance map": {
+  "position": [
+   169.0,
+   3.9,
+   171.0
+  ],
+  "target": [
+   172.713,
+   3.714,
+   161.717
+  ],
+  "lensMm": 32.0,
+  "fovDeg": 33.0
+ },
+ "08 Hall overview": {
+  "position": [
+   184.0,
+   4.1,
+   166.0
+  ],
+  "target": [
+   192.904,
+   4.179,
+   161.449
+  ],
+  "lensMm": 27.0,
+  "fovDeg": 37.9
+ },
+ "11 Dispatch and garden": {
+  "position": [
+   265.0,
+   4.3,
+   123.0
+  ],
+  "target": [
+   272.525,
+   4.206,
+   116.415
+  ],
+  "lensMm": 31.0,
+  "fovDeg": 33.9
+ },
+ "AOC_PORT_Hall_Walk": {
+  "position": [
+   192.0,
+   4.5,
+   162.0
+  ],
+  "target": [
+   202.0,
+   4.5,
+   162.0
+  ],
+  "lensMm": 30.0,
+  "fovDeg": 34.8
+ },
+ "AOC_PORT_North_Promenade": {
+  "position": [
+   189.0,
+   4.7,
+   120.0
+  ],
+  "target": [
+   199.0,
+   4.673,
+   120.0
+  ],
+  "lensMm": 30.0,
+  "fovDeg": 34.8
+ },
+ "AOC_PORT_Park_Entry": {
+  "position": [
+   123.0,
+   8.0,
+   161.0
+  ],
+  "target": [
+   132.998,
+   7.794,
+   161.0
+  ],
+  "lensMm": 31.0,
+  "fovDeg": 33.9
+ },
+ "AOC_PORT_Tower_Clearance": {
+  "position": [
+   232.0,
+   11.0,
+   107.0
+  ],
+  "target": [
+   241.929,
+   11.0,
+   108.191
+  ],
+  "lensMm": 29.0,
+  "fovDeg": 35.8
+ },
+ "AOC_PORT_USB_South_Promenade": {
+  "position": [
+   284.0,
+   4.7,
+   190.0
+  ],
+  "target": [
+   294.0,
+   4.67,
+   190.0
+  ],
+  "lensMm": 30.0,
+  "fovDeg": 34.8
+ }
+}

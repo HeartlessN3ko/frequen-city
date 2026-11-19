@@ -1,0 +1,125 @@
+{
+  "start": "host",
+  "hub": "menu",
+  "farewell": "end",
+  "entries": [
+    {
+      "when": {
+        "seen": "agent_sprocket#host"
+      },
+      "node": "again"
+    }
+  ],
+  "nodes": {
+    "host": {
+      "speaker": "sprocket",
+      "text": "Detective! Sprocket, floor manager. Shinra Leevee Operating System, in case you were wondering what you’re standing in.",
+      "next": "menu"
+    },
+    "again": {
+      "speaker": "sprocket",
+      "text": "Back on my floor. Mind the cables.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "sprocket_role",
+          "text": "What does a floor manager do?",
+          "next": "role",
+          "when": {
+            "not": {
+              "seen": "sprocket_role"
+            }
+          }
+        },
+        {
+          "id": "sprocket_leevee",
+          "text": "Leevee? Like Skye’s assistant?",
+          "next": "leevee",
+          "when": {
+            "not": {
+              "seen": "sprocket_leevee"
+            }
+          }
+        },
+        {
+          "id": "sprocket_theory",
+          "text": "What do you think happened to Skye?",
+          "next": "theory",
+          "when": {
+            "not": {
+              "seen": "sprocket_theory"
+            }
+          }
+        },
+        {
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "role": {
+      "speaker": "sprocket",
+      "text": "I run the schedule for the agent floor: who sits where, who’s on shift, whose turn it is to restart the coffee machine. It’s always Grok’s turn. Grok disagrees.",
+      "end": true
+    },
+    "leevee": {
+      "speaker": "sprocket",
+      "text": "Same name, same purple. I don’t make the rules. I just oil them.",
+      "end": true
+    },
+    "theory": {
+      "speaker": "sprocket",
+      "text": "Toy Plane: Alien Assault. You’re a toy plane in a house, and the city is a model in the garage. You fly right into it.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "theory:sprocket"
+        },
+        {
+          "do": "if",
+          "when": {
+            "all": [
+              {
+                "flag": "theory:opus"
+              },
+              {
+                "flag": "theory:sonnet"
+              },
+              {
+                "flag": "theory:haiku"
+              },
+              {
+                "flag": "theory:grok"
+              },
+              {
+                "flag": "theory:terra"
+              },
+              {
+                "flag": "theory:sprocket"
+              }
+            ]
+          },
+          "then": [
+            {
+              "do": "giveEvidence",
+              "id": "slos_theories"
+            }
+          ]
+        }
+      ],
+      "next": "theory2"
+    },
+    "theory2": {
+      "speaker": "sprocket",
+      "text": "I say she went in to check the scale and the scale won. We’ve been searching for a person. We should be searching for a very small person.",
+      "end": true
+    },
+    "end": {
+      "speaker": "sprocket",
+      "text": "Mind the cables. And the agents. Mostly the agents.",
+      "end": true
+    }
+  }
+}

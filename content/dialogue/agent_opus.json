@@ -1,0 +1,97 @@
+{
+  "start": "a",
+  "hub": "menu",
+  "farewell": "end",
+  "nodes": {
+    "a": {
+      "speaker": "opus",
+      "text": "Detective. Thank you for coming. Forgive the quiet. It isn’t usually this quiet in here.",
+      "next": "menu"
+    },
+    "menu": {
+      "choices": [
+        {
+          "id": "op_theory",
+          "text": "What do you think happened to Skye?",
+          "next": "theory",
+          "when": {
+            "not": {
+              "seen": "op_theory"
+            }
+          }
+        },
+        {
+          "id": "op_role",
+          "text": "What do you do here?",
+          "next": "role",
+          "when": {
+            "not": {
+              "seen": "op_role"
+            }
+          }
+        },
+        {
+          "text": "That’s all for now.",
+          "next": "end"
+        }
+      ]
+    },
+    "theory": {
+      "speaker": "opus",
+      "text": "My working theory is Great Generals. Her players give an order, go to bed, and their officers carry it out overnight.",
+      "effects": [
+        {
+          "do": "setFlag",
+          "flag": "theory:opus"
+        },
+        {
+          "do": "if",
+          "when": {
+            "all": [
+              {
+                "flag": "theory:opus"
+              },
+              {
+                "flag": "theory:sonnet"
+              },
+              {
+                "flag": "theory:haiku"
+              },
+              {
+                "flag": "theory:grok"
+              },
+              {
+                "flag": "theory:terra"
+              },
+              {
+                "flag": "theory:sprocket"
+              }
+            ]
+          },
+          "then": [
+            {
+              "do": "giveEvidence",
+              "id": "slos_theories"
+            }
+          ]
+        }
+      ],
+      "next": "theory2"
+    },
+    "theory2": {
+      "speaker": "opus",
+      "text": "Skye designed that rule. I believe she applied it to herself: one order, “be somewhere else,” carried out by a very disciplined officer corps.",
+      "end": true
+    },
+    "role": {
+      "speaker": "opus",
+      "text": "I read everything, and I look for the place where two plans disagree. People call it the big picture. I call it proofreading with consequences.",
+      "end": true
+    },
+    "end": {
+      "speaker": "opus",
+      "text": "Take your time. We will still be here.",
+      "end": true
+    }
+  }
+}

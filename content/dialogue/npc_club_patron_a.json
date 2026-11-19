@@ -1,0 +1,26 @@
+{
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "club_patron_a",
+      "text": "Missing? Skye's not missing. She's offline. In a cool way.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "club_patron_b",
+      "text": "Offline is missing.",
+      "next": "c"
+    },
+    "c": {
+      "speaker": "club_patron_a",
+      "text": "Offline is a lifestyle.",
+      "effects": [
+        {
+          "do": "discover",
+          "id": "club_patrons"
+        }
+      ],
+      "end": true
+    }
+  }
+}

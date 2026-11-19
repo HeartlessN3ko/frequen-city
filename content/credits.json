@@ -1,0 +1,76 @@
+{
+  "title": "Frequen City: Missing User",
+  "seconds": 58,
+  "sections": [
+    {
+      "title": "Created by",
+      "names": [
+        "Skye — ChaosDesigned"
+      ]
+    },
+    {
+      "title": "Featuring",
+      "names": [
+        "The SLOS agents",
+        "The citizens of Frequen City"
+      ]
+    },
+    {
+      "title": "Music in the city",
+      "names": [
+        "“Never Let Go” · “Our Youth Never Dies” — Taku",
+        "“Cold Hearted Machine” · “Mushroom Land” — ChaosDesigned",
+        "“Paper Fields — Tactical Victory Mix” — Toy Plane: Alien Assault",
+        "Savage Cat Productions"
+      ]
+    },
+    {
+      "title": "On the televisions",
+      "names": [
+        "Agents of Chaos",
+        "Clockwork Dance"
+      ]
+    },
+    {
+      "title": "Game systems",
+      "names": [
+        "Opus (Claude)"
+      ]
+    },
+    {
+      "title": "Sound",
+      "names": [
+        "Ambience and effects from public-domain (CC0) recordings"
+      ]
+    },
+    {
+      "title": "Built with",
+      "names": [
+        "three.js · Vite · Blender",
+        "Bebas Neue, Caveat and IBM Plex typefaces (SIL Open Font License)"
+      ]
+    },
+    {
+      "title": "Thank you for playing",
+      "names": [
+        "Come say hi."
+      ]
+    }
+  ],
+  "closing": "Missing for: a few hours.",
+  "music": {
+    "title": "Never Let Go",
+    "artist": "Taku",
+    "src": "assets/audio/taku-never-let-go.mp3",
+    "verseStart": 33.25,
+    "verseEnd": 65.25,
+    "verseGain": 0.16,
+    "chorusDownbeat": 81.25,
+    "pickupSeconds": 0.55
+  },
+  "sunset": {
+    "video": "assets/city/roof-credits.mp4",
+    "poster": "assets/city/roof-credits.jpg",
+    "still": "assets/city/roof-credits-still.jpg"
+  }
+}

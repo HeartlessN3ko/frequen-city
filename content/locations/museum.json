@@ -1,0 +1,204 @@
+{
+  "name": "Museum of Questionable Achievements",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Kernel Avenue",
+  "mapName": "Museum",
+  "mapPin": {
+    "x": 18,
+    "y": 50
+  },
+  "interior": "museum-interior",
+  "models": [
+    {
+      "url": "assets/city/ext-museum.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        -356,
+        -106,
+        -244,
+        6
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        -356,
+        -106,
+        -244,
+        6
+      ]
+    },
+    {
+      "url": "assets/city/museum-bookshop-row.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/museum-lettering.glb"
+    },
+    {
+      "url": "assets/city/museum-transit-stop.glb",
+      "position": [
+        -312,
+        0.2,
+        -27.85
+      ],
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/sidewalks/museum.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/museum-window-cases.glb",
+      "showInPhotograph": true
+    },
+    {
+      "url": "assets/city/frontage-construction/museum.glb"
+    },
+    {
+      "url": "assets/city/traffic/hatchback.glb",
+      "position": [
+        -320.025,
+        0.2,
+        -21.4
+      ],
+      "rotationY": 90,
+      "showInPhotograph": true,
+      "parkedVehicle": "hatchback"
+    },
+    {
+      "url": "assets/city/traffic/city-pod.glb",
+      "position": [
+        -306.775,
+        0.2,
+        -21.4
+      ],
+      "rotationY": 90,
+      "showInPhotograph": true,
+      "parkedVehicle": "city-pod"
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "fill": 0.9
+  },
+  "ambient": {
+    "pedestrians": 5,
+    "paths": [
+      [
+        [
+          -286,
+          0.36,
+          -41
+        ],
+        [
+          -314,
+          0.36,
+          -41
+        ]
+      ],
+      [
+        [
+          -314,
+          0.36,
+          -39.5
+        ],
+        [
+          -286,
+          0.36,
+          -39.5
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street"
+    ],
+    "greetings": [
+      "I came for one exhibit. I’ve been saying that since lunch.",
+      "The curator has a story for just about everything in there.",
+      "They gave the whole place a D. The curator framed the grade.",
+      "Half the exhibits have a plaque. I read all of them and regret none.",
+      "Half of it got built, half got prototyped, and the rest is ‘proposed.’ Very honest museum."
+    ]
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Across the street",
+      "camera": {
+        "position": [
+          -294.8,
+          1.89,
+          -27.8
+        ],
+        "target": [
+          -300,
+          3.28,
+          -47.22
+        ],
+        "fov": 66,
+        "yawRange": 76
+      },
+      "links": []
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        -300,
+        1.66,
+        -47.2
+      ],
+      "positions": [
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "museum-interior"
+      }
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "museum_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "Welcome. Questionable achievements, right this way."
+    }
+  ],
+  "unlockWhen": {
+    "visited": "slos-hq"
+  },
+  "optional": true,
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter the museum"
+  },
+  "horizon": {
+    "day": "assets/city/views/museum-day.jpg",
+    "late": "assets/city/views/museum-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      -294.8,
+      1.89,
+      -27.8
+    ],
+    "surfaceDepth": "assets/city/street-depth/museum-street.png",
+    "detail": {
+      "layout": "twoRows",
+      "day": "assets/city/views/museum-blocks-day.webp",
+      "late": "assets/city/views/museum-blocks-late.webp"
+    }
+  }
+}

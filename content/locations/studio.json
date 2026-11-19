@@ -1,0 +1,257 @@
+{
+  "name": "Frequency Tower",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Savage Cat Productions entrance",
+  "mapName": "Frequency Tower",
+  "mapPin": {
+    "x": 50,
+    "y": 40
+  },
+  "interior": "studio-interior",
+  "models": [
+    {
+      "url": "assets/city/ext-studio.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        14,
+        -46,
+        126,
+        66
+      ]
+    },
+    {
+      "url": "assets/city/port-waterfront.glb",
+      "outside": [
+        14,
+        -46,
+        126,
+        66
+      ]
+    },
+    {
+      "url": "assets/city/studio-lettering.glb"
+    },
+    {
+      "url": "assets/city/sidewalks/studio.glb",
+      "showInPhotograph": true
+    }
+  ],
+  "env": {
+    "fogNear": 300,
+    "fogFar": 2400,
+    "fill": 0.9
+  },
+  "ambient": {
+    "pedestrians": 3,
+    "paths": [
+      [
+        [
+          64.2,
+          0.308,
+          2.45
+        ],
+        [
+          55.5,
+          0.308,
+          2.45
+        ]
+      ],
+      [
+        [
+          55.5,
+          0.308,
+          3.65
+        ],
+        [
+          64.2,
+          0.308,
+          3.65
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street"
+    ],
+    "greetings": [
+      "Sometimes you can hear the bass from this pavement.",
+      "The tower’s the landmark I give anyone who’s lost.",
+      "This place is older than it looks."
+    ]
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Across the street",
+      "camera": {
+        "position": [
+          76.4,
+          2.12,
+          19.6
+        ],
+        "target": [
+          69,
+          4.2,
+          0.7
+        ],
+        "fov": 53,
+        "yawRange": 51
+      },
+      "links": [
+        {
+          "to": "door",
+          "label": "Anniversary plaque",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "label": "Anniversary plaque",
+      "camera": {
+        "position": [
+          70.9,
+          2.04,
+          5.29
+        ],
+        "target": [
+          69,
+          1.98,
+          1
+        ],
+        "fov": 56,
+        "yawRange": 54,
+        "portrait": {
+          "target": [
+            66.22,
+            1.96,
+            1.308
+          ],
+          "fov": 51
+        }
+      },
+      "links": [
+        {
+          "to": "street",
+          "label": "Step back",
+          "dir": "back"
+        }
+      ],
+      "scenery": {
+        "day": "assets/city/views/studio-plaque-day.jpg",
+        "late": "assets/city/views/studio-plaque-late.jpg",
+        "lateHour": 15,
+        "surfaceDepth": "assets/city/street-depth/studio-door.png"
+      }
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        68.4,
+        2,
+        1.5
+      ],
+      "positions": [
+        "door",
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "studio-interior"
+      }
+    },
+    {
+      "id": "plaque",
+      "kind": "inspect",
+      "label": "Anniversary plaque",
+      "at": [
+        66.22,
+        1.96,
+        1.308
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": [
+        {
+          "do": "narrate",
+          "line": "studio_plaque"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Frequency Tower",
+          "title": "Frequency Tower anniversary plaque",
+          "text": "In {towerAnniversary}, Frequency Tower celebrated ten years on the air. The commemoration is dated to its tenth anniversary.",
+          "print": {
+            "style": "cue",
+            "lines": [
+              "FREQUENCY TOWER",
+              "TENTH ANNIVERSARY",
+              "{towerAnniversary}"
+            ]
+          }
+        },
+        {
+          "do": "setFlag",
+          "flag": "seen:plaque"
+        }
+      ]
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": [
+    {
+      "do": "narrate",
+      "line": "studio_arrive"
+    },
+    {
+      "do": "residentHello",
+      "text": "That’s Frequency Tower. Hard to miss."
+    }
+  ],
+  "unlockWhen": {
+    "evidence": "e2_transfer"
+  },
+  "screens": [
+    {
+      "id": "dedication",
+      "style": "brass",
+      "at": [
+        66.22,
+        1.96,
+        1.281
+      ],
+      "size": [
+        1.86,
+        0.97
+      ],
+      "title": "FREQUENCY TOWER",
+      "inscription": "Built to carry the signal.",
+      "yearKey": "towerYear",
+      "highlightFor": "plaque",
+      "standOff": 0.031
+    }
+  ],
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter the studio"
+  },
+  "horizon": {
+    "day": "assets/city/views/studio-day.jpg",
+    "late": "assets/city/views/studio-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      76.4,
+      2.12,
+      19.6
+    ],
+    "surfaceDepth": "assets/city/street-depth/studio-street.png"
+  }
+}

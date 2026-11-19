@@ -1,0 +1,876 @@
+{
+  "name": "Library",
+  "ambience": "assets/audio/amb/library.mp3",
+  "subtitle": "Frequen City Library",
+  "exterior": "library",
+  "hideOnMap": true,
+  "models": [
+    {
+      "url": "assets/interiors/library.glb",
+      "lightScale": 0.002,
+      "floorFinish": {
+        "image": "assets/interiors/library-floor.jpg",
+        "bounds": [
+          -9.2,
+          -18.2,
+          18.4
+        ]
+      }
+    },
+    {
+      "url": "assets/interiors/library-furniture.glb"
+    },
+    {
+      "url": "assets/interiors/library-inspection.glb"
+    },
+    {
+      "url": "assets/interiors/library-study.glb"
+    },
+    {
+      "url": "assets/interiors/library-construction.glb"
+    },
+    {
+      "url": "assets/props/library-catalog-terminal.glb"
+    },
+    {
+      "url": "assets/props/library-reading-books.glb"
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#0f0b08",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.38,
+    "key": 0.35,
+    "ambient": 0.07,
+    "exposure": 1.05,
+    "reflections": 0.26,
+    "fog": false
+  },
+  "startPosition": "entrance",
+  "_measure": "Positions come from the gameplay cameras in Frequen City Library.blend (LOC_FrequenCityLibrary), converted to game axes (x, z, -y). Front door at x 0, z 0; the room runs toward -z.",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Library entrance",
+      "camera": {
+        "position": [
+          -2.834,
+          1.25,
+          -2.469
+        ],
+        "target": [
+          -6.398,
+          1.131,
+          -4.285
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -6.398,
+            1.131,
+            -4.285
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/library-workshop/entrance.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "blogs",
+          "label": "Blogs",
+          "dir": "left",
+          "transition": "cut"
+        },
+        {
+          "to": "door",
+          "label": "Realm atlas",
+          "dir": "back"
+        },
+        {
+          "to": "city-archive",
+          "label": "The Realm",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "local-worlds",
+      "label": "Journals",
+      "camera": {
+        "position": [
+          5.5,
+          1.25,
+          -8.8
+        ],
+        "target": [
+          5.5,
+          1.38,
+          -10.45
+        ],
+        "fov": 66,
+        "yawRange": 60
+      },
+      "links": [
+        {
+          "to": "local-history",
+          "label": "The Life of Skye",
+          "dir": "back"
+        },
+        {
+          "to": "door",
+          "label": "Realm atlas",
+          "dir": "back"
+        },
+        {
+          "to": "city-archive",
+          "label": "The Realm",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "local-history",
+      "label": "The Life of Skye",
+      "camera": {
+        "position": [
+          4.15,
+          1.25,
+          -5.72
+        ],
+        "target": [
+          6.667,
+          1.476,
+          -8.829
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            6.667,
+            1.476,
+            -8.829
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/library-workshop/local-history.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Library entrance",
+          "dir": "back"
+        },
+        {
+          "to": "local-worlds",
+          "label": "Journals",
+          "dir": "forward"
+        },
+        {
+          "to": "door",
+          "label": "Realm atlas",
+          "dir": "back"
+        }
+      ]
+    },
+    {
+      "id": "door",
+      "label": "Realm atlas",
+      "camera": {
+        "position": [
+          0,
+          1.17,
+          -2.4
+        ],
+        "target": [
+          -0.832,
+          0.834,
+          -6.313
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -0.832,
+            0.834,
+            -6.313
+          ],
+          "fov": 74
+        }
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Library entrance",
+          "dir": "left"
+        },
+        {
+          "to": "local-worlds",
+          "label": "Journals",
+          "dir": "forward"
+        },
+        {
+          "to": "local-history",
+          "label": "The Life of Skye",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "city-archive",
+      "label": "The Realm",
+      "camera": {
+        "position": [
+          -5.5,
+          1.25,
+          -8.85
+        ],
+        "target": [
+          -5.5,
+          1.22,
+          -10.45
+        ],
+        "fov": 66,
+        "yawRange": 60
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Library entrance",
+          "dir": "back"
+        },
+        {
+          "to": "local-worlds",
+          "label": "Journals",
+          "dir": "right"
+        },
+        {
+          "to": "returns",
+          "label": "Realm map",
+          "dir": "forward"
+        }
+      ]
+    },
+    {
+      "id": "returns",
+      "label": "Realm map",
+      "camera": {
+        "position": [
+          -5.4,
+          1.25,
+          -13.2
+        ],
+        "target": [
+          -8.636,
+          1.121,
+          -10.849
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -8.636,
+            1.121,
+            -10.849
+          ],
+          "fov": 74
+        }
+      },
+      "scenery": {
+        "day": "assets/interiors/library-workshop/returns.webp",
+        "heading": 0
+      },
+      "links": [
+        {
+          "to": "city-archive",
+          "label": "The Realm",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "blogs",
+      "label": "Blogs",
+      "camera": {
+        "position": [
+          -5.5,
+          1.25,
+          -5.5
+        ],
+        "target": [
+          -5.5,
+          1.4,
+          -7.15
+        ],
+        "fov": 66,
+        "yawRange": 45
+      },
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Library entrance",
+          "dir": "back",
+          "transition": "cut"
+        },
+        {
+          "to": "city-archive",
+          "label": "The Realm",
+          "dir": "back",
+          "transition": "cut"
+        },
+        {
+          "to": "local-history",
+          "label": "The Life of Skye",
+          "dir": "back",
+          "transition": "cut"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        -0.15
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "library"
+      }
+    },
+    {
+      "id": "shelf2",
+      "kind": "inspect",
+      "label": "The Life of Skye",
+      "at": [
+        5.5,
+        1.37,
+        -7.361
+      ],
+      "positions": [
+        "local-history"
+      ],
+      "doneWhen": {
+        "discovered": "library_life"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_life"
+        },
+        {
+          "do": "inspect",
+          "title": "The Life of Skye",
+          "text": "A documentary about Skye's life, told from the perspective of AIs a thousand years in the future. They gather the data she left across the internet and try to reconstruct what she lived through.",
+          "kicker": "Discovery",
+          "print": {
+            "style": "bookmark",
+            "lines": [
+              "Recovered pages",
+              "The Life of Skye",
+              "Open last session"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "aifacts",
+      "kind": "inspect",
+      "label": "Skye AI catalog card",
+      "at": [
+        -8.54,
+        1.31,
+        -5.4
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_aifacts"
+        },
+        {
+          "do": "inspect",
+          "title": "Skye AI",
+          "text": "Skye AI is a chatbot Skye built to introduce people to her. Visitors can ask about her interests, projects and personality through a conversational interface backed by information she has provided about herself.",
+          "kicker": "Discovery"
+        }
+      ],
+      "doneWhen": {
+        "discovered": "library_aifacts"
+      }
+    },
+    {
+      "id": "atlas",
+      "kind": "inspect",
+      "label": "The Realm / Cartography",
+      "at": [
+        -0.34,
+        0.89,
+        -4.29
+      ],
+      "positions": [
+        "door"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "The Great Rift",
+        "text": "The Great Rift tore through the barriers between Terra and other realities. For roughly seventy-two hours, gravity shifted, time behaved differently from place to place, and fragments of other worlds collided with the planet. When the tears closed, the people they had brought through were stranded on Terra. The event reshaped its geography and the civilizations that followed."
+      }
+    },
+    {
+      "id": "circulation",
+      "kind": "inspect",
+      "label": "Circulation desk",
+      "at": [
+        -6.47,
+        0.904,
+        -3.369
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Circulation desk",
+        "image": "assets/discoveries/civic/loans.png",
+        "kicker": "Library",
+        "text": "The Realm, Blogs and Journals each have their own section. Open individual books to read their passages."
+      }
+    },
+    {
+      "id": "realm-wall",
+      "kind": "inspect",
+      "label": "The Realm · Wall map",
+      "positions": [
+        "returns"
+      ],
+      "at": [
+        -8.766,
+        2.1,
+        -10.14
+      ],
+      "action": {
+        "do": "inspect",
+        "title": "Terra — The Realm",
+        "text": "Terra is the world at the center of the Realm. The books in The Realm section introduce its history, places and related projects."
+      }
+    },
+    {
+      "id": "book-library_stories",
+      "kind": "inspect",
+      "label": "The Realm: A World in the Making",
+      "at": [
+        -6.8323750495910645,
+        1.347499966621399,
+        -10.657500251770019
+      ],
+      "positions": [
+        "city-archive"
+      ],
+      "doneWhen": {
+        "discovered": "library_stories"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_stories"
+        },
+        {
+          "do": "inspect",
+          "kicker": "The Realm",
+          "title": "The Realm: A World in the Making",
+          "text": "A fantasy and science-fiction world Skye has been developing for twenty years, with its own geography, cultures and extensive history. It began in AIM roleplay, where she founded the company behind SRX and Shinra. That world now extends into Realm Knights, a Discord adventure game; The Realm: Third Age, a fully AI-driven roleplaying experience built for Discord; and numerous videos and characters."
+        }
+      ]
+    },
+    {
+      "id": "book-library_rift",
+      "kind": "inspect",
+      "label": "The Great Rift",
+      "at": [
+        -6.267125129699707,
+        1.337499976158142,
+        -10.657500251770019
+      ],
+      "positions": [
+        "city-archive"
+      ],
+      "doneWhen": {
+        "discovered": "library_rift"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_rift"
+        },
+        {
+          "do": "inspect",
+          "kicker": "The Realm",
+          "title": "The Great Rift",
+          "text": "The Great Rift tore through the barriers between Terra and other realities. For roughly seventy-two hours, gravity shifted, time behaved differently from place to place, and fragments of other worlds collided with the planet. When the tears closed, the people they had brought through were stranded on Terra. The event reshaped its geography and the civilizations that followed."
+        }
+      ]
+    },
+    {
+      "id": "book-library_midgar",
+      "kind": "inspect",
+      "label": "The Realm Locations",
+      "at": [
+        -5.782624959945679,
+        1.3574999570846558,
+        -10.657500251770019
+      ],
+      "positions": [
+        "city-archive"
+      ],
+      "doneWhen": {
+        "discovered": "library_midgar"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_midgar"
+        },
+        {
+          "do": "inspect",
+          "kicker": "The Realm",
+          "title": "The Realm Locations",
+          "text": "Midgar is divided into eight sectors around Shinra Tower. Its districts include finance, industry, commerce, housing and recreation, alongside restricted military and research areas. Wall Market has its own underground economy and a much lighter SRX presence. The city is one setting within the wider world of Terra."
+        }
+      ]
+    },
+    {
+      "id": "book-library_knights",
+      "kind": "inspect",
+      "label": "Adventures in Terra",
+      "at": [
+        -5.2981250286102295,
+        1.3774999976158142,
+        -10.657500251770019
+      ],
+      "positions": [
+        "city-archive"
+      ],
+      "doneWhen": {
+        "discovered": "library_knights"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_knights"
+        },
+        {
+          "do": "inspect",
+          "kicker": "The Realm",
+          "title": "Adventures in Terra",
+          "text": "Realm Knights is a Discord RPG Skye made in the world of Terra. Players choose a class, fight turn-based battles, explore biomes and develop their characters through class evolutions. Between adventures, the town hub offers a blacksmith, alchemist, inn and the Klickalack Tavern."
+        }
+      ]
+    },
+    {
+      "id": "book-library_third_age",
+      "kind": "inspect",
+      "label": "The Realm: Third Age",
+      "at": [
+        -4.813624858856201,
+        1.347499966621399,
+        -10.657500251770019
+      ],
+      "positions": [
+        "city-archive"
+      ],
+      "doneWhen": {
+        "discovered": "library_third_age"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_third_age"
+        },
+        {
+          "do": "inspect",
+          "kicker": "The Realm",
+          "title": "The Realm: Third Age",
+          "text": "The Realm: Third Age is a fully AI-driven roleplaying experience Skye built for Discord. Players bring original characters into the world, where AI-powered NPCs respond to them and world events develop from the directions she gives as game master."
+        }
+      ]
+    },
+    {
+      "id": "book-library_bedtime",
+      "kind": "inspect",
+      "label": "Bedtime in the Realm",
+      "at": [
+        -4.329124927520752,
+        1.3675000071525574,
+        -10.657500251770019
+      ],
+      "positions": [
+        "city-archive"
+      ],
+      "doneWhen": {
+        "discovered": "library_bedtime"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_bedtime"
+        },
+        {
+          "do": "inspect",
+          "kicker": "The Realm",
+          "title": "Bedtime in the Realm",
+          "text": "A planned animated story series drawing on the Realm's lore and history. Told by a narrator with a storybook feel, the episodes are intended as long-form bedtime listening."
+        }
+      ]
+    },
+    {
+      "id": "book-library_blog",
+      "kind": "inspect",
+      "label": "Building Weird Little Things",
+      "at": [
+        -6.267125129699707,
+        1.337499976158142,
+        -7.357500061035156
+      ],
+      "positions": [
+        "blogs"
+      ],
+      "doneWhen": {
+        "discovered": "library_blog"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_blog"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Blogs",
+          "title": "Building Weird Little Things",
+          "text": "Skye writes about using AI to learn unfamiliar skills and begin building ideas without already knowing every technical detail.\n\n“You can start with an idea instead of a perfect plan. You can say, “I want something inspired by a retro handheld companion, but not a copy. No arms. No legs. Just a face screen, buttons, a speaker, and a printable shell.” Then AI can help translate that vague shape into something more concrete: proportions, display size, vents, button placement, Raspberry Pi clearance, sensor holes, USB-C access, screw posts, and shell seams.”\n\n— AI Makes Building Weird Little Things Possible Again"
+        }
+      ]
+    },
+    {
+      "id": "book-library_blog_portland",
+      "kind": "inspect",
+      "label": "A City Worth Exploring",
+      "at": [
+        -5.540374994277954,
+        1.3675000071525574,
+        -7.357500061035156
+      ],
+      "positions": [
+        "blogs"
+      ],
+      "doneWhen": {
+        "discovered": "library_blog_portland"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_blog_portland"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Blogs",
+          "title": "A City Worth Exploring",
+          "text": "Skye argues for making Portland’s existing businesses and culture easier to reach.\n\n“The city should stop treating that identity like an accidental side effect and start building an economic strategy around it.\nNot by turning every neighborhood into a tourist trap. Not by replacing what people like with a row of chain stores, branded murals, and $19 cocktails named after the color beige. I mean making it easier for people to find, reach, and spend money at the places that already make Portland worth visiting.”\n\n— How I Would Fix Portland: Stop Treating It Like It Has Nothing to Offer"
+        }
+      ]
+    },
+    {
+      "id": "book-library_blog_nightlife",
+      "kind": "inspect",
+      "label": "Designing a Night Out",
+      "at": [
+        -4.732874870300293,
+        1.3675000071525574,
+        -7.357500061035156
+      ],
+      "positions": [
+        "blogs"
+      ],
+      "doneWhen": {
+        "discovered": "library_blog_nightlife"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_blog_nightlife"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Blogs",
+          "title": "Designing a Night Out",
+          "text": "Skye examines how venue design shapes the experience of going out.\n\n“Instead, many Portland bars and clubs feel like they were assembled with almost no thought about how people actually experience them.\nNot because the owners don't care, but because design decisions compound into an experience that feels frustrating before the night even begins.”\n\n— Portland’s Nightlife Doesn’t Have a People Problem. It Has a Design Problem."
+        }
+      ]
+    },
+    {
+      "id": "book-library_journals",
+      "kind": "inspect",
+      "label": "Learning the Ropes",
+      "at": [
+        5.459625005722046,
+        1.3675000071525574,
+        -10.657500251770019
+      ],
+      "positions": [
+        "local-worlds"
+      ],
+      "doneWhen": {
+        "discovered": "library_journals"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "library_journals"
+        },
+        {
+          "do": "inspect",
+          "kicker": "Journals",
+          "title": "Learning the Ropes",
+          "text": "An early entry about Skye teaching herself to customize LiveJournal and making an HTML prototype of her ideal layout.\n\n“A quick overview. I changed my LJ, I did it myself this time. I learned the ropes and I've got the hang of it now. I experimented for about 3 hours until I got back to what I liked. I even made my own HTML prototype of my dream layout.”\n\n— Mercury — journal, February 23, 2004"
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "librarian",
+      "character": "librarian",
+      "at": [
+        -7.12,
+        0,
+        -2.12
+      ],
+      "facing": 94.7,
+      "dialogue": "npc_librarian",
+      "positions": [
+        "entrance"
+      ]
+    },
+    {
+      "id": "leevee",
+      "character": "leevee",
+      "at": [
+        -2.2,
+        0,
+        -9.6
+      ],
+      "facing": 7,
+      "dialogue": "leevee_library",
+      "when": {
+        "all": [
+          {
+            "visited": "apartment"
+          },
+          {
+            "not": {
+              "flag": "lib:leevee_talked"
+            }
+          }
+        ]
+      },
+      "positions": [
+        "door"
+      ]
+    }
+  ],
+  "continuousInterior": true,
+  "lights": "assets/interiors/library.lights.json",
+  "lampScale": 0.36,
+  "outlines": "assets/outlines/library-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "windowView": {
+    "street": "library",
+    "rotation": -82.41,
+    "origin": [
+      -151.45,
+      1.98,
+      -305
+    ],
+    "day": "assets/city/views/library-doorway-day.jpg",
+    "late": "assets/city/views/library-doorway-late.jpg"
+  },
+  "photoOccluders": [
+    {
+      "center": [
+        -5.5,
+        0.435,
+        -3
+      ],
+      "size": [
+        3.3,
+        0.65,
+        0.6
+      ]
+    },
+    {
+      "center": [
+        -5.5,
+        0.785,
+        -3
+      ],
+      "size": [
+        3.34,
+        0.05,
+        0.64
+      ]
+    },
+    {
+      "center": [
+        -5.5,
+        0.826,
+        -3.393
+      ],
+      "size": [
+        3.35,
+        0.048,
+        0.354
+      ]
+    },
+    {
+      "center": [
+        -5.5,
+        1.23,
+        -2.951
+      ],
+      "size": [
+        0.58,
+        0.33,
+        0.039
+      ]
+    }
+  ],
+  "onFirstEnter": [
+    {
+      "do": "dialogue",
+      "tree": "npc_librarian",
+      "npc": "librarian",
+      "greeting": true
+    }
+  ]
+}

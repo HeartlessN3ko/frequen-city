@@ -1,0 +1,46 @@
+{
+  "start": "a",
+  "nodes": {
+    "a": {
+      "speaker": "leevee",
+      "text": "Oh! I — didn't hear you come in.",
+      "next": "b"
+    },
+    "b": {
+      "speaker": "leevee",
+      "text": "I didn't find anything useful here. I'll get out of your way.",
+      "next": "c",
+      "effects": [
+        {
+          "do": "npcLeave",
+          "npc": "leevee",
+          "path": [
+            [
+              21.4,
+              2.3
+            ],
+            [
+              21.0,
+              3.6
+            ],
+            [
+              21.4,
+              5.6
+            ],
+            [
+              22.5,
+              9.5
+            ]
+          ],
+          "flag": "apt:leevee_left"
+        }
+      ]
+    },
+    "c": {
+      "speaker": "detective",
+      "thought": true,
+      "text": "She folded the cloth and was gone before I could ask her anything.",
+      "end": true
+    }
+  }
+}

@@ -1,0 +1,694 @@
+{
+  "name": "Voidworks Game Labs",
+  "ambience": "assets/audio/amb/lab.mp3",
+  "exterior": "voidworks",
+  "hideOnMap": true,
+  "screens": [
+    {
+      "id": "development-1",
+      "at": [
+        -6.65,
+        1.16,
+        -4.471
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "lab",
+        "service": "VOIDWORKS  /  GAME LABS",
+        "status": "DEVELOPMENT BENCH   /   01",
+        "keyboard": [
+          -6.65,
+          0.77,
+          -4.15
+        ]
+      },
+      "title": "Squad Dungeon",
+      "rows": [
+        [
+          "Playable slice",
+          "10 floors"
+        ],
+        [
+          "Floor 5",
+          "Goblin Shaman Chief"
+        ],
+        [
+          "Floor 10",
+          "Slime King"
+        ]
+      ]
+    },
+    {
+      "id": "development-2",
+      "at": [
+        -5.35,
+        1.16,
+        -4.471
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "lab",
+        "service": "VOIDWORKS  /  GAME LABS",
+        "status": "DEVELOPMENT BENCH   /   02",
+        "keyboard": [
+          -5.35,
+          0.77,
+          -4.15
+        ]
+      },
+      "title": "Studio project index",
+      "rows": [
+        [
+          "Spotlight",
+          "Great Generals"
+        ],
+        [
+          "Archive",
+          "27 projects"
+        ]
+      ],
+      "highlightFor": "devdesk"
+    },
+    {
+      "id": "development-3",
+      "at": [
+        -6.65,
+        1.16,
+        -7.566
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "lab",
+        "service": "VOIDWORKS  /  GAME LABS",
+        "status": "DEVELOPMENT BENCH   /   03",
+        "keyboard": [
+          -6.65,
+          0.77,
+          -7.25
+        ],
+        "image": "assets/workstations/generals.webp"
+      },
+      "title": "Great Generals",
+      "rows": [
+        [
+          "World",
+          "Always live"
+        ],
+        [
+          "Campaign",
+          "Delegated commands"
+        ]
+      ]
+    },
+    {
+      "id": "development-4",
+      "at": [
+        -5.35,
+        1.16,
+        -7.571
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "lab",
+        "service": "VOIDWORKS  /  GAME LABS",
+        "status": "ARCHIVED BUILD",
+        "keyboard": [
+          -5.35,
+          0.77,
+          -7.25
+        ]
+      },
+      "title": "Who’s the Smartest?",
+      "rows": [
+        [
+          "Host",
+          "Party trivia"
+        ],
+        [
+          "Players",
+          "Join by phone"
+        ]
+      ]
+    },
+    {
+      "id": "development-5",
+      "at": [
+        -5.4,
+        1.16,
+        -13.601
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "lab",
+        "service": "VOIDWORKS  /  GAME LABS",
+        "status": "DEVELOPMENT BENCH   /   05",
+        "keyboard": [
+          -5.4,
+          0.77,
+          -13.28
+        ],
+        "image": "assets/workstations/canyon.webp"
+      },
+      "title": "Toy Plane",
+      "rows": [
+        [
+          "Course",
+          "Canyon Run"
+        ],
+        [
+          "Review",
+          "Flight clearance"
+        ]
+      ]
+    },
+    {
+      "id": "development-6",
+      "at": [
+        -4.3,
+        1.16,
+        -13.601
+      ],
+      "size": [
+        0.576,
+        0.32
+      ],
+      "yaw": 0,
+      "station": {
+        "palette": "lab",
+        "service": "VOIDWORKS  /  GAME LABS",
+        "status": "DEVELOPMENT BENCH   /   06",
+        "keyboard": [
+          -4.3,
+          0.77,
+          -13.28
+        ],
+        "image": "assets/workstations/megabytes.webp"
+      },
+      "title": "MEGA-BYTES",
+      "rows": [
+        [
+          "Concept archive",
+          "Care loop"
+        ],
+        [
+          "Life cycle",
+          "Baby to elder"
+        ]
+      ]
+    }
+  ],
+  "models": [
+    {
+      "url": "assets/interiors/voidworks.glb",
+      "lightScale": 0.002,
+      "floorFinish": {
+        "image": "assets/interiors/voidworks-floor.jpg",
+        "bounds": [
+          -9.2,
+          -17.2,
+          18.4
+        ]
+      },
+      "stageFinish": "light"
+    },
+    {
+      "url": "assets/interiors/voidworks-furniture.glb"
+    },
+    {
+      "url": "assets/interiors/voidworks-inspection.glb"
+    }
+  ],
+  "env": {
+    "sky": "interior",
+    "background": "#0b0a12",
+    "fogNear": 14,
+    "fogFar": 40,
+    "hemi": 0.38,
+    "key": 0.35,
+    "ambient": 0.07,
+    "exposure": 1.05,
+    "reflections": 0.26,
+    "fog": false
+  },
+  "startPosition": "entrance",
+  "_measure": "Positions come from the gameplay cameras in Voidworks Game Labs.blend (LOC_VoidworksGameLabs), converted to game axes (x, z, -y). Front door at x 0, z 0; the room runs toward -z.",
+  "positions": [
+    {
+      "id": "entrance",
+      "label": "Great Generals",
+      "camera": {
+        "position": [
+          -2.674,
+          1.25,
+          -3.364
+        ],
+        "target": [
+          -5.502,
+          1.134,
+          -6.192
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            -5.502,
+            1.134,
+            -6.192
+          ],
+          "fov": 74
+        }
+      },
+      "finish": "assets/interiors/voidworks-interior-views/entrance.webp",
+      "links": [
+        {
+          "to": "arcade",
+          "label": "MEGA-BYTES",
+          "dir": "right"
+        },
+        {
+          "to": "canyon",
+          "label": "Voidworks Developer",
+          "dir": "right"
+        }
+      ]
+    },
+    {
+      "id": "arcade",
+      "label": "MEGA-BYTES",
+      "camera": {
+        "position": [
+          4.35,
+          1.25,
+          -5.87
+        ],
+        "target": [
+          8.328,
+          1.545,
+          -6.288
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            8.328,
+            1.545,
+            -6.288
+          ],
+          "fov": 74
+        }
+      },
+      "finish": "assets/interiors/voidworks-interior-views/arcade.webp",
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Great Generals",
+          "dir": "back"
+        },
+        {
+          "to": "canyon",
+          "label": "Voidworks Developer",
+          "dir": "left"
+        }
+      ]
+    },
+    {
+      "id": "canyon",
+      "label": "Voidworks Developer",
+      "camera": {
+        "position": [
+          5.02,
+          1.26,
+          -8.18
+        ],
+        "target": [
+          1.042,
+          1.143,
+          -7.762
+        ],
+        "fov": 66,
+        "yawRange": 60,
+        "portrait": {
+          "target": [
+            1.042,
+            1.143,
+            -7.762
+          ],
+          "fov": 74
+        }
+      },
+      "finish": "assets/interiors/voidworks-interior-views/canyon.webp",
+      "links": [
+        {
+          "to": "entrance",
+          "label": "Great Generals",
+          "dir": "forward"
+        },
+        {
+          "to": "arcade",
+          "label": "MEGA-BYTES",
+          "dir": "left"
+        }
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "exit",
+      "kind": "door",
+      "label": "Leave",
+      "at": [
+        0,
+        1.3,
+        -0.15
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "voidworks"
+      }
+    },
+    {
+      "id": "cab0",
+      "kind": "inspect",
+      "label": "MEGA-BYTES",
+      "at": [
+        7.43,
+        1.51,
+        -6.3
+      ],
+      "positions": [
+        "arcade"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_megabytes"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_megabytes"
+        },
+        {
+          "do": "inspect",
+          "title": "MEGA-BYTES",
+          "text": "A virtual-pet game inspired by Tamagotchi, where you care for your own digital pet. Skye began it in 2024, making it one of her first major games developed with AI.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "cab1",
+      "kind": "inspect",
+      "label": "Great Generals",
+      "at": [
+        -6.65,
+        1.16,
+        -7.58
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_generals"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_generals"
+        },
+        {
+          "do": "inspect",
+          "title": "Great Generals",
+          "text": "A grand 4X strategy game where you take control of a kingdom. Its world runs through 24-hour real-time days, tracking the systems that keep the kingdom going.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "cab2",
+      "kind": "inspect",
+      "label": "Toy Plane: Alien Assault",
+      "at": [
+        7.43,
+        1.51,
+        -4.1
+      ],
+      "positions": [
+        "arcade"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_toyplane"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_toyplane"
+        },
+        {
+          "do": "inspect",
+          "title": "Toy Plane: Alien Assault",
+          "text": "You're a toy airplane in a garage when aliens attack. Skye developed the project in about a week with multiple AI agents, creating the assets in Blender and building the game in Godot.",
+          "kicker": "Discovery",
+          "listening": {
+            "do": "listeningStation",
+            "title": "Toy Plane · Play the Paper Fields victory mix",
+            "tracks": [
+              "victory"
+            ],
+            "autoplay": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "cab3",
+      "kind": "inspect",
+      "label": "Who's the Smartest?",
+      "at": [
+        -5.34,
+        1.16,
+        -7.58
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_smartest"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_smartest"
+        },
+        {
+          "do": "inspect",
+          "title": "Who's the Smartest?",
+          "text": "A GameHub trivia game made for Jeopardy-style rounds with the shared-screen, play-together format of Jackbox.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "cab4",
+      "kind": "inspect",
+      "label": "Squad Dungeon",
+      "at": [
+        -6.65,
+        1.16,
+        -4.48
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_squad"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_squad"
+        },
+        {
+          "do": "inspect",
+          "title": "Squad Dungeon",
+          "text": "Squad Dungeon is a Godot 4 top-down dungeon crawler. The playable slice runs 10 floors with 10 classes, a Goblin Shaman Chief on floor 5, a Slime King on floor 10 and original music.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "devdesk",
+      "kind": "inspect",
+      "label": "Studio project index",
+      "at": [
+        -5.35,
+        1.16,
+        -4.462
+      ],
+      "positions": [
+        "entrance"
+      ],
+      "doneWhen": {
+        "discovered": "vw_devdesk"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "vw_devdesk"
+        },
+        {
+          "do": "inspect",
+          "title": "Studio project index",
+          "text": "The development desk lists everything Voidworks has built or tried. Besides the cabinets there is Shinobi Dash, a Phaser 3 browser platformer with parallax scenery; Realm Knights, a turn-based RPG played in Discord; and a GameHub archive of online games (Battle Rock, Prism Pop Survival, Street Siren, Unit-0, Marble Mayhem, District Rush, Card Table, Meow UNO, Connect 4, Battleship, Risk and Plotluck). It also lists mod and asset work: Project Zomboid mods, Hull Breach hairstyles and furniture, a Voxel Destruction experiment, a Pokémon Battle Advanced patch, a PokéPath TD quality-of-life mod and a PokeMMO battlefield art study. Frequen City: Missing User, the game this desk sits inside, is on the list too.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "toy-model",
+      "kind": "inspect",
+      "label": "Toy Plane prototype",
+      "at": [
+        0,
+        1.11,
+        -6.28
+      ],
+      "positions": [
+        "canyon"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_toyplane_model"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_toyplane_model"
+        },
+        {
+          "do": "inspect",
+          "title": "Toy Plane airframe",
+          "text": "The jet on the display is the kind of asset Skye builds in Blender: an F-22 airframe, exported to the game, where Toy Plane reads plane models by name and gives every one the same toon finish for its colors and glow. That is how a hard-surface jet ends up looking like a toy.",
+          "kicker": "Discovery"
+        }
+      ]
+    },
+    {
+      "id": "canyon",
+      "kind": "inspect",
+      "label": "Toy Plane / Canyon Run",
+      "at": [
+        7.43,
+        1.51,
+        -8.5
+      ],
+      "positions": [
+        "arcade"
+      ],
+      "doneWhen": {
+        "discovered": "arcade_canyon_run"
+      },
+      "action": [
+        {
+          "do": "discover",
+          "id": "arcade_canyon_run"
+        },
+        {
+          "do": "inspect",
+          "title": "Canyon Run",
+          "text": "Canyon Run is the premise of Toy Plane in one picture. From the ground it is a gap between buildings; from a toy cockpit it is the course. The city is a model inside a house, so what looks like a canyon is a tabletop street, and at the transitions the real room shows through.",
+          "kicker": "Discovery"
+        }
+      ]
+    }
+  ],
+  "npcs": [
+    {
+      "id": "dev",
+      "character": "dev",
+      "at": [
+        -3.52,
+        0,
+        -7.58
+      ],
+      "facing": 11.3,
+      "dialogue": "npc_dev",
+      "positions": [
+        "entrance",
+        "canyon"
+      ]
+    },
+    {
+      "id": "dev_b",
+      "character": "staff_gamedev_b",
+      "at": [
+        2.04,
+        0,
+        -7.87
+      ],
+      "facing": 95.9,
+      "positions": [
+        "canyon"
+      ]
+    },
+    {
+      "id": "dev_c",
+      "character": "staff_gamedev_c",
+      "at": [
+        6.72,
+        0.01,
+        -7.23
+      ],
+      "facing": -60,
+      "positions": [
+        "arcade"
+      ]
+    }
+  ],
+  "lights": "assets/interiors/voidworks.lights.json",
+  "lampScale": 0.36,
+  "outlines": "assets/outlines/voidworks-interior.glb",
+  "crossing": {
+    "hotspot": "exit",
+    "label": "Leave building"
+  },
+  "windowView": {
+    "street": "voidworks",
+    "rotation": 7.59,
+    "origin": [
+      330,
+      1.98,
+      -166.25
+    ],
+    "day": "assets/city/views/voidworks-doorway-day.jpg",
+    "late": "assets/city/views/voidworks-doorway-late.jpg"
+  },
+  "onFirstEnter": [
+    {
+      "do": "dialogue",
+      "tree": "npc_dev",
+      "npc": "dev",
+      "greeting": true
+    }
+  ]
+}

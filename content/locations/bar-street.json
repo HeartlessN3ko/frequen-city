@@ -1,0 +1,128 @@
+{
+  "name": "The Bar",
+  "ambience": "assets/audio/amb/city.mp3",
+  "subtitle": "Frequency Bar patio",
+  "mapName": "Bar",
+  "mapPin": {
+    "x": 56,
+    "y": 68
+  },
+  "interior": "bar",
+  "env": {
+    "fogNear": 60,
+    "fogFar": 260
+  },
+  "startPosition": "street",
+  "positions": [
+    {
+      "id": "street",
+      "label": "Patio approach",
+      "camera": {
+        "position": [
+          211,
+          1.75,
+          -39
+        ],
+        "target": [
+          205,
+          3.1,
+          -52
+        ],
+        "fov": 57,
+        "yawRange": 65
+      },
+      "links": []
+    }
+  ],
+  "hotspots": [
+    {
+      "id": "enter",
+      "kind": "door",
+      "label": "Enter",
+      "at": [
+        205,
+        2.15,
+        -51.78
+      ],
+      "positions": [
+        "street"
+      ],
+      "action": {
+        "do": "travel",
+        "location": "bar"
+      }
+    }
+  ],
+  "npcs": [],
+  "onFirstEnter": {
+    "do": "narrate",
+    "line": "bar_arrive",
+    "when": {
+      "not": {
+        "visited": "bar"
+      }
+    }
+  },
+  "unlockWhen": {
+    "evidence": "e1_pickup"
+  },
+  "models": [
+    {
+      "url": "assets/city/ext-bar.glb"
+    },
+    {
+      "url": "assets/city/backdrop-port.glb",
+      "outside": [
+        174,
+        -85,
+        234,
+        -21
+      ]
+    },
+    {
+      "url": "assets/city/sidewalks/bar-street.glb",
+      "showInPhotograph": true
+    }
+  ],
+  "crossing": {
+    "hotspot": "enter",
+    "label": "Enter the bar"
+  },
+  "horizon": {
+    "day": "assets/city/views/bar-street-day.jpg",
+    "late": "assets/city/views/bar-street-late.jpg",
+    "lateHour": 15,
+    "radius": 39,
+    "origin": [
+      211,
+      1.75,
+      -39
+    ],
+    "surfaceDepth": "assets/city/street-depth/bar-street-street.png"
+  },
+  "ambient": {
+    "pedestrians": 3,
+    "paths": [
+      [
+        [
+          190,
+          0.38,
+          -41.26
+        ],
+        [
+          217,
+          0.38,
+          -41.26
+        ]
+      ]
+    ],
+    "talkPositions": [
+      "street"
+    ],
+    "greetings": [
+      "My shift ended an hour ago. I'm spending the difference on the patio.",
+      "I order at the counter. No app knows my usual like the bartender.",
+      "I come by when the light hits the brass on the rail."
+    ]
+  }
+}

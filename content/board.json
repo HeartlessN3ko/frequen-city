@@ -1,0 +1,392 @@
+{
+  "title": "Conspiracy Board",
+  "emptyText": "No evidence yet. Inspect things around the city — what you find ends up here.",
+  "hint": "The Board is where the case comes together, and it is part of solving it. Arrange clues freely, then choose Red string and tap two that support each other. A true pair turns the string gold and confirms a deduction. Tap the same pair again to remove a string.",
+  "headings": [
+    {
+      "x": 3,
+      "y": 3,
+      "text": "WHERE IS SKYE?"
+    },
+    {
+      "x": 62,
+      "y": 3,
+      "text": "THEORIES"
+    }
+  ],
+  "deductions": [
+    {
+      "id": "d1",
+      "pair": [
+        "e1_pickup",
+        "e3_sighting"
+      ],
+      "title": "She went out for food",
+      "text": "The pickup slip and the bartender agree: Skye collected her food today and walked off with it."
+    },
+    {
+      "id": "d2",
+      "pair": [
+        "e2_transfer",
+        "e4_access"
+      ],
+      "title": "The music went to the tower",
+      "text": "Skye asked for her latest music to go to Frequency Tower instead of Voidworks, and someone used its rooftop entrance after hours."
+    },
+    {
+      "id": "d3",
+      "pair": [
+        "e3_sighting",
+        "e4_access"
+      ],
+      "title": "A lead on the roof",
+      "text": "The bartender saw Skye walk toward the tower. Someone used the roof entrance afterward. The rooftop is worth checking."
+    }
+  ],
+  "onSolved": [
+    {
+      "do": "narrate",
+      "line": "board_solved"
+    },
+    {
+      "do": "toast",
+      "text": "Frequency Tower rooftop unlocked on the map."
+    }
+  ],
+  "profile": {
+    "needed": 10,
+    "pending": "You know where she went. You still need to know who you are looking for: learn {needed} things about Skye ({known} so far). Look closely at what she left around the city."
+  },
+  "leads": [
+    {
+      "when": {
+        "all": [
+          {
+            "flag": "deduce:d1"
+          },
+          {
+            "flag": "deduce:d2"
+          },
+          {
+            "flag": "deduce:d3"
+          },
+          {
+            "not": {
+              "flag": "board:solved"
+            }
+          }
+        ]
+      },
+      "text": "You know where Skye went. Now learn who you are looking for: {known} of {needed} things about her. Look closely at what she left around the city.",
+      "shortText": "About Skye · {known} of {needed} known"
+    },
+    {
+      "when": {
+        "flag": "roof:open"
+      },
+      "text": "Follow the music.",
+      "shortText": "Follow the music",
+      "destination": "rooftop",
+      "where": [
+        {
+          "location": "rooftop",
+          "position": "lounge",
+          "hotspot": "npc:skye"
+        }
+      ]
+    },
+    {
+      "when": {
+        "flag": "board:solved"
+      },
+      "text": "Your case holds together. Find a way onto the tower’s roof.",
+      "shortText": "Find a way up",
+      "destination": "rooftop",
+      "where": [
+        {
+          "location": "rooftop",
+          "position": "landing",
+          "hotspot": "keypad"
+        }
+      ]
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e1_pickup"
+          },
+          {
+            "evidence": "e3_sighting"
+          },
+          {
+            "not": {
+              "flag": "deduce:d1"
+            }
+          }
+        ]
+      },
+      "text": "Some of your clues may support each other. Try them together on the Board.",
+      "boardHint": "Some clues back each other up. Choose Red string and tap two to compare them."
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e2_transfer"
+          },
+          {
+            "evidence": "e4_access"
+          },
+          {
+            "not": {
+              "flag": "deduce:d2"
+            }
+          }
+        ]
+      },
+      "text": "Something else on your Board may connect.",
+      "boardHint": "Another pair on your Board may connect."
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e3_sighting"
+          },
+          {
+            "evidence": "e4_access"
+          },
+          {
+            "not": {
+              "flag": "deduce:d3"
+            }
+          }
+        ]
+      },
+      "text": "One more pair on your Board may connect.",
+      "boardHint": "One more pair on your Board may connect."
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e1_pickup"
+          },
+          {
+            "evidence": "e2_transfer"
+          },
+          {
+            "evidence": "e3_sighting"
+          },
+          {
+            "evidence": "e4_access"
+          }
+        ]
+      },
+      "text": "You have what you need on the Board. Make the connections."
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e1_pickup"
+          },
+          {
+            "not": {
+              "evidence": "e3_sighting"
+            }
+          }
+        ]
+      },
+      "text": "Ask around at The Bar.",
+      "shortText": "The Bar · Ask around",
+      "destination": "bar-street",
+      "where": [
+        {
+          "location": "bar-street",
+          "hotspot": "enter"
+        },
+        {
+          "location": "bar",
+          "position": "entrance",
+          "hotspot": "npc:bartender"
+        }
+      ],
+      "trail": true
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e2_transfer"
+          },
+          {
+            "not": {
+              "evidence": "e4_access"
+            }
+          }
+        ]
+      },
+      "text": "Skye’s music went to Frequency Tower. Find out why.",
+      "shortText": "Frequency Tower · Find out why",
+      "destination": "studio",
+      "where": [
+        {
+          "location": "studio",
+          "hotspot": "enter"
+        },
+        {
+          "location": "studio-interior",
+          "position": "logbook",
+          "hotspot": "access"
+        }
+      ],
+      "trail": true
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "evidence": "e3_sighting"
+          },
+          {
+            "not": {
+              "evidence": "e2_transfer"
+            }
+          },
+          {
+            "not": {
+              "evidence": "e4_access"
+            }
+          }
+        ]
+      },
+      "text": "Skye was seen heading for Frequency Tower, but the Tower is not on your map yet. Her agents at SLOS Headquarters may know why.",
+      "shortText": "SLOS HQ · Why the Tower?",
+      "destination": "slos-hq",
+      "where": [
+        {
+          "location": "slos-hq",
+          "hotspot": "enter"
+        },
+        {
+          "location": "slos-hq-interior",
+          "position": "entrance",
+          "hotspot": "log"
+        }
+      ],
+      "trail": true
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "flag": "unlocked:apartment"
+          },
+          {
+            "not": {
+              "evidence": "e1_pickup"
+            }
+          }
+        ]
+      },
+      "text": "Skye’s apartment is on your map. See what she left behind.",
+      "shortText": "Robot Arms · See what she left",
+      "destination": "apartment",
+      "trail": true,
+      "where": [
+        {
+          "location": "apartment",
+          "position": "pantry-view",
+          "hotspot": "pickup"
+        }
+      ]
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "flag": "unlocked:apartment"
+          },
+          {
+            "not": {
+              "evidence": "e2_transfer"
+            }
+          }
+        ]
+      },
+      "text": "Skye’s agents work at SLOS Headquarters. See what they know.",
+      "shortText": "SLOS HQ · See what they know",
+      "destination": "slos-hq",
+      "where": [
+        {
+          "location": "slos-hq",
+          "hotspot": "enter"
+        },
+        {
+          "location": "slos-hq-interior",
+          "position": "entrance",
+          "hotspot": "log"
+        }
+      ],
+      "trail": true
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "flag": "briefed"
+          },
+          {
+            "not": {
+              "flag": "unlocked:apartment"
+            }
+          }
+        ]
+      },
+      "text": "Find out where Skye lives.",
+      "shortText": "Police · Find her address",
+      "destination": "police",
+      "where": [
+        {
+          "location": "police",
+          "hotspot": "enter"
+        },
+        {
+          "location": "police-interior",
+          "position": "operations",
+          "hotspot": "dispatch"
+        }
+      ]
+    },
+    {
+      "when": {
+        "all": [
+          {
+            "flag": "unlocked:police"
+          },
+          {
+            "not": {
+              "flag": "briefed"
+            }
+          }
+        ]
+      },
+      "text": "Report in at the Police Department.",
+      "shortText": "Police · Report in",
+      "destination": "police",
+      "where": [
+        {
+          "location": "police",
+          "hotspot": "enter"
+        },
+        {
+          "location": "police-interior",
+          "position": "entrance",
+          "hotspot": "npc:chief"
+        }
+      ]
+    }
+  ]
+}
