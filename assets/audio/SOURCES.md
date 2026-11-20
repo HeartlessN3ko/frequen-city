@@ -39,14 +39,33 @@ file ends so a player that leaves a small gap when looping does not click.
 | File | Played for | Source | Author | Source URL |
 |---|---|---|---|---|
 | `sfx/step-1.mp3`, `step-2.mp3`, `step-3.mp3` | moving between viewpoints (two soft steps each) | `footstep_concrete_000`–`004` from Impact Sounds, low-passed | Kenney (kenney.nl) | https://kenney.nl/assets/impact-sounds |
-| `sfx/door.mp3` | entering or leaving an interior | `doorOpen_1` from RPG Audio | Kenney (kenney.nl) | https://kenney.nl/assets/rpg-audio |
 | `sfx/paper-1.mp3`, `paper-2.mp3` | opening the Case file and the Board | `bookFlip1`, `bookFlip2` from RPG Audio | Kenney (kenney.nl) | https://kenney.nl/assets/rpg-audio |
 | `sfx/pin.mp3` | picking a Board card for a string | `impactGeneric_light_001` from Impact Sounds, low-passed | Kenney (kenney.nl) | https://kenney.nl/assets/impact-sounds |
 | `sfx/string.mp3` | tying a Board connection | `pluck_002` from Interface Sounds | Kenney (kenney.nl) | https://kenney.nl/assets/interface-sounds |
-| `sfx/clue.mp3` | essential clue found, deduction confirmed | `confirmation_002` from Interface Sounds | Kenney (kenney.nl) | https://kenney.nl/assets/interface-sounds |
-| `sfx/key.mp3` | keypad press | `click_001` from Interface Sounds | Kenney (kenney.nl) | https://kenney.nl/assets/interface-sounds |
-| `sfx/travel.mp3` | map travel | SYNTHESIZED (ffmpeg pink noise, band-passed around 700 Hz, 0.8 s swell) | — | — |
 
 ## Adding or replacing a sound
 
 Keep new sounds CC0 or your own, add a row here, and keep ambience quiet (around -30 LUFS) so it stays under dialogue.
+
+## Musical cues — `sfx/music/` (MP3 44.1 kHz stereo 128 kbps)
+
+Original, made for this game. Every cue is synthesized by `tools/sfx-music/build-sfx-music.py` (FM electric piano,
+mallet, bell, beep and buzz voices in D Dorian, no samples). The matching MIDI clip for each cue is in
+`tools/sfx-music/midi/` so it can be re-made in Ableton and dropped back in under the same name
+(`tools/sfx-music/README.md`).
+
+| File | Plays for |
+|---|---|
+| `tick` | dialogue text typing out (short dry dot) |
+| `click` | tool buttons, menus, prev/next, tutorial step |
+| `choice` | picking a dialogue choice |
+| `confirm` | title Begin/Continue, choosing your detective |
+| `enter` | entering a building or room (Dm9) |
+| `exit` | stepping out to the city (Fmaj9) |
+| `travel` | street-to-street map travel |
+| `evidence` | ordinary evidence added |
+| `clue` | essential clue found |
+| `deduce` | deduction confirmed (ii–V–i) |
+| `achievement` | achievement unlocked |
+| `key`, `unlock`, `denied` | keypad digit, right code, wrong code |
+| `unlink` | removing a Board string |
